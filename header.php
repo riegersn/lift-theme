@@ -8,6 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <script src="https://use.typekit.net/dcf1lbu.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
     <?php wp_head(); ?>
   </head>
 
@@ -24,7 +27,7 @@
 
     <div class="container">
 
-      <div class="blog-header">
+      <!-- <div class="blog-header">
         <h1 class="blog-title"><a href="<?php bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
         <p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
-      </div>
+      </div> -->

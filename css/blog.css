@@ -3,7 +3,7 @@
  */
 
 body {
-  font-family: "Raleway", Arial, sans-serif;
+  font-family: "museo-sans", Arial, sans-serif;
   font-size: 16px;
   color: #333;
 }
@@ -37,7 +37,7 @@ h6, .h6 {
  */
 
 .blog-masthead {
-  background-color: #428bca;
+  background-color: #fff;
   -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
@@ -52,7 +52,7 @@ h6, .h6 {
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
-  color: #fff;
+  color: #666;
   text-decoration: none;
 }
 
@@ -88,6 +88,20 @@ h6, .h6 {
 /*
  * Blog name and description
  */
+
+ @media (min-width: 992px)
+ .blog-post-featured {
+     height: 0;
+     margin: 0;
+     overflow: hidden;
+     padding-bottom: calc(1/3 * 100%);
+ }
+
+ .blog-post-featured {
+     margin: 0 -8px;
+     position: relative;
+     z-index: -1;
+ }
 
 .blog-header {
   padding-top: 20px;
