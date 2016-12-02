@@ -12,8 +12,10 @@ add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 
 // Add Google Fonts
 function lift_google_fonts() {
-				wp_register_style('OpenSans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-				wp_enqueue_style( 'OpenSans');
+				wp_register_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat');
+				wp_register_style('Raleway', 'https://fonts.googleapis.com/css?family=Raleway');
+				wp_enqueue_style('Montserrat');
+				wp_enqueue_style('Raleway');
 		}
 
 add_action('wp_print_styles', 'lift_google_fonts');
