@@ -3,17 +3,19 @@
 	content-single.php / blog-post
 -->
 
-<div class="blog-post-featured">
-	<?php if ( has_post_thumbnail() ) {
-		the_post_thumbnail();
-	} ?>
+<div class="blog-post-featured" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');" >
+	<div class="blog-post-featured-fade"></div>
 </div>
 
-<div class="blog-post">
+<div class="post-wrap">
 
-	<h2 class="blog-post-title"><?php the_title(); ?></h2>
-	<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
+	<div class="post-content">
 
-	<?php the_content(); ?>
+		<h2 class="blog-post-title"><?php the_title(); ?></h2>
+		<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
 
-</div><!-- /.blog-post -->
+		<?php the_content(); ?>
+
+	</div><!-- /.blog-post -->
+
+</div>

@@ -16,16 +16,23 @@
 
   <body>
 
-	<div class="blog-masthead">
-		<div class="container">
-			<nav class="blog-nav">
-				<a class="blog-nav-item active" href="#">Home</a>
-				<?php wp_list_pages( '&title_li=' ); ?>
-			</nav>
-		</div>
+	<div class="lift-nav-wrapper">
+      <nav class="lift-nav">
+          <ul>
+             <li class="site-logo">
+                <a href="<?php bloginfo( 'wpurl' );?>">
+                   <img src="http://localhost:8888/wp-content/uploads/2016/12/lyftguy_new_logo.png">
+                </a>
+             </li>
+              <li >
+                  <a href="<?php bloginfo( 'wpurl' );?>">Blog</a>
+              </li>
+              <?php wp_list_pages( '&title_li=' ); ?>
+          </ul>
+      </nav>
 	</div>
 
-    <div class="container">
+    <div class="content-container">
 
       <!-- <div class="blog-header">
         <h1 class="blog-title"><a href="<?php bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
