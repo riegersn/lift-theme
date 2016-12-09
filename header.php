@@ -17,7 +17,7 @@
       <nav class="lift-nav">
          <div class="site-logo">
             <a href="<?php bloginfo( 'wpurl' );?>">
-                <img class="site-logo" src="http://localhost:8888/wp-content/uploads/2016/12/newlogo.png">
+                <img class="site-logo" src="http://localhost:8888/wp-content/uploads/2016/12/lyftguy_logo_new.png">
             </a>
          </div>
          <div class="lift-menu">

@@ -2,9 +2,11 @@
 
 // Add scripts and stylesheets
 function lift_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6' );
+	wp_enqueue_style( 'shareable', get_template_directory_uri() . '/css/shareable.css' );
 	wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );
-	// wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.6', true );
+	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
+	wp_enqueue_script( 'shareable', get_template_directory_uri() . '/js/shareable.js');
 }
 
 add_action( 'wp_enqueue_scripts', 'lift_scripts' );
