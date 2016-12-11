@@ -7,6 +7,7 @@ function lift_scripts() {
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 	wp_enqueue_script( 'shareable', get_template_directory_uri() . '/js/shareable.js');
+	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
 }
 
 add_action( 'wp_enqueue_scripts', 'lift_scripts' );
@@ -63,3 +64,80 @@ function custom_settings_page_setup() {
   register_setting('section', 'facebook');
 }
 add_action( 'admin_init', 'custom_settings_page_setup' );
+
+
+class comment_walker extends Walker_Comment {
+	var $tree_type = 'comment';
+	var $db_fields = array( 'parent' => 'comment_parent', 'id' => 'comment_ID' );
+
+	// constructor – wrapper for the comments list
+	function __construct() { ?>
+
+		<div class="comments-list">
+
+	<?php }
+
+	// start_lvl – wrapper for child comments list
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$GLOBALS['comment_depth'] = $depth + 2; ?>
+
+		<ol class="child-comments comments-list">
+
+	<?php }
+
+	// end_lvl – closing wrapper for child comments list
+	function end_lvl( &$output, $depth = 0, $args = array() ) {
+		$GLOBALS['comment_depth'] = $depth + 2; ?>
+
+	</ol>
+
+	<?php }
+
+	// start_el – HTML for comment template
+	function start_el( &$output, $comment, $depth = 0, $args = array(), $id = 0 ) {
+		$depth++;
+		$GLOBALS['comment_depth'] = $depth;
+		$GLOBALS['comment'] = $comment;
+		$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' );
+
+		if ( 'article' == $args['style'] ) {
+			$tag = 'article';
+			$add_below = 'comment';
+		} else {
+			$tag = 'article';
+			$add_below = 'comment';
+		} ?>
+
+		<li <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>">
+			<div class="cm-gravatar"><?php echo get_avatar( $comment, 75, '[default gravatar URL]', 'Author’s gravatar' ); ?></div>
+			<!-- <div class="comment-meta post-meta" role="complementary">
+			</div> -->
+			<div class="cm-content">
+				<strong><a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a></strong>
+				<?php if ($comment->comment_approved == '0') : ?>
+				<p class="cm-comment">Your comment is awaiting moderation.</p>
+				<?php endif; ?>
+				<?php comment_text() ?>
+				<div class="cm-buttons">
+					<?php edit_comment_link('Edit this comment','',''); ?>
+					<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+				</div>
+			</div>
+
+	<?php }
+
+	// end_el – closing HTML for comment template
+	function end_el(&$output, $comment, $depth = 0, $args = array() ) { ?>
+
+	</li>
+
+	<?php }
+
+	// destructor – closing wrapper for the comments list
+	function __destruct() { ?>
+
+	</div>
+
+	<?php }
+
+}

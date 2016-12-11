@@ -3,9 +3,9 @@
 	content-single.php / blog-post
 -->
 
-<div class="blog-post-featured" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');" >
-	<div class="blog-post-featured-fade"></div>
-</div>
+<div class="parallax-window" style="width:100%; height:500px;" data-parallax="scroll" data-image-src="<?php the_post_thumbnail_url( 'full' ); ?>"></div>
+<!-- <div class="blog-post-featured" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');" > -->
+<!-- </div> -->
 
 <div class="post-wrap">
 
