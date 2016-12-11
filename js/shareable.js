@@ -2,18 +2,14 @@ jQuery(function() {
 
     var $sidebar   = jQuery("#shareable-box"),
         $window    = jQuery(window),
-        offset     = $sidebar.offset(),
-        topPadding = 50;
+        $offset     = $sidebar.offset();
 
     $window.scroll(function() {
-        if ($window.scrollTop() > offset.top) {
-            $sidebar.stop().animate({
-                marginTop: $window.scrollTop() - offset.top + topPadding
-            });
+        if ($window.scrollTop() > $sidebar.offset() - 30) {
+           $sidebar.addClass('sb-fixed-content-wrap');
         } else {
-            $sidebar.stop().animate({
-                marginTop: 0
-            });
+           $sidebar.removeClass('sb-fixed-content-wrap');
+
         }
     });
 

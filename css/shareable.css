@@ -3,10 +3,19 @@
  *  12/08/2017
  */
 
+.sb-fixed-content-wrap {
+    clear:both;
+    margin-left: -70px;
+    position: fixed;
+    top: 30px;
+    width: 40px;
+}
+
 .sb-content-wrap {
-  width: 40px;
+  clear: both;
   margin-left: -70px;
   position: absolute;
+  width: 40px;
 }
 
 /* brand colors */

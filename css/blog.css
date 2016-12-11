@@ -38,8 +38,8 @@ img {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #333;
-  margin-top: 0;
   font-weight: 700;
+  margin-top: 0;
 }
 
 h2,.h2 {
@@ -303,11 +303,11 @@ textarea#comment {
   padding-top: 15px;
   box-sizing: border-box;
   font-weight: 300;
-  text-align: right;
+  text-align: center;
 }
 
 #subscribe-banner-copy span {
-  margin-left: 55px;
+  margin-left: 65px;
 }
 
 #subscribe-banner-form {
@@ -316,13 +316,14 @@ textarea#comment {
 
 #subscribe-banner-form .email-input {
   display: inline-block;
-  width: 200px;
+  width: 246px;
+  height: 40px;
   padding: 10px 20px;
-  border: 4px solid #36474f;
+  border: 3px solid #36474f;
   color: rgba(0,142,198,1);
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -o-text-overflow: clip;
   text-overflow: clip;
   float: left;
@@ -332,18 +333,16 @@ textarea#comment {
 
 #subscribe-banner-form .subscribe-button {
   display: inline-block;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border: none;
   color: #ffffff;
-  -o-text-overflow: clip;
-  text-overflow: clip;
   background: #36474f;
   float: left;
-  font-weight: 100;
+  border: 0;
+  font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  border: 4px solid #36474f;
-  padding: 10px 20px;
+  height: 40px;
+  width: 105px;
+  line-height: 36px;
+  vertical-align: middle;
+  text-align: center;
 }
