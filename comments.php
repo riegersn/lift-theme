@@ -6,7 +6,7 @@
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php
-			printf( _nx( 'One comment on “%2$s”', '%1$s comments on “%2$s”', get_comments_number(), 'comments title'),
+			printf( _nx( 'One awesome comment.', '%1$s awesome comments.', get_comments_number(), 'comments title'),
 				number_format_i18n( get_comments_number() ), get_the_title() );
 			?>
 		</h3>

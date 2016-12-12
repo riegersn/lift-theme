@@ -141,3 +141,43 @@ class comment_walker extends Walker_Comment {
 	<?php }
 
 }
+
+function my_update_comment_field( $comment_field ) {
+
+  $comment_field =
+    '<p class="comment-form-comment">
+            <textarea required id="comment" name="comment" placeholder="' . esc_attr__( "Start talking!", "text-domain" ) . '" cols="45" rows="8" aria-required="true"></textarea>
+        </p>';
+
+  return $comment_field;
+}
+add_filter( 'comment_form_field_comment', 'my_update_comment_field' );
+
+function my_update_comment_fields( $fields ) {
+
+	$commenter = wp_get_current_commenter();
+	$req       = get_option( 'require_name_email' );
+	$label     = $req ? '*' : ' ' . __( '(optional)', 'text-domain' );
+	$aria_req  = $req ? "aria-required='true'" : '';
+
+	$fields['author'] =
+		'<p class="comment-form-author">
+			<input id="author" name="author" type="text" placeholder="' . esc_attr__( "*Your real name", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+		'" size="30" ' . $aria_req . ' />
+		</p>';
+
+	$fields['email'] =
+		'<p class="comment-form-email">
+			<input id="email" name="email" type="email" placeholder="' . esc_attr__( "*Your email", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
+		'" size="30" ' . $aria_req . ' />
+		</p>';
+
+	$fields['url'] =
+		'<p class="comment-form-url">
+			<input id="url" name="url" type="url"  placeholder="' . esc_attr__( "Your website (Optional)", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
+		'" size="30" />
+			</p>';
+
+	return $fields;
+}
+add_filter( 'comment_form_default_fields', 'my_update_comment_fields' );

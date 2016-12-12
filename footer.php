@@ -1,18 +1,13 @@
     </div><!-- /.container -->
 
-    <footer class="blog-footer">
-      <p>Footer by @riegersn</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
+    <footer class="ft-container">
+      <p>Theme by theLyftGuy</p>
+      <p>Copyright © 2016 theLyftGuy.net</p>
+      <!-- <h4>Follow Us</h4> -->
+      <a href="https://www.facebook.com/theLyftGuy/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></href>
+      <a href="http://twitter.com/thelyftguy_net" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></href>
     </footer>
 
-
-    <!-- Core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
     <?php wp_footer(); ?>
   </body>
 </html>

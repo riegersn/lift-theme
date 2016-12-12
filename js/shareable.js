@@ -1,16 +1,18 @@
-var sb_stop = jQuery('#subscribe-banner').position().top - 40;
-
 jQuery(window).scroll(function(){
-    if (jQuery(window).scrollTop() >= 810) {
-      jQuery('.sb-content-wrap').removeClass('sb-fixed-hidden');
-       jQuery('.sb-content-wrap').addClass('sb-fixed-content-wrap');
+    var sb_content_wrap = jQuery('.sb-content-wrap'),
+        scroll_top = jQuery(window).scrollTop(),
+        banner_top = jQuery('#subscribe-banner').position().top - sb_content_wrap.height() - 55;
+
+    if (scroll_top >= 760 && scroll_top < banner_top) {
+      sb_content_wrap.removeClass('sb-fixed-hidden');
+       sb_content_wrap.addClass('sb-fixed-content-wrap');
     }
-    else if (jQuery(window).scrollTop() >= sb_stop) {
-      jQuery('.sb-content-wrap').addClass('sb-fixed-hidden');
+    else if (scroll_top > banner_top) {
+      sb_content_wrap.addClass('sb-fixed-hidden');
     }
     else {
-      jQuery('.sb-content-wrap').removeClass('sb-fixed-hidden');
-       jQuery('.sb-content-wrap').removeClass('sb-fixed-content-wrap');
+      sb_content_wrap.removeClass('sb-fixed-hidden');
+       sb_content_wrap.removeClass('sb-fixed-content-wrap');
     }
 
 });
