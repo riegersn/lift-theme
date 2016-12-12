@@ -19,14 +19,13 @@ lyftguy theme
 		</div>
 </div>
 
-<div id="subscribe-banner">
-	<div>
-		<div id="subscribe-banner-copy">
+<div id="lg-subscribe">
+	<div class="lg-subscribe-copy">
 		Work less not more,<br/><span>Smarter not harder.</span>
 	</div>
-	<div id="subscribe-banner-form">
+	<div class="lg-subscribe-form">
 		<input class="email-input" placeholder="your@email.com" />
-		<input type="button" class="subscribe-button" value="Subscribe" />
+		<input type="button" class="subscribe-button" value="I'm In!" />
 	</div>
 </div>
 
