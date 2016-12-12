@@ -266,12 +266,14 @@ h4, .h4 {
     margin-bottom: 20px;
 }
 
-.comments-area {
+div#cm-container {
     box-sizing: border-box;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 auto;
     max-width: 800px;
     padding: 10px 20px;
+    font-size: 0.9375rem;
+    line-height: 24px;
 }
 
 .comments-area ul {
@@ -286,18 +288,23 @@ h4, .h4 {
 }
 
 .cm-gravatar {
-        float: left;
-        margin: 0 20px 0 0;
+    float: left;
+    margin: 0 20px 0 0;
 }
 
 .cm-gravatar img {
-    vertical-align: top;
+  width: 48px!important;
+  height: 48px!important;
+  -webkit-border-radius: 4px!important;
+  -moz-border-radius: 4px!important;
+  border-radius: 4px!important;
+  float: left!important;
+  margin-right: 12px!important;
 }
 
 .cm-content {
     overflow: hidden;
     padding: 2px 0 20px 0;
-    line-height: 28px;
 }
 
 .cm-content p {
@@ -314,14 +321,14 @@ h4, .h4 {
     margin-right: 20px;
 }
 
-.cm-content a:first-child {
-    color: #464655;
-}
-
 h3.comments-title {
     font-weight: 300;
     font-size: 26px;
     margin-bottom: 40px;
+}
+
+div.cm-content > strong > a {
+  color: #464655 !important;
 }
 
 /*
