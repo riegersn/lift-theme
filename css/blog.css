@@ -1,3 +1,29 @@
+/*-----------------------------------------------------------------
+
+ Theme Name: theLyftGuy
+ Version: 1.0.0
+ Description: Custom theme for thelyftguy.net
+ Author: Shawn Rieger
+ Author URI: https://about.me/shawnrieger
+ License: MIT License Copyright (c) 2016 Shawn Rieger
+
+-------------------------------------------------------------------
+
+/*-----------------------------------------------------------------
+[# Colors]
+-------------------------------------------------------------------
+
+# Primary   : #1e1e1e
+# Secondary : #fafafa
+# Links     : #e91e78
+
+
+/*-----------------------------------------------------------------
+[# Reset]
+------------------------------------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html{font-size:62.5%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}body{background:#fff;line-height:1;}article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0;}caption,th,td{font-weight:normal;text-align:left;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}blockquote,q{quotes:none}a:focus{outline:0}a:hover,a:active{outline:0}a img{border:0}img{max-width:100%;height:auto;}select{max-width:100%}input,select,textarea,button{font-family:inherit}
+
+
 :root
 {
   font-size:16px;
@@ -416,9 +442,9 @@ textarea#comment
 {
     font-weight: 300;
     font-size: 15px;
-    background-color:#313131;
-    border-top:1px solid #e5e5e5;
-    color:#999;
+    background-color:#1e1e1e;
+    /*border-top:1px solid #e5e5e5;*/
+    color:#adacb5;
     padding:40px 0;
     text-align:center;
     display: inline-block;
