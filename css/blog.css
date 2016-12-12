@@ -13,11 +13,10 @@
 [# Colors]
 -------------------------------------------------------------------
 
-# Black     : #1e1e1e
-# White     : #fafafa
-# Grey      : #adacb5
-# Accent    : #e91e78
-# Secondary : #0eb1d2
+# Primary   : #1e1e1e
+# Secondary : #fafafa
+# Links     : #e91e78
+
 
 /*-----------------------------------------------------------------
 [# Reset]
@@ -38,7 +37,6 @@ body,html
 body
 {
   color:#1e1e1e;
-  background-color: #fafafa;
   font:normal 400 1.125em/1.75em "Open Sans", Arial, Helvetica, sans-serif;
   letter-spacing:normal;
   margin:0;
@@ -65,15 +63,15 @@ img
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 {
-  color:#1e1e1e;
+  color:#333;
   font-weight:700;
   margin-top:0;
 }
 
 h2,.h2
 {
-  font-size:36px;
-  font-weight:700;
+  font-size:42px;
+  font-weight:100;
   line-height:42px;
   margin-bottom:12px;
 }
@@ -86,11 +84,11 @@ h4,.h4
 
 .lift-nav-wrapper
 {
-  background-color:#fafafa;
+  background-color:#f2f4f4;
   box-shadow:0 3px 25px 0 rgba(0,0,0,0.75);
   text-align:center;
   width:100%;
-}/p
+}
 
 .lift-nav
 {
@@ -103,7 +101,7 @@ h4,.h4
 .site-logo img
 {
   height:100px;
-  margin:40px 0 15px 0;
+  margin:20px 0 15px;
   width:375px;
 }
 
@@ -120,8 +118,8 @@ h4,.h4
   -moz-transition:color 300ms cubic-bezier(0.25,0.25,0.75,0.75);
   -o-transition:color 300ms cubic-bezier(0.25,0.25,0.75,0.75);
   -webkit-transition:color 300ms cubic-bezier(0.25,0.25,0.75,0.75);
-  border-right:1px solid #adacb5;
-  color:#1e1e1e;
+  border-right:1px solid #333447;
+  color:#333447;
   display:inline-block;
   font-size:1.125rem;
   letter-spacing:-.5px;
@@ -129,7 +127,6 @@ h4,.h4
   position:relative;
   text-decoration:none;
   text-transform:lowercase;
-  line-height: 1.125rem;
   transition:color 300ms cubic-bezier(0.25,0.25,0.75,0.75);
 }
 
@@ -146,7 +143,7 @@ h4,.h4
 
 .lift-nav li a:hover:after
 {
-  background:#0eb1d2;
+  background:#008ec6;
   width:100%;
 }
 
@@ -154,7 +151,7 @@ h4,.h4
 {
   border-right:0;
 }
-/*
+
 .blog-header
 {
   padding-bottom:20px;
@@ -168,18 +165,18 @@ h4,.h4
 
 .blog-post-meta
 {
-  border-top:1px solid #adacb5;
-  color:#adacb5;
+  border-top:1px solid #8D99AE;
+  color:#8D99AE;
   font-size:.9375rem;
   font-weight:100;
   margin:0;
   padding:3px 0;
-}*/
+}
 
-/*.blog-description
+.blog-description
 {
   color:#999;
-}*/
+}
 
 .pager
 {
@@ -195,7 +192,7 @@ h4,.h4
   width:140px;
 }
 
-/*.blog-post-featured
+.blog-post-featured
 {
   background-position:50% 50%;
   background-repeat:no-repeat;
@@ -205,20 +202,6 @@ h4,.h4
   position:relative;
   width:100%;
   z-index:-1;
-}*/
-
-.bp-title
-{
-  margin-bottom:5px;
-}
-
-.bp-meta
-{
-    border-top:1px solid #8D99AE;
-    color:#8D99AE;
-    font-size:.9375rem;
-    font-weight:100;
-    margin: 0 0 20px 0;
 }
 
 .bp-container
@@ -228,6 +211,16 @@ h4,.h4
   max-width:750px;
   overflow:hidden;
   padding:0 20px;
+}
+
+.bp-title
+{
+  margin-bottom:5px;
+}
+
+.bp-meta
+{
+  margin-bottom:20px;
 }
 
 div#cm-container
@@ -332,7 +325,7 @@ div#respond
 #respond input[type="submit"]
 {
   background-color:#e91e78;
-  color:#fafafa;
+  color:#fff;
   cursor:pointer;
   margin-top:4px;
   width:120px!important;
@@ -344,18 +337,20 @@ textarea#comment
   width:200px;
 }
 
-#lg-subscribe
+#subscribe-banner
 {
-  color: #fafafa;
-  background-color:#0eb1d2;
-  box-sizing: content-box;
-  height:100px;
+  background-color:#0EB1D2;
+  box-shadow:0 0 20px 0 rgba(0,0,0,0.25);
+  height:90px;
   margin:40px 0;
   width:100%;
 }
 
 #subscribe-banner div
 {
+  height:inherit;
+  margin:0 auto;
+  max-width:800px;
 }
 
 #subscribe-banner div div
@@ -366,11 +361,8 @@ textarea#comment
   width:50%;
 }
 
-.lg-subscribe-copy
+#subscribe-banner-copy
 {
-  height:inherit;
-  margin:0 auto;
-  max-width:800px;
   box-sizing:border-box;
   color:#fff;
   font-size:1.75rem;
@@ -379,17 +371,17 @@ textarea#comment
   text-align:center;
 }
 
-.lg-subscribe-copy span
+#subscribe-banner-copy span
 {
   margin-left:65px;
 }
 
-.lg-subscribe-form
+#subscribe-banner-form
 {
   padding-top:23px;
 }
 
-.lg-subscribe-form .email-input
+#subscribe-banner-form .email-input
 {
   -moz-box-sizing:border-box;
   -o-text-overflow:clip;
@@ -407,11 +399,11 @@ textarea#comment
   width:246px;
 }
 
-.lg-subscribe-form .subscribe-button
+#subscribe-banner-form .subscribe-button
 {
-  background:#8D99AE;
+  background:#36474f;
   border:0;
-  color:#fafafa;
+  color:#fff;
   cursor:pointer;
   display:inline-block;
   float:left;
@@ -448,10 +440,11 @@ textarea#comment
 
 .ft-container
 {
-    color:#adacb5;
-    background-color:#1e1e1e;
     font-weight: 300;
     font-size: 15px;
+    background-color:#1e1e1e;
+    /*border-top:1px solid #e5e5e5;*/
+    color:#adacb5;
     padding:40px 0;
     text-align:center;
     display: inline-block;
@@ -459,11 +452,11 @@ textarea#comment
 }
 
 .ft-container h4 {
-    color:#fafafa;
+    color:#fff;
     margin-bottom:6px;
 }
 
 .ft-container i {
     font-size: 26px;
-    padding: 14px 10px 0 10px;
+    padding: 0 10px;
 }
