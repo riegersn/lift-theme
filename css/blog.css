@@ -13,16 +13,16 @@
 [# Colors]
 -------------------------------------------------------------------
 
-# Primary   : #1e1e1e
-# Secondary : #fafafa
-# Links     : #e91e78
+# Black     : #1e1e1e
+# White     : #fafafa
+# Grey      : #adacb5
+# Accent    : #e91e78
+# Secondary : #0eb1d2
 
 
 /*-----------------------------------------------------------------
 [# Reset]
 ------------------------------------------------------------------*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html{font-size:62.5%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}body{background:#fff;line-height:1;}article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0;}caption,th,td{font-weight:normal;text-align:left;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}blockquote,q{quotes:none}a:focus{outline:0}a:hover,a:active{outline:0}a img{border:0}img{max-width:100%;height:auto;}select{max-width:100%}input,select,textarea,button{font-family:inherit}
-
 
 :root
 {
@@ -63,7 +63,7 @@ img
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 {
-  color:#333;
+  color:#1e1e1e;
   font-weight:700;
   margin-top:0;
 }
@@ -118,8 +118,8 @@ h4,.h4
   -moz-transition:color 300ms cubic-bezier(0.25,0.25,0.75,0.75);
   -o-transition:color 300ms cubic-bezier(0.25,0.25,0.75,0.75);
   -webkit-transition:color 300ms cubic-bezier(0.25,0.25,0.75,0.75);
-  border-right:1px solid #333447;
-  color:#333447;
+  border-right:1px solid #adacb5;
+  color:#1e1e1e;
   display:inline-block;
   font-size:1.125rem;
   letter-spacing:-.5px;
@@ -143,7 +143,7 @@ h4,.h4
 
 .lift-nav li a:hover:after
 {
-  background:#008ec6;
+  background:#0eb1d2;
   width:100%;
 }
 
@@ -165,8 +165,8 @@ h4,.h4
 
 .blog-post-meta
 {
-  border-top:1px solid #8D99AE;
-  color:#8D99AE;
+  border-top:1px solid #adacb5;
+  color:#adacb5;
   font-size:.9375rem;
   font-weight:100;
   margin:0;
@@ -175,7 +175,7 @@ h4,.h4
 
 .blog-description
 {
-  color:#999;
+  color:#adacb5;
 }
 
 .pager
@@ -230,7 +230,7 @@ div#cm-container
   font-weight:400;
   line-height:24px;
   margin:0 auto;
-  max-width:800px;
+  max-width:660px;
   padding:10px 20px;
 }
 
@@ -302,10 +302,10 @@ div#respond
   -webkit-border-radius:4px;
   -webkit-box-sizing:content-box;
   background:#F5F8FA;
-  border:1px solid #DFE4E6;
+  border:1px solid #adacb5;
   border-radius:4px;
   box-sizing:content-box;
-  color:#565664;
+  color:#adacb5;
   display:inline-block;
   font-size:15px!important;
   padding:10px 20px;
@@ -325,7 +325,7 @@ div#respond
 #respond input[type="submit"]
 {
   background-color:#e91e78;
-  color:#fff;
+  color:#fafafa;
   cursor:pointer;
   margin-top:4px;
   width:120px!important;
@@ -339,7 +339,7 @@ textarea#comment
 
 #subscribe-banner
 {
-  background-color:#0EB1D2;
+  background-color:#0eb1d2;
   box-shadow:0 0 20px 0 rgba(0,0,0,0.25);
   height:90px;
   margin:40px 0;
@@ -364,7 +364,7 @@ textarea#comment
 #subscribe-banner-copy
 {
   box-sizing:border-box;
-  color:#fff;
+  color:#fafafa;
   font-size:1.75rem;
   font-weight:300;
   padding-top:15px;
@@ -386,9 +386,9 @@ textarea#comment
   -moz-box-sizing:border-box;
   -o-text-overflow:clip;
   -webkit-box-sizing:border-box;
-  border:3px solid #36474f;
+  border:3px solid #1a1a1a;
   box-sizing:border-box;
-  color:#008ec6;
+  color:#0eb1d2;
   display:inline-block;
   float:left;
   font-size:16px;
@@ -401,9 +401,9 @@ textarea#comment
 
 #subscribe-banner-form .subscribe-button
 {
-  background:#36474f;
+  background:#1a1a1a;
   border:0;
-  color:#fff;
+  color:#fafafa;
   cursor:pointer;
   display:inline-block;
   float:left;
@@ -452,7 +452,7 @@ textarea#comment
 }
 
 .ft-container h4 {
-    color:#fff;
+    color:#fafafa;
     margin-bottom:6px;
 }
 
