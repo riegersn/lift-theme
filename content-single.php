@@ -19,14 +19,10 @@ lyftguy theme
 		</div>
 </div>
 
-<div id="subscribe-banner">
-	<div>
-		<div id="subscribe-banner-copy">
-		Work less not more,<br/><span>Smarter not harder.</span>
-	</div>
-	<div id="subscribe-banner-form">
-		<input class="email-input" placeholder="your@email.com" />
-		<input type="button" class="subscribe-button" value="Subscribe" />
+<div id="bp-signup">
+	<div class="bp-signup-content">
+		Work less not more, smarter not harder.<br/>
+		<a href="#">Sign Up Now!</a>
 	</div>
 </div>
 

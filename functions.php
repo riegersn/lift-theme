@@ -1,15 +1,17 @@
 <?php
 
+show_admin_bar( false ); // disable the admin bar.
+
 function lift_scripts() {
 
-	/* scripts
+	/* Scripts
 	 * ----------------------------------------*/
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 	wp_enqueue_script( 'shareable', get_template_directory_uri() . '/js/shareable.js');
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
 
-	/* stylesheets
+	/* Stylesheets
 	 * ----------------------------------------*/
 	wp_enqueue_style( 'shareable', get_template_directory_uri() . '/css/shareable.css' );
 	wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );
@@ -17,13 +19,11 @@ function lift_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 
-/* fonts
+/* Fonts
  * ----------------------------------------*/
  function lift_google_fonts() {
-	// open sans
 	wp_register_style('Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 	wp_enqueue_style('Open Sans');
-	// roboto slab
 	wp_register_style('Roboto Slab', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 	wp_enqueue_style('Roboto Slab');
 }
@@ -38,7 +38,7 @@ add_theme_support( 'post-thumbnails' ); // Support Featured Images
 
 
 /* ----------------------------------------*
- * settings menu
+ * Settings Menu
  * ----------------------------------------*/
 function custom_settings_add_menu() {
   add_menu_page( 'Custom Settings', 'Custom Settings', 'manage_options', 'custom-settings', 'custom_settings_page', null, 99);
@@ -88,15 +88,17 @@ class comment_walker extends Walker_Comment {
 		} ?>
 
 		<li <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>">
-			<div class="cm-gravatar"><?php echo get_avatar( $comment, 75, 'mystery', 'Author’s gravatar' ); ?></div>
-			<div class="cm-content">
-				<strong><a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a></strong> -
-				<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>,
-				<?php edit_comment_link('Edit this comment','',''); ?>
-				<?php if ($comment->comment_approved == '0') : ?>
-				<p class="cm-comment">Your comment is awaiting moderation.</p>
-				<?php endif; ?>
-				<?php comment_text() ?>
+			<div class="cm-content-wrap">
+				<a href="<?php comment_author_url(); ?>"><?php echo get_avatar( $comment, 60, 'mystery', 'Author’s gravatar' ); ?></a>
+				<div class="cm-content">
+					<strong><a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a></strong> -
+					<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+					<!-- <?php edit_comment_link('Edit this comment','',''); ?> -->
+					<?php if ($comment->comment_approved == '0') : ?>
+					<p class="cm-comment">Your comment is awaiting moderation.</p>
+					<?php endif; ?>
+					<?php comment_text() ?>
+				</div>
 			</div>
 
 	<?php }
