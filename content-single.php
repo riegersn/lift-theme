@@ -21,7 +21,7 @@ lyftguy theme
 
 <div id="bp-signup">
 	<div class="bp-signup-content">
-		Work less not more, smarter not harder.<br/>
+		Work smarter, work less.<br/>
 		<a href="#">Sign Up Now!</a>
 	</div>
 </div>
