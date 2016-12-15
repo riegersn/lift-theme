@@ -37,6 +37,14 @@ add_theme_support( 'title-tag' ); // Titles
 add_theme_support( 'post-thumbnails' ); // Support Featured Images
 
 
+function lift_theme_menu() {
+  register_nav_menus( array(
+    'header' => 'Header menu'
+  ) );
+ }
+
+add_action( 'after_setup_theme', 'lift_theme_menu' );
+
 /* ----------------------------------------*
  * Settings Menu
  * ----------------------------------------*/
