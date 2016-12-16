@@ -5,7 +5,7 @@ lyftguy theme
 	content-single.php
 -->
 
-<div class="parallax-window" style="width:100%; height:450px;" data-parallax="scroll" data-image-src="<?php the_post_thumbnail_url( 'full' ); ?>"></div>
+<div class="parallax-window" style="width:100%; height:500px;" data-parallax="scroll" data-image-src="<?php the_post_thumbnail_url( 'full' ); ?>"></div>
 
 <div class="bp-container">
 

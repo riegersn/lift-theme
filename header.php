@@ -16,7 +16,7 @@
          <nav class="hd-content">
             <div class="hd-logo">
                <a href="<?php bloginfo( 'wpurl' );?>">
-                   <img class="hd-logo-img" src="http://localhost:8888/wp-content/uploads/2016/12/lg-horizontal-logo-dark.png">
+                   <img class="hd-logo-img" src="http://localhost:8888/wp-content/uploads/2016/12/lg-horizontal-logo.png">
                </a>
             </div>
             <div class="hd-menu">
