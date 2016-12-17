@@ -29,7 +29,10 @@
 /* brand colors */
 .sb-facebook { background: #3a579a; }
 .sb-twitter { background: #00aced; }
-.sb-pinterest { background: #C92228; }
+.sb-googleplus { background: #d34836; }
+.sb-linkedin { background: #0077b5; }
+.sb-reddit { background: #ff4500; }
+.sb-email { background: #333333; }
 
 .sb-button { display: inline-block; }
 
