@@ -33,6 +33,18 @@ body, html {
     min-width: 100%;
 }
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
     color: #333333;
     background-color: #f2f4f4;
@@ -183,6 +195,9 @@ a:hover {
 
 img {
     border-style: none;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -218,18 +233,15 @@ a.button {
     -webkit-transition: all 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
 }
 
-.hd-wrapper {
+.tlg-header-container {
     background-color: #f2f4f4;
     text-align: center;
     width: 100%;
     padding: 50px 0 20px 0;
 }
 
-.hd-content {
-    /*display: inline-block;
-    height: 100%;
-    margin: 0 auto;
-    width: 900px;*/
+.tlg-header-wrap {
+    display: block;
 }
 
 .hd-logo-img {
@@ -238,13 +250,13 @@ a.button {
     width: 375px;
 }
 
-.hd-menu {
+.tlg-header-menu {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
 
-.hd-content li a {
+.tlg-header-wrap li a {
     -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
     -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
     -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
@@ -261,7 +273,7 @@ a.button {
     transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
 }
 
-.hd-content li a:after {
+.tlg-header-wrap li a:after {
     background: transparent;
     content: '';
     display: block;
@@ -271,19 +283,19 @@ a.button {
     width: 0;
 }
 
-.hd-content li a:hover:after {
+.tlg-header-wrap li a:hover:after {
     background: #0eb1d2;
     width: 100%;
 }
 
-.hd-content li:last-child a {
+.tlg-header-wrap li:last-child a {
     border-right: 0;
 }
 
 .hp-wrap {
-    max-width:800px;
-    box-sizing: border-box;
-    padding: 0 20px;
+    max-width:1000px;
+    width: 85%;
+        padding: 0 20px;
     height: auto;
     margin: 0 auto;
 }
@@ -291,8 +303,7 @@ a.button {
 .hp-promo-wrap {
     width: 100%;
     background-color: inherit;
-    box-sizing: border-box;
-    height: auto;
+        height: auto;
     color: #fafafa;
     font-weight: 400;
     text-align: center;
@@ -314,9 +325,10 @@ a.button {
 
 .hp-item {
     display: block;
-    max-width: 300px;
-    margin: 40px;
+    /*max-width: 300px;*/
+    margin: 10px;
     float: left;
+    width: 40%;
 }
 
 .hp-item img {
@@ -326,6 +338,8 @@ a.button {
     border-radius: 4px;
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.15);
     display: block;
+    width: 100%
+    height: auto;
 
 }
 
@@ -459,8 +473,7 @@ table thead { background: #f9f9f9; color: #222; }
 }
 
 #cm-container {
-    box-sizing: border-box;
-    font-size: .9375rem;
+        font-size: .9375rem;
     font-weight: 300;
     line-height: 24px;
     margin: 0 auto;
@@ -583,8 +596,7 @@ textarea#comment {
     margin: 40px 0;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box;
-}
+    }
 
 .bp-signup-content {
     width: auto;
@@ -614,17 +626,17 @@ textarea#comment {
     margin-top: 8px;
 }
 
-.hd-content ul, .comments-area ul {
+.tlg-header-wrap ul, .comments-area ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.hd-content li, .cm-gravatar {
+.tlg-header-wrap li, .cm-gravatar {
     float: left;
 }
 
-.hd-content li a:hover, .hd-content li.current_page_item a {
+.tlg-header-wrap li a:hover, .tlg-header-wrap li.current_page_item a {
     color: #e91e78;
 }
 

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="bp-featured-img" style="background-image: url(http://localhost:8888/wp-content/uploads/2016/12/lyft-amp-illo-1200x630.png)">
+<div class="bp-featured-img" style="background-image: url(http://localhost:8888/wp-content/uploads/2016/12/Lyft_PressKit_02.jpg)">
 	<div class="home-featured-overlay">
 		<div class="hp-promo-wrap">
 			<p>
