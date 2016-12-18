@@ -15,7 +15,8 @@ lyftguy theme
 		<?php get_template_part('shareable') ?>
 
 		<h2 class="bp-title"><?php the_title(); ?></h2>
-		<p class="bp-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
+		<p class="bp-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a>
+		</p>
 
 		<div class="bp-content">
 			<?php the_content(); ?>

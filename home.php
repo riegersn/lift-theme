@@ -14,10 +14,6 @@
 	</div>
 </div>
 
-<div class="hp-section-header">
-	<h1>Latest Blog Posts</h1>
-</div>
-
 <div class="tlg-posts-wrap clearfix">
 
 	<?php
