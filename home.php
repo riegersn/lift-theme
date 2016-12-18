@@ -14,10 +14,12 @@
 	</div>
 </div>
 
-<div class="hp-wrap">
-	<div class="hp-section-header">
-		<h1>Latest Blog Posts</h1>
-	</div>
+<div class="hp-section-header">
+	<h1>Latest Blog Posts</h1>
+</div>
+
+<div class="tlg-posts-wrap clearfix">
+
 	<?php
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -37,6 +39,6 @@
 		endif;
 	?>
 
-</div>
+	</div>
 
 <?php get_footer(); ?>
