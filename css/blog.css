@@ -235,39 +235,52 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .tlg-header-container {
-    background-color: #f2f4f4;
-    text-align: center;
-    width: 100%;
-    padding: 50px 0 20px 0;
+  background-color: #1e1e1e;
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
 .tlg-header-wrap {
-    display: block;
+  display: inline-flex;
+  margin: 0 auto;
+  max-width: 900px;
+  overflow: auto;
+  padding: 20px;
 }
 
-.hd-logo-img {
-    height: 100px;
-    margin: 0 0 40px 0;
-    width: 375px;
+.hd-logo {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+
+.hd-logo img {
+  height: 70px;
+  width: auto;
 }
 
 .tlg-header-menu {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+  float: left;
+  height: 22px ;
+  vertical-align: middle;
+  margin: auto 0;
 }
 
 .tlg-header-wrap li a {
     -moz-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
     -o-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
     -webkit-transition: color 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-    border-right: 1px solid #333;
-    color: #333;
+    border-right: 1px solid #999;
+    color: #999;
     display: inline-block;
-    font-size: 1.3125rem;
-    letter-spacing: -.5px;
+    font-size: 1.25rem;
+    letter-spacing: -1px;
     line-height: 1.125;
-    padding: 0 15px;
+    padding: 0 7px;
     position: relative;
     text-decoration: none;
     text-transform: lowercase;

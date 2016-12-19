@@ -16,7 +16,7 @@
          <nav class="tlg-header-wrap">
             <div class="hd-logo">
                <a href="<?php bloginfo( 'wpurl' );?>">
-                   <img class="hd-logo-img" src="http://localhost:8888/wp-content/uploads/2016/12/lg-horizontal-logo-bilinear.png">
+                   <img class="hd-logo-img" src="http://localhost:8888/wp-content/uploads/2016/12/ellipse4230-7.png">
                </a>
             </div>
             <div class="tlg-header-menu">
