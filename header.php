@@ -11,18 +11,21 @@
 	<body>
 		<div class="header-main">
 			<nav class="header-content">
-				<div class="header-logo-container">
+				<div class="col header-logo-container">
 					<a href="<?php bloginfo( 'wpurl' );?>">
 						<img class="header-logo" src="http://localhost:8888/wp-content/uploads/2016/12/logo-dark-60h.png">
 					</a>
 				</div>
-				<div class="header-menu">
+				<div class="col header-menu">
 					<ul>
 						<li>
 							<a href="<?php bloginfo( 'wpurl' );?>">Blog</a>
 						</li>
 						<?php wp_list_pages( '&title_li=' ); ?>
 					</ul>
+				</div>
+				<div class="header-button">
+					<a class="button-border" href="#">START DRIVING NOW</a>
 				</div>
 			</nav>
 		</div>
