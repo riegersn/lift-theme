@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="post-list-container clearfix">
+<div class="post-list-container section">
 
 	<?php
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -21,6 +21,12 @@
 		endif;
 	?>
 
-	</div>
+</div>
+
+<script type="text/javascript">
+	jQuery('.post-list-container').masonry({
+  		itemSelector: '.post-entry'
+	});
+</script>
 
 <?php get_footer(); ?>

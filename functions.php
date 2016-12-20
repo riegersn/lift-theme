@@ -9,7 +9,8 @@ function lift_scripts() {
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 	wp_enqueue_script( 'shareable', get_template_directory_uri() . '/js/shareable.js');
-	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
+	// wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
+	wp_enqueue_script( 'masonary', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js');
 
 	/* Stylesheets
 	 * ----------------------------------------*/
@@ -64,7 +65,7 @@ if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
             $wpse_excerpt = strip_tags($wpse_excerpt, wpse_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
 
             //Set the excerpt word count and only break after sentence is complete.
-                $excerpt_word_count = 160;
+                $excerpt_word_count = 80;
                 $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
                 $tokens = array();
                 $excerptOutput = '';

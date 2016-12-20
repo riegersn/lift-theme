@@ -200,15 +200,59 @@ blockquote {
 .section {
     padding: 0;
     margin: 0;
+    overflow: auto;
     clear: both;
 }
 
 .col {
     display: block;
     float: left;
+    margin: 2%;
+    /*
+    TODO: @span-2-2 plus margins don't work right
+    */
+}
+
+.col-nomargin {
     margin: 0;
 }
 
+.group:before,
+.group:after {
+    display: table;
+
+    content: "";
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1; /* For IE 6/7 */
+}
+
+.span-2-2 {
+    width: 100%;
+}
+.span-1-2 {
+    width: 46%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .span_2_of_2,
+    .span_1_of_2 {
+        width: 100%;
+    }
+}
 
 
 
@@ -228,8 +272,8 @@ a:hover {
 
 img {
     height: auto;
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
 
     border-style: none;
 }
@@ -314,8 +358,8 @@ img {
 }
 
 .header-logo {
-    height: 60px;
     width: auto;
+    height: 60px;
     min-height: 60px;
     padding: 20px 0;
 }
@@ -354,8 +398,8 @@ img {
 
 .header-menu a:after {
     display: block;
-    height: 3px;
     width: 0;
+    height: 3px;
     margin: auto;
 
     content: "";
@@ -400,15 +444,19 @@ img {
 
 
 /*-----------------------------------------------------------------
-[# Home Content]
+[# Home/Welcome]
 -------------------------------------------------------------------*/
 
 .post-list-container {
     display: block;
-    height: auto;
     width: 88%;
-    max-width: 760px;
+    height: auto;
+    max-width: 800px;
+    /* padding: 0 10px; */
     margin: 60px auto 0;
+    /* box-sizing: border-box; */
+
+    /* border: 1px dotted maroon; */
 }
 
 .post-list-link {
@@ -416,15 +464,22 @@ img {
 }
 
 .post-entry {
-    display: block;
-    margin-bottom: 80px;
-
-    background-color: #fafafa;
+    /* margin-bottom: 20px; */
+    border-radius: 4px;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
 }
 
-.post-list-content {
+.entry-wrap {
     padding: 26px;
+
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+.post-list-content {
+    line-height: 26px;
+
+    color: #666;
 }
 
 .post-list-title {
@@ -435,8 +490,13 @@ img {
 
 .post-list-image {
     display: block;
-    height: 400px;
+    /* width: 85%; */
+    height: 250px;
+    margin: 0 auto;
 
+    border-bottom: 1px solid #dcdcdc;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     background-position: 50% 50%;
     -webkit-background-size: cover;
        -moz-background-size: cover;
@@ -459,8 +519,8 @@ img {
     position: relative;
 
     display: block;
-    height: 550px;
     width: 100%;
+    height: 550px;
 
     background-position: 50% 50%;
     -webkit-background-size: cover;
@@ -511,8 +571,8 @@ p.wp-caption-text {
 
 .post-text img {
     height: auto;
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
 
     -webkit-border-radius: 6px;
        -moz-border-radius: 6px;
@@ -529,8 +589,8 @@ p.wp-caption-text {
     position: absolute;
     bottom: 0;
 
-    height: auto;
     width: 100%;
+    height: auto;
     padding: 0 20px;
     margin: 0 auto;
 
@@ -681,8 +741,8 @@ ol.child-comments {
 
 .cm-content-wrap img {
     float: left!important;
-    height: 60px!important;
     width: 60px!important;
+    height: 60px!important;
     margin-top: 3px;
 
     -webkit-border-radius: 4px!important;
@@ -790,8 +850,8 @@ textarea#comment {
 }
 
 .bp-signup-content {
-    height: inherit;
     width: auto;
+    height: inherit;
     box-sizing: content-box;
 
     font-family: "Roboto Slab";
