@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="tlg-posts-wrap clearfix">
+<div class="post-list-container clearfix">
 
 	<?php
 	if ( have_posts() ) : while ( have_posts() ) : the_post();

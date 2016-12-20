@@ -1,8 +1,8 @@
-<div class="tlg-home-entry clearfix">
+<article class="post-entry">
 
 
 	<?php if ( has_post_thumbnail() ) {?>
-		<div class="tlg-home-image" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ); ?>);">
+		<div class="post-list-image" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ); ?>);">
 		</div>
 	<?php } ?>
 
@@ -12,10 +12,10 @@
 		</a>
 	</div> -->
 
-	<div class="tlg-home-content">
-		<a class="tlg-home-title-link" href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+	<div class="post-list-content">
+		<a class="post-list-link" href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 		<?php the_excerpt(); ?>
 		<a class="button" href="<?php echo the_permalink(); ?>"> Continue reading...</a>
 	</div>
 
-</div>
+</article>

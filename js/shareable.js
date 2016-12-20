@@ -5,7 +5,7 @@ jQuery(window).scroll(function(){
     if (sb_content_wrap.length)
     {
         var scroll_top = jQuery(window).scrollTop(),
-            bp_title_top = jQuery('.bp-container > .bp-title').position().top - 160,
+            bp_title_top = jQuery('.post-content > .post-title').position().top - 160,
             banner_top = jQuery('#bp-signup').position().top - sb_content_wrap.height() - 120;
 
         if (scroll_top >= bp_title_top && scroll_top < banner_top) {
