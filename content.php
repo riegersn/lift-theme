@@ -1,7 +1,9 @@
 <article class="post-entry col span-1-2">
 	<?php if ( has_post_thumbnail() ) {?>
-		<div class="post-list-image" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ); ?>);">
-		</div>
+		<a href="<?php echo the_permalink(); ?>">
+			<div class="post-list-image" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ); ?>);">
+			</div>
+		</a>
 	<?php } ?>
 
 	<div class="entry-wrap">
@@ -15,7 +17,7 @@
 
 		<div class="post-list-content">
 			<?php the_excerpt(); ?>
-			<a class="button" href="<?php echo the_permalink(); ?>">Continue reading...</a>
+			<a class="button" href="<?php echo the_permalink(); ?>">Continue reading</a>
 		</div>
 	</div>
 
