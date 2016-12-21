@@ -1,4 +1,4 @@
-<article class="post-entry col span-1-2">
+<article class="post-entry col span-1-3">
 	<?php if ( has_post_thumbnail() ) {?>
 		<a href="<?php echo the_permalink(); ?>">
 			<div class="post-list-image" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ); ?>);">
