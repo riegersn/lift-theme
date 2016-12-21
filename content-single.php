@@ -14,13 +14,12 @@ lyftguy theme
 <div class="post-content">
 		<?php get_template_part('shareable') ?>
 
-		<h2 class="post-title"><?php the_title(); ?></h2>
+		<h1 class="post-title"><?php the_title(); ?></h1>
 		<p class="post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a>
 		</p>
 
-		<div class="post-text">
+
 			<?php the_content(); ?>
-		</div>
 </div>
 
 <div id="bp-signup">

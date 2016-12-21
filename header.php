@@ -13,7 +13,7 @@
 			<nav class="header-content">
 				<div class="col col-nomargin header-logo-container">
 					<a href="<?php bloginfo( 'wpurl' );?>">
-						<img class="header-logo" src="http://localhost:8888/wp-content/uploads/2016/12/logo-dark-60h.png">
+						<img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
 					</a>
 				</div>
 				<div class="col col-nomargin header-menu">

@@ -7,15 +7,15 @@ jQuery(window).scroll(function() {
         pc_top = jQuery('.post-content').position().top,
         pc_height = jQuery('.post-content').innerHeight(),
         sb_content_height = sb_content_wrap.height(),
-        freeze_point_top = Math.round(pc_top + 36) - 105,
-        freeze_point_bottom = Math.round(pc_top + pc_height - sb_content_height - 131);
+        freeze_point_top = Math.round(pc_top - 89),
+        freeze_point_bottom = Math.round(pc_top + pc_height - sb_content_height - 150);
 
     if (scroll_top >= freeze_point_top && scroll_top < freeze_point_bottom) {
       sb_content_wrap.css({'top': '', 'position': ''});
       sb_content_wrap.addClass('sb-fixed-content-wrap');
     }
     else if (scroll_top >= freeze_point_bottom) {
-      sb_content_wrap.css({'position': 'absolute', 'top': freeze_point_bottom + 131});
+      sb_content_wrap.css({'position': 'absolute', 'top': freeze_point_bottom + 150});
       sb_content_wrap.removeClass('sb-fixed-content-wrap');
     }
     else {
