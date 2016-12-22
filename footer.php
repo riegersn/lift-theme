@@ -1,6 +1,6 @@
-    </div><!-- /.container -->
+    </div><!-- /.m-container -->
 
-    <footer class="ft-container">
+    <footer class="m-footer">
         <p>The LyftGuy</p>
         <p>
             <a href="https://www.facebook.com/theLyftGuy/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>

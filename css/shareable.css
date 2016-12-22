@@ -1,7 +1,15 @@
-/*
- *  Shareable by Shawn Rieger
- *  12/08/2017
- */
+/*-----------------------------------------------------------------
+
+ Name: Shareable
+ Author: Shawn Rieger
+ License: MIT License Copyright (c) 2016 Shawn Rieger
+
+-------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------
+[# Setup
+-------------------------------------------------------------------*/
 
 .sb-content-wrap {
     position: absolute;
@@ -13,16 +21,52 @@
 
 .sb-fixed-content-wrap {
     position: fixed;
-    top: 150px; /* padding(26) + header(124) */
+    top: 154px; /* padding(26) + header(128) */
     clear: both;
 }
 
-.sb-fixed-hidden {
-    opacity: 0;
+.sb-button {
+    display: inline-block;
+    -webkit-transition: background-color .3s linear;
+    -moz-transition: background-color .3s linear;
+    -o-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+    background-color: #cbcfd3;
+}
+
+.sb-button .fa {
+    color: #f2f4f4;
+    height: 47px;
+    width: 47px;
+    font-size: 1.3rem;
+    line-height: 47px;
+    cursor: pointer;
+    -webkit-transition: color .3s linear;
+    -moz-transition: color .3s linear;
+    -o-transition: color .3s linear;
+    transition: color .3s linear;
+    text-align: center;
+    vertical-align: middle;
+}
+
+a.sb-button:hover i {
+    color: #fff;
+}
+
+.sb-content-wrap a:first-child {
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.sb-content-wrap a:last-child {
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
 }
 
 
-/* brand colors */
+/*-----------------------------------------------------------------
+[# Brand Colors
+-------------------------------------------------------------------*/
 
 .sb-facebook:hover {
     background: #3a579a;
@@ -46,42 +90,4 @@
 
 .sb-email:hover {
     background: #333;
-}
-
-.sb-button {
-    display: inline-block;
-    -webkit-transition: all 200ms cubic-bezier(.42, 0, .58, 1);
-    -moz-transition: all 200ms cubic-bezier(.42, 0, .58, 1);
-    -o-transition: all 200ms cubic-bezier(.42, 0, .58, 1);
-    transition: all 200ms cubic-bezier(.42, 0, .58, 1);
-    background-color: #cbcfd3;
-}
-
-.sb-button .fa {
-    height: 47px;
-    width: 47px;
-    font-size: 1.375rem;
-    line-height: 47px;
-    cursor: pointer;
-    -webkit-transition: color 200ms cubic-bezier(.42, 0, .58, 1);
-    -moz-transition: color 200ms cubic-bezier(.42, 0, .58, 1);
-    -o-transition: color 200ms cubic-bezier(.42, 0, .58, 1);
-    transition: color 200ms cubic-bezier(.42, 0, .58, 1);
-    text-align: center;
-    vertical-align: middle;
-    color: #f2f4f4;
-}
-
-a.sb-button:hover i {
-    color: #fff;
-}
-
-.sb-content-wrap a:first-child {
-    -webkit-border-radius: 6px 0 0 0;
-    border-radius: 6px 0 0 0;
-}
-
-.sb-content-wrap a:last-child {
-    -webkit-border-radius: 0 0 0 6px;
-    border-radius: 0 0 0 6px;
 }

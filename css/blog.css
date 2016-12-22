@@ -73,11 +73,25 @@ div {
 }
 
 
-
-
 /*-----------------------------------------------------------------
-[# Headings / Paragraphs / Lists / Tables ...
+[# Global stuff]
 -------------------------------------------------------------------*/
+
+a {
+    text-decoration: none;
+    color: #e91e78;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    border-style: none;
+}
 
 h1,
 h2,
@@ -104,16 +118,85 @@ h3 {
     font-size: 1.1176470588235294rem;
 }
 
-p, ul, table {
+p,
+ul,
+table {
     margin: 0 0 28px 0;
     overflow: visible;
 }
 
+table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+}
 
+table td,
+table th {
+    padding: 0;
+    padding: .857em;
+    margin: 0;
+    text-align: left;
+    border: 1px solid #e7e7e7;
+}
+
+table thead {
+    color: #222;
+    background: #f9f9f9;
+}
+
+
+/*---aligns---*/
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+    margin: 16px 0;
+}
+
+.alignright {
+    float: right;
+    margin: 16px 0 16px 16px;
+}
+
+.alignleft {
+    float: left;
+    margin: 16px 16px 16px 0;
+}
+
+.alignnone img {
+    vertical-align: bottom;
+}
+
+
+/*---floats---*/
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+
+/*---text-style---*/
+
+.textcenter {
+    text-align: center;
+}
+
+.textright {
+    text-align: right;
+}
+
+.textleft {
+    text-align: left;
+}
 
 
 /*-----------------------------------------------------------------
-[# Layout Classes
+[# Grid stuff
 -------------------------------------------------------------------*/
 
 .section {
@@ -181,27 +264,6 @@ p, ul, table {
 
 
 /*-----------------------------------------------------------------
-[# Defaults]
--------------------------------------------------------------------*/
-
-a {
-    text-decoration: none;
-    color: #e91e78;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-img {
-    height: auto;
-    max-height: 100%;
-    max-width: 100%;
-    border-style: none;
-}
-
-
-/*-----------------------------------------------------------------
 [# Custom Elements]
 -------------------------------------------------------------------*/
 
@@ -221,7 +283,7 @@ img {
     background-color: #e91e78;
 }
 
-.button-border {
+.buttons-border {
     display: inline-block;
     width: auto;
     padding: 8px 10px;
@@ -236,7 +298,7 @@ img {
     border-radius: 4px;
 }
 
-.button-border:hover {
+.buttons-border:hover {
     color: #e91e78;
     border-color: #0eb1d2;
     box-shadow: 0 0 3px 1px rgba(14, 177, 210, .5);
@@ -253,6 +315,7 @@ img {
     z-index: 9999;
     display: inline-block;
     width: 100%;
+    height: 128px;
     overflow: hidden;
     text-align: center;
     letter-spacing: 1;
@@ -276,13 +339,23 @@ img {
 .h-logo {
     height: 80px;
     width: auto;
-    padding: 22px 0 18px 0;
+    padding: 24px 0;
 }
 
 .h-menu {
     padding-top: 50px;
     vertical-align: middle;
     font-size: 1.1764705882352942rem;
+}
+
+.h-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.h-menu li {
+    float: left;
 }
 
 .h-menu a {
@@ -298,6 +371,11 @@ img {
     letter-spacing: -.5px;
     text-transform: lowercase;
     border-right: 1px solid #999;
+}
+
+.h-menu li a:hover,
+.h-menu .current_page_item a {
+    color: #e91e78;
 }
 
 .h-menu a:after {
@@ -333,7 +411,7 @@ img {
 -------------------------------------------------------------------*/
 
 .m-content {
-    padding: 138px 0 40px;
+    padding: 128px 0 40px;
 }
 
 
@@ -341,7 +419,7 @@ img {
 [# Home/Welcome]
 -------------------------------------------------------------------*/
 
-.sec-container {
+.c-column {
     display: block;
     height: auto;
     width: 88%;
@@ -349,15 +427,21 @@ img {
     margin: 20px auto;
 }
 
-.post-list-container {
-}
-
-.home-welcome {
-    margin: 0 9px;
+.c-panel {
+    margin: 15px 9px;
     padding: 26px;
+    overflow: hidden;
     border-radius: 6px;
     background-color: #fafafa;
 }
+
+.c-post-panel {
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+
+/* ---------------- */
 
 .post-list-link {
     color: #333;
@@ -402,7 +486,6 @@ img {
     font-size: .9em;
     padding: 6px 10px;
 }
-
 
 
 /*-----------------------------------------------------------------
@@ -469,118 +552,26 @@ img {
 }
 
 
-
-
-
-
-
-
-.hp-promo-wrap {
-    position: absolute;
-    bottom: 0;
-    height: auto;
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-    font-size: 1.25em;
-    font-weight: 400;
-    text-align: center;
-    color: #fafafa;
-    background-color: inherit;
-}
-
-.hp-promo-wrap a {
-    font-size: 1rem !important;
-}
-
-.hp-section-header {
-    font-family: "Roboto Slab";
-    text-align: center;
-}
-
-
-/* Home page post list */
+/*-----------------------------------------------------------------
+[# Blog pager]
+-------------------------------------------------------------------*/
 
 .pager {
     margin-bottom: 60px;
     text-align: left;
 }
 
-.pager > li > a {
+.pager a {
     width: 140px;
     padding: 10px 20px;
     text-align: center;
     border-radius: 30px;
 }
 
-table {
-    width: 100%;
-    font-size: .9em;
-    border-collapse: collapse;
-}
 
-table td,
-table th {
-    padding: 0;
-    padding: .857em;
-    margin: 0;
-    text-align: left;
-    border: 1px solid #e7e7e7;
-}
-
-table thead {
-    color: #222;
-    background: #f9f9f9;
-}
-
-
-/*aligns*/
-
-.aligncenter {
-    display: block;
-    margin: 0 auto;
-    margin: 16px 0;
-}
-
-.alignright {
-    float: right;
-    margin: 16px 0 16px 16px;
-}
-
-.alignleft {
-    float: left;
-    margin: 16px 16px 16px 0;
-}
-
-.alignnone img {
-    vertical-align: bottom;
-}
-
-
-/*floats*/
-
-.floatleft {
-    float: left;
-}
-
-.floatright {
-    float: right;
-}
-
-
-/*text style*/
-
-.textcenter {
-    text-align: center;
-}
-
-.textright {
-    text-align: right;
-}
-
-.textleft {
-    text-align: left;
-}
+/*-----------------------------------------------------------------
+[# Comments]
+-------------------------------------------------------------------*/
 
 #cm-container {
     max-width: 660px;
@@ -612,13 +603,13 @@ ol.child-comments {
 }
 
 .cm-content-wrap img {
-    float: left!important;
-    height: 60px!important;
-    width: 60px!important;
+    float: left;
+    height: 60px;
+    width: 60px;
     margin-top: 3px;
-    -webkit-border-radius: 4px!important;
-    -moz-border-radius: 4px!important;
-    border-radius: 4px!important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .cm-content {
@@ -653,8 +644,8 @@ h3.comments-title {
     font-weight: 300;
 }
 
-div.cm-content > strong > a {
-    color: #464655!important;
+.cm-content strong a {
+    color: #464655;
 }
 
 div#respond {
@@ -698,6 +689,36 @@ textarea#comment {
     width: 200px;
 }
 
+.cm-gravatar {
+    float: left;
+}
+
+.hp-promo-wrap {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    font-size: 1.25em;
+    font-weight: 400;
+    text-align: center;
+    color: #fafafa;
+    background-color: inherit;
+}
+
+.hp-promo-wrap a {
+    font-size: 1rem !important;
+}
+
+.hp-section-header {
+    font-family: "Roboto Slab";
+    text-align: center;
+}
+
+
+/* Home page post list */
+
 #bp-signup {
     display: block;
     width: 100%;
@@ -737,26 +758,14 @@ textarea#comment {
     background-color: #e91e78;
 }
 
-.h-wrap ul,
-.comments-area ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
 
-.h-wrap li,
-.cm-gravatar {
-    float: left;
-}
+/*-----------------------------------------------------------------
+[# Footer]
+-------------------------------------------------------------------*/
 
-.h-wrap li a:hover,
-.h-wrap li.current_page_item a {
-    color: #e91e78;
-}
-
-.ft-container {
-    display: inline-block;
-    width: 100%;
+.m-footer {
+    /* display: inline-block; */
+    /* width: 100%; */
     padding: 40px 0;
     text-align: center;
     color: #adacb5;
@@ -764,11 +773,11 @@ textarea#comment {
     background-color: #1a1a1a;
 }
 
-.ft-container p:last-child {
+.m-footer p:last-child {
     margin-bottom: 0;
 }
 
-.ft-container i {
+.m-footer i {
     padding: 0 6px;
     font-size: 26px;
 }

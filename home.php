@@ -1,37 +1,40 @@
+
 <?php get_header(); ?>
 
-<div class="section sec-container">
-	<div class="home-welcome">
-		This is just some text.
-	</div>
-</div>
+<!--
+<m-content> -->
+	<div class="c-column">
 
-<div class="sec-container">
-	<div class="section post-list-container">
+		<div class="c-panel">
+				This is just some text.
+		</div>
 
-		<?php
-		if ( have_posts() ) : while ( have_posts() ) : the_post();
+		<div class="c-post-panel">
 
-			get_template_part( 'content', get_post_format() );
+			<?php
+			if ( have_posts() ) : while ( have_posts() ) : the_post();
+				get_template_part( 'content', get_post_format() );
+				endwhile;
+			?>
 
-		endwhile;
-		?>
-
-		<!-- <nav>
+			<!--
 			<ul class="pager">
-				<li><?php next_posts_link( 'Previous' ); ?></li>
-				<li><?php previous_posts_link( 'Next' ); ?></li>
-			</ul>
-		</nav> -->
+					<li><?php next_posts_link( 'Previous' ); ?></li>
+					<li><?php previous_posts_link( 'Next' ); ?></li>
+				</ul>
+			-->
 
-		<?php
-			endif;
-		?>
+			<?php
+				endif;
+			?>
 
-	</div>
-</div>
+		</div>
+
+	</div> <!-- /.c-column -->
+</div> <!-- /.m-content -->
+
 <script type="text/javascript">
-	jQuery('.post-list-container').masonry({
+	jQuery('.c-post-panel').masonry({
   		itemSelector: '.post-entry'
 	});
 </script>

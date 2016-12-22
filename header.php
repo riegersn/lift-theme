@@ -24,7 +24,7 @@
 					</ul>
 				</div>
 				<div class="h-button">
-					<a class="button-border" href="#">START DRIVING NOW</a>
+					<a class="buttons-border" href="#">START DRIVING NOW</a>
 				</div>
 			</nav> <!-- /h-logo-wrap -->
 		</div> <!-- /main-header -->
