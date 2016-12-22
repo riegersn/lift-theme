@@ -9,24 +9,23 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<div class="header-main">
-			<nav class="header-content">
-				<div class="col col-nomargin header-logo-container">
+		<div class="m-header">
+
+			<nav class="h-wrap">
+				<div class="h-logo-wrap col col-nomargin">
 					<a href="<?php bloginfo( 'wpurl' );?>">
-						<img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
+						<img class="h-logo" src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
 					</a>
 				</div>
-				<div class="col col-nomargin header-menu">
+				<div class="col col-nomargin h-menu">
 					<ul>
-						<li>
-							<a href="<?php bloginfo( 'wpurl' );?>">Blog</a>
-						</li>
+						<li><a href="<?php bloginfo( 'wpurl' );?>">Blog</a></li>
 						<?php wp_list_pages( '&title_li=' ); ?>
 					</ul>
 				</div>
-				<div class="header-button">
+				<div class="h-button">
 					<a class="button-border" href="#">START DRIVING NOW</a>
 				</div>
-			</nav>
-		</div>
-		<div class="content-container">
+			</nav> <!-- /h-logo-wrap -->
+		</div> <!-- /main-header -->
+		<div class="m-content">
