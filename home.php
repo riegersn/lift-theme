@@ -5,8 +5,16 @@
 <m-content> -->
 	<div class="c-column">
 
-		<div class="c-panel">
-				This is just some text.
+		<div class="c-row c-header">
+			<strong>Welcome</strong>
+		</div>
+
+		<div class="c-row c-panel">
+			This is just some text.
+		</div>
+
+		<div class="c-row c-header">
+			<img class="c-header" src="<?php echo get_template_directory_uri(); ?>/img/the_blog_154.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/the_blog_154_fallback.png'">
 		</div>
 
 		<div class="c-post-panel">
