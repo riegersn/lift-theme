@@ -12,12 +12,12 @@
 		<div class="m-header">
 
 			<nav class="h-wrap">
-				<div class="h-logo-wrap col col-nomargin">
+				<div class="h-logo-wrap">
 					<a href="<?php bloginfo( 'wpurl' );?>">
 						<img class="h-logo" src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
 					</a>
 				</div>
-				<div class="col col-nomargin h-menu">
+				<div class="h-menu">
 					<ul>
 						<li><a href="<?php bloginfo( 'wpurl' );?>">Blog</a></li>
 						<?php wp_list_pages( '&title_li=' ); ?>
