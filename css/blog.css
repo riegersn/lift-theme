@@ -333,19 +333,27 @@ table thead {
 }
 
 .h-logo-wrap {
-    margin-right: 30px;
+    float: left;
+    padding: 24px 30px;
 }
 
 .h-logo {
     height: 80px;
+    max-height: 80px;
     width: auto;
-    padding: 24px 0;
+}
+
+.h-logo-wrap a {
+    line-height: 0;
+    display: block;
 }
 
 .h-menu {
-    padding-top: 50px;
-    vertical-align: middle;
+    padding: 52px 0 46px;
+    float: left;
     font-size: 1.1764705882352942rem;
+    display: block;
+    overflow: hidden;
 }
 
 .h-menu ul {
@@ -400,7 +408,7 @@ table thead {
 .h-button {
     float: right;
     min-width: 196px;
-    padding-top: 41px;
+    padding: 43px 0 40px;
     font-size: 0.8823529411764706rem;
     text-align: right;
 }
@@ -427,10 +435,17 @@ table thead {
     margin: 20px auto;
 }
 
-.c-panel {
+.c-row {
     margin: 15px 9px;
     padding: 26px;
     overflow: hidden;
+}
+
+.c-header {
+    text-align: center;
+}
+
+.c-panel {
     border-radius: 6px;
     background-color: #fafafa;
 }
@@ -582,12 +597,12 @@ table thead {
     line-height: 24px;
 }
 
-ul.comment-list {
+.comment-list {
     padding: 0 !important;
     margin: 0 !important;
 }
 
-li.comment {
+.comment {
     overflow: hidden;
     list-style: none;
 }
@@ -638,7 +653,7 @@ ol.child-comments {
     color: #e91e78;
 }
 
-h3.comments-title {
+.comments-title {
     margin-bottom: 40px;
     font-size: 26px;
     font-weight: 300;
@@ -692,6 +707,14 @@ textarea#comment {
 .cm-gravatar {
     float: left;
 }
+
+
+
+
+/*-----------------------------------------------------------------
+[# Subscribe Banner]
+-------------------------------------------------------------------*/
+
 
 .hp-promo-wrap {
     position: absolute;
