@@ -322,6 +322,8 @@ table thead {
     color: #fafafa;
     background-color: #1e1e1e;
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, .15);
+
+    /* border: 1px dotted indianred; */
 }
 
 .h-wrap {
@@ -330,11 +332,14 @@ table thead {
     padding: 0 40px;
     margin: 0 auto;
     overflow: hidden;
+
+    border: 1px dotted indianred;
 }
 
 .h-logo-wrap {
     float: left;
-    padding: 24px 30px;
+
+    border: 1px dotted ghostwhite;
 }
 
 .h-logo {
@@ -354,6 +359,7 @@ table thead {
     font-size: 1.1764705882352942rem;
     display: block;
     overflow: hidden;
+    border: 1px dotted ghostwhite;
 }
 
 .h-menu ul {
