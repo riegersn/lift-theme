@@ -12,20 +12,23 @@
 		<div class="m-header">
 
 			<nav class="h-wrap">
-				<div class="h-logo-wrap">
+				<div class="h-logo">
 					<a href="<?php bloginfo( 'wpurl' );?>">
-						<img class="h-logo" src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
 					</a>
 				</div>
 				<div class="h-menu">
+					<a id="mobile-menu" href="#">
+						<i class='fa fa-bars' aria-hidden='true'></i>
+					</a>
 					<ul>
 						<li><a href="<?php bloginfo( 'wpurl' );?>">Blog</a></li>
 						<?php wp_list_pages( '&title_li=' ); ?>
 					</ul>
 				</div>
-				<div class="h-button">
+<!-- 				<div class="h-button">
 					<a class="buttons-border" href="#">START DRIVING NOW</a>
-				</div>
+				</div> -->
 			</nav> <!-- /h-logo-wrap -->
 		</div> <!-- /main-header -->
 		<div class="m-content">

@@ -315,7 +315,6 @@ table thead {
     z-index: 9999;
     display: inline-block;
     width: 100%;
-    height: 128px;
     overflow: hidden;
     text-align: center;
     letter-spacing: 1;
@@ -327,19 +326,18 @@ table thead {
 .h-wrap {
     position: relative;
     max-width: 1336px;
-    padding: 0 30px;
     margin: 0 auto;
     overflow: hidden;
-}
-
-.h-logo-wrap {
-    float: left;
-    margin-top: 24px;
+    line-height: 1em;
 }
 
 .h-logo {
+    float: left;
+    padding: 20px;
+}
+
+.h-logo img {
     height: 80px;
-    max-height: 80px;
     width: auto;
 }
 
@@ -349,28 +347,36 @@ table thead {
 }
 
 .h-menu {
-    float: left;
+    float: right;
     font-size: 1.176rem;
     display: block;
     overflow: hidden;
-    margin-top: 49px;
-    padding: 0 20px;
+    margin-right: 20px;
 }
 
 .h-menu ul {
     padding: 0;
     margin: 0;
     list-style: none;
+
+}
+
+#mobile-menu {
+    display: none;
+    font-size: 34px;
+    color: #fafafa;
+    line-height: 102px;
 }
 
 .h-menu li {
-    float: left;
+    display: inline-block;
+    line-height: 128px;
 }
 
-.h-menu a {
+.h-menu li a {
     position: relative;
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 15px;
     color: #fafafa;
     -webkit-transition: color 300ms linear;
     -moz-transition: color 300ms linear;
@@ -379,7 +385,7 @@ table thead {
     text-decoration: none;
     letter-spacing: -.5px;
     text-transform: lowercase;
-    border-right: 1px solid #999;
+    line-height: 1em;
 }
 
 .h-menu li a:hover,
@@ -414,37 +420,29 @@ table thead {
     letter-spacing: -.5px;
 }
 
-@media only screen and (max-width: 1210px) {
-    .h-button {
-        font-size: 0.765rem;
+@media only screen and (max-width: 1120px) {
+    .h-logo img {
+        height: 60px;
     }
     .h-menu {
-        font-size: 1.118rem;
+        font-size: 1.0588rem;
+        font-weight: 400;
+    }
+    .h-menu li {
+        line-height: 102px;
     }
 }
 
-@media only screen and (max-width: 1165px) {
-    .m-header {
-        height: 108px;
+@media only screen and (max-width: 950px) {
+    #mobile-menu {
+        display: inline-block;
     }
-    .h-logo {
-        max-height: 60px;
+    .h-menu li {
+        display: none;
+        line-height: 3em;
+        text-align: right;
+        background-color: crimson;
     }
-    .h-logo-wrap {
-        margin-top: 24px;
-    }
-    .h-menu {
-        font-size: 1rem;
-        margin-top: 41px;
-    }
-    .h-button {
-        margin-top: 33px;
-        font-size: 0.765rem;
-    }
-}
-
-@media only screen and (max-width: 1020px) {
-    /* switch to mobile */
 }
 
 
@@ -456,9 +454,9 @@ table thead {
     padding: 128px 0 40px;
 }
 
-@media only screen and (max-width: 1165px) {
+@media only screen and (max-width: 1120px) {
     .m-content {
-        padding-top:  108px;
+        padding-top:  102px;
     }
 }
 
