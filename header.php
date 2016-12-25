@@ -18,17 +18,16 @@
 					</a>
 				</div>
 				<div class="h-menu">
-					<a id="mobile-menu" href="#">
+					<a class="mobile-only h-three-bars" href="#">
 						<i class='fa fa-bars' aria-hidden='true'></i>
 					</a>
 					<ul>
 						<li><a href="<?php bloginfo( 'wpurl' );?>">Blog</a></li>
 						<?php wp_list_pages( '&title_li=' ); ?>
+						<a class="mobile-only drive-now buttons-border" href="#">START DRIVING NOW</a>
 					</ul>
+
 				</div>
-<!-- 				<div class="h-button">
-					<a class="buttons-border" href="#">START DRIVING NOW</a>
-				</div> -->
 			</nav> <!-- /h-logo-wrap -->
 		</div> <!-- /main-header -->
 		<div class="m-content">
