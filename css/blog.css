@@ -30,7 +30,7 @@
 html,
 body {
     color: #666;
-    background-color: #edf2f4;
+    background-color: #1e1e1e;
     font: 300 17px/27px "Open Sans", Arial, Helvetica, sans-serif;
     margin: 0;
     min-width: 100%;
@@ -40,8 +40,8 @@ body {
 @media (max-width: 400px) {
     html,
     body {
-        font-size: 15px;
-        line-height: 1.5882352941em;
+        font-size: 16px;
+        line-height: 1.8em;
     }
 }
 
@@ -204,7 +204,6 @@ table thead {
     display: block;
     float: left;
     margin: 1%;
-    /* TODO: @.col @.span-2-2 plus margins don't work right */
 }
 
 .col-nomargin {
@@ -227,7 +226,8 @@ table thead {
 }
 
 .span-3-3 {
-    width: 100%;
+    width: 98%;
+    /* accounting for 1% margins */
 }
 
 .span-2-3 {
@@ -243,17 +243,14 @@ table thead {
 
 @media only screen and (max-width: 480px) {
     .col {
-        margin: 1% 0 1% 0;
-        /* TODO: @media @.col adjust margins */
+        margin: 5% 0 5% 0;
     }
-}
 
-@media only screen and (max-width: 480px) {
-    .span_2_of_2,
-    .span_1_of_2 {
+    .span-1-3,
+    .span-2-3,
+    .span-3-3 {
         width: 100%;
     }
-    /* TODO: @media @.span_#_of_2 adjust margins and selectors */
 }
 
 
@@ -275,6 +272,7 @@ table thead {
     border: none;
     border-radius: 4px;
     background-color: #e91e78;
+    margin: 5px;
 }
 
 .buttons-border {
@@ -311,10 +309,9 @@ table thead {
     width: 100%;
     overflow: hidden;
     text-align: center;
-    letter-spacing: 1;
     color: #fafafa;
     background-color: #1e1e1e;
-    box-shadow: 0 0 7px 2px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 10px 2px rgba(0,0,0, .5);
 }
 
 .h-wrap {
@@ -327,15 +324,15 @@ table thead {
 
 .h-logo {
     float: left;
-    padding: 20px;
+    padding: 14px 20px;
 }
 
 .h-logo img {
-    height: 80px;
+    height: 70px;
     width: auto;
 }
 
-.h-logo-wrap a {
+.h-logo a {
     line-height: 0;
     display: block;
 }
@@ -355,18 +352,19 @@ table thead {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: block;
 }
 
 .h-three-bars {
     display: none;
     font-size: 34px;
     color: #fafafa;
-    line-height: 102px;
+    line-height: 98px;
 }
 
 .h-menu li {
     display: inline-block;
-    line-height: 128px;
+    line-height: 98px;
 }
 
 .h-menu li a {
@@ -381,7 +379,7 @@ table thead {
     text-decoration: none;
     letter-spacing: -.5px;
     text-transform: lowercase;
-    line-height: 1em;
+    line-height: 1.3em;
 }
 
 .h-menu li a:hover,
@@ -420,20 +418,7 @@ table thead {
     display: none;
 }
 
-@media only screen and (max-width: 1120px) {
-    .h-logo img {
-        height: 60px;
-    }
-    .h-menu {
-        font-size: 1.0588rem;
-        font-weight: 400;
-    }
-    .h-menu li {
-        line-height: 102px;
-    }
-}
-
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1010px) {
     .h-three-bars {
         display: inline-block;
         margin-right: 20px;
@@ -445,16 +430,19 @@ table thead {
         right: 0;
         text-align: right;
         width: 100%
-        height: 102px;
+        height: 98px;
     }
 
     .h-menu ul {
+        display: none;
         background-color: #1e1e1e;
     }
 
     .h-menu li {
         display: block;
         line-height: 3em;
+        font-size: 1.2em;
+        margin: 0 10px;
     }
 
     .drive-now {
@@ -468,12 +456,13 @@ table thead {
 -------------------------------------------------------------------*/
 
 .m-content {
-    padding: 128px 0 40px;
+    padding: 98px 0 40px;
+    background-color: #edf2f4;
 }
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1010px) {
     .m-content {
-        padding-top:  102px;
+        padding: 98px 0 0 0;
     }
 }
 
@@ -490,10 +479,22 @@ table thead {
     margin: 20px auto;
 }
 
+@media only screen and (max-width: 480px) {
+    .c-column {
+        width: 100%;
+    }
+}
+
 .c-row {
     margin: 15px 9px;
     padding: 26px;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+    .c-row {
+        padding: 10px;
+    }
 }
 
 .c-header {
@@ -503,6 +504,10 @@ table thead {
 .c-panel {
     border-radius: 6px;
     background-color: #fafafa;
+}
+
+@media only screen and (max-width: 480px) {
+    border-radius: 0;
 }
 
 .c-post-panel {
@@ -522,10 +527,22 @@ table thead {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
 }
 
+@media only screen and (max-width: 1010px) {
+    .post-entry {
+        border-radius: 0;
+    }
+}
+
 .entry-wrap {
     padding: 26px;
     border-radius: 6px;
     background-color: #fafafa;
+}
+
+@media only screen and (max-width: 1010px) {
+    .entry-wrap {
+        border-radius: 0;
+    }
 }
 
 .post-list-content {
@@ -550,6 +567,14 @@ table thead {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+@media only screen and (max-width: 480px) {
+    .post-list-image {
+        height: 260px;
+        border-radius: 0;
+        box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, .1);
+    }
 }
 
 .post-list-content a.button {
@@ -579,6 +604,14 @@ table thead {
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, .15);
 }
 
+@media only screen and (max-width: 480px) {
+    .post-featured-image {
+        height: 260px;
+        border-radius: 0;
+        box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, .1);
+    }
+}
+
 .post-content {
     max-width: 900px;
     padding: 26px;
@@ -586,6 +619,14 @@ table thead {
     overflow: hidden;
     border-radius: 6px;
     background-color: #fafafa;
+}
+
+@media only screen and (max-width: 1010px) {
+    .post-content {
+        margin: 0;
+        border-radius: 0;
+        max-width: 100%;
+    }
 }
 
 .post-content p:last-child {
@@ -839,13 +880,9 @@ textarea#comment {
 -------------------------------------------------------------------*/
 
 .m-footer {
-    /* display: inline-block; */
-    /* width: 100%; */
-    padding: 40px 0;
+    padding: 40px 26px;
     text-align: center;
     color: #adacb5;
-    border-top: 1px solid #e5e5e5;
-    background-color: #1a1a1a;
 }
 
 .m-footer p:last-child {

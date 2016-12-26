@@ -21,13 +21,18 @@
 					<a class="mobile-only h-three-bars" href="#">
 						<i class='fa fa-bars' aria-hidden='true'></i>
 					</a>
-					<ul>
+					<ul class="h-menu-ul">
 						<li><a href="<?php bloginfo( 'wpurl' );?>">Blog</a></li>
 						<?php wp_list_pages( '&title_li=' ); ?>
 						<a class="mobile-only drive-now buttons-border" href="#">START DRIVING NOW</a>
 					</ul>
 
 				</div>
+				<script type="text/javascript">
+					jQuery('.h-three-bars').click(function(){
+						jQuery('.h-menu-ul').slideToggle('fast');
+					});
+				</script>
 			</nav> <!-- /h-logo-wrap -->
 		</div> <!-- /main-header -->
 		<div class="m-content">
