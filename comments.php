@@ -2,7 +2,7 @@
 	return;
 } ?>
 
-<div id="cm-container" class="cm-content">
+<div class="cm-container">
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php

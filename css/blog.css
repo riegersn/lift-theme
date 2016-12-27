@@ -189,6 +189,17 @@ table thead {
 }
 
 
+@media only screen and (max-width: 680px) {
+    iframe {
+        width: 100%;
+    }
+
+    .scrollx {
+        overflow-x: scroll;
+    }
+}
+
+
 /*-----------------------------------------------------------------
 [# Grid stuff
 -------------------------------------------------------------------*/
@@ -229,27 +240,16 @@ table thead {
     width: 31.33%;
 }
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
 @media only screen and (max-width: 1010px) {
     .span-col {
-        width: 46%;
-    }
-
-    article.col {
-        margin: 2% 2%;
-    }
-
-    article.col:last-child {
-        margin: 2% 2% 5% 2%;
+        width: 48%;
     }
 }
 
 @media only screen and (max-width: 620px) {
     .col {
-        margin: 5% 0 5% 0;
+        margin: 2% 0;
     }
-
     .span-col {
         width: 100%;
     }
@@ -313,7 +313,7 @@ table thead {
     text-align: center;
     color: #fafafa;
     background-color: #1e1e1e;
-    box-shadow: 0 0 10px 2px rgba(0,0,0, .5);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
 }
 
 .h-wrap {
@@ -426,28 +426,23 @@ table thead {
         display: inline-block;
         margin-right: 20px;
     }
-
     .h-menu {
         margin: -3px 0 0 0;
         position: fixed;
         right: 0;
         text-align: right;
-        width: 100%
-        height: 98px;
+        width: 100% height: 98px;
     }
-
     .h-menu ul {
         display: none;
         background-color: #1e1e1e;
     }
-
     .h-menu li {
         display: block;
         line-height: 3em;
         font-size: 1.2em;
         margin: 0 10px;
     }
-
     .drive-now {
         margin: 10px 20px 20px;
     }
@@ -482,22 +477,10 @@ table thead {
     margin: 20px auto;
 }
 
-@media only screen and (max-width: 480px) {
-    .c-column {
-        width: 100%;
-    }
-}
-
 .c-row {
     margin: 15px 9px;
     padding: 26px;
     overflow: hidden;
-}
-
-@media only screen and (max-width: 480px) {
-    .c-row {
-        padding: 10px;
-    }
 }
 
 .c-header {
@@ -509,13 +492,22 @@ table thead {
     background-color: #fafafa;
 }
 
-@media only screen and (max-width: 480px) {
-    border-radius: 0;
-}
-
 .c-post-panel {
     margin: 15px 0;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 620px) {
+    .c-column {
+        width: 100%;
+    }
+    .c-row {
+        margin: 15px 0;
+        padding: 26px;
+    }
+    .c-panel {
+        border-radius: 0;
+    }
 }
 
 
@@ -572,7 +564,7 @@ table thead {
     background-size: cover;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 620px) {
     .post-list-image {
         height: 260px;
         border-radius: 0;
@@ -607,7 +599,7 @@ table thead {
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, .15);
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 620px) {
     .post-featured-image {
         height: 260px;
         border-radius: 0;
@@ -687,9 +679,9 @@ table thead {
 [# Comments]
 -------------------------------------------------------------------*/
 
-#cm-container {
+.cm-container {
     max-width: 660px;
-    padding: 20px 20px;
+    padding: 20px;
     margin: 0 auto;
     font-size: .9375rem;
     font-weight: 300;
@@ -697,8 +689,8 @@ table thead {
 }
 
 .comment-list {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
 }
 
 .comment {
@@ -706,7 +698,7 @@ table thead {
     list-style: none;
 }
 
-ol.child-comments {
+.child-comments {
     padding: 0;
     margin-left: 62px;
 }
@@ -717,6 +709,7 @@ ol.child-comments {
     background-color: #fafafa;
     padding: 20px;
     border-radius: 6px;
+    overflow: auto;
 }
 
 .cm-content-wrap img {
@@ -765,18 +758,22 @@ ol.child-comments {
     color: #464655;
 }
 
-div#respond {
+.comment-respond {
     margin: 0 0 40px 0;
 }
 
-#respond input,
-#respond textarea {
+.comment-respond p {
+    margin-bottom: 4px;
+}
+
+.comment-respond input,
+.comment-respond textarea {
     display: inline-block;
     padding: 10px 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 15px!important;
+    font-size: 15px;
     text-overflow: clip;
     color: #adacb5;
     border: 1px solid #adacb5;
@@ -784,28 +781,36 @@ div#respond {
     border-radius: 4px;
     background: #f5f8fa;
     -o-text-overflow: clip;
-
     width: 100%;
 }
 
-#respond input {
-    width: 260px!important;
+.comment-respond input {
+    width: 280px;
 }
 
-#respond input[type="submit"] {
-    /* width: 120px!important; */
+.comment-respond input[type="submit"] {
+    width: auto;
     margin-top: 4px;
     cursor: pointer;
     color: #fafafa;
     background-color: #e91e78;
 }
 
-/* textarea#comment {
-    width: 200px;
-} */
-
-.cm-gravatar {
-    float: left;
+@media only screen and (max-width: 680px) {
+    .cm-container {
+        max-width: 660px;
+        padding: 40px 0;
+    }
+    .cm-content-wrap {
+        border-radius: 0;
+    }
+    .comment-respond {
+        padding: 20px;
+    }
+    .comments-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
 }
 
 
