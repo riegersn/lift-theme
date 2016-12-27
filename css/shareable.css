@@ -21,22 +21,22 @@
 
 .sb-fixed-content-wrap {
     position: fixed;
-    top: 154px; /* padding(26) + header(128) */
+    top: 154px;
+    /* padding(26) + header(128) */
     clear: both;
 }
 
 @media only screen and (max-width: 1010px) {
     .sb-content-wrap {
-        /* display: none; */
-    }
-
-    .sb-fixed-content-wrap {
-        position: fixed;
+        /* position: absolute; */
         width: auto;
         margin: 0;
         clear: both;
-        z-index: 1000;
+        opacity: 1;
+        display: inline-block;
         font-size: 0;
+        position: fixed;
+        z-index: 9999;
     }
 }
 
@@ -79,13 +79,12 @@ a.sb-button:hover i {
 }
 
 @media only screen and (max-width: 1010px) {
-
     .sb-content-wrap a:last-child {
         -webkit-border-radius: 0 6px 0 0;
         border-radius: 0 6px 0 0;
     }
-
 }
+
 
 /*-----------------------------------------------------------------
 [# Brand Colors
