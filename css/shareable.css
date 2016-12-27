@@ -17,6 +17,7 @@
     margin: 0 0 0 -73px;
     clear: both;
     opacity: 1;
+    display: block;
 }
 
 .sb-fixed-content-wrap {
@@ -28,12 +29,11 @@
 
 @media only screen and (max-width: 1010px) {
     .sb-content-wrap {
-        /* position: absolute; */
         width: auto;
         margin: 0;
         clear: both;
         opacity: 1;
-        display: inline-block;
+        display: none;
         font-size: 0;
         position: fixed;
         z-index: 9999;
