@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<?php wp_head(); ?>
+	</head>
+	<body>
+		<div class="m-header">
 
-    <?php wp_head(); ?>
-  </head>
+			<nav class="h-wrap">
+				<div class="h-logo">
+					<a href="<?php bloginfo( 'wpurl' );?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
+					</a>
+				</div>
+				<div class="h-menu">
+					<a class="mobile-only h-three-bars" href="#">
+						<i class='fa fa-bars' aria-hidden='true'></i>
+					</a>
+					<ul class="h-menu-ul">
+						<li><a href="<?php bloginfo( 'wpurl' );?>">Blog</a></li>
+						<?php wp_list_pages( '&title_li=' ); ?>
+						<a class="mobile-only drive-now buttons-border" href="#">START DRIVING NOW</a>
+					</ul>
 
-  <body>
-
-	<div class="lift-nav-wrapper">
-      <nav class="lift-nav">
-         <div class="site-logo">
-            <a href="<?php bloginfo( 'wpurl' );?>">
-                <img class="site-logo" src="http://localhost:8888/wp-content/uploads/2016/12/lg-horizontal-logo.png">
-            </a>
-         </div>
-         <div class="lift-menu">
-             <ul>
-                 <li >
-                     <a href="<?php bloginfo( 'wpurl' );?>">Blog</a>
-                 </li>
-                 <?php wp_list_pages( '&title_li=' ); ?>
-             </ul>
-         </div>
-      </nav>
-	</div>
-
-    <div class="content-container">
-
-      <!-- <div class="blog-header">
-        <h1 class="blog-title"><a href="<?php bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-        <p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
-      </div> -->
+				</div>
+				<script type="text/javascript">
+					jQuery('.h-three-bars').click(function(){
+						jQuery('.h-menu-ul').slideToggle('fast');
+					});
+				</script>
+			</nav> <!-- /h-logo-wrap -->
+		</div> <!-- /main-header -->
+		<div class="m-content">

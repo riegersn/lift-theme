@@ -1,70 +1,137 @@
 <?php
 
-// Add scripts and stylesheets
+show_admin_bar( false ); // disable the admin bar.
+
 function lift_scripts() {
-	wp_enqueue_style( 'shareable', get_template_directory_uri() . '/css/shareable.css' );
-	wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );
+
+	/* Scripts
+	 * ----------------------------------------*/
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 	wp_enqueue_script( 'shareable', get_template_directory_uri() . '/js/shareable.js');
-	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
+	// wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
+	wp_enqueue_script( 'masonary', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js');
+
+	/* Stylesheets
+	 * ----------------------------------------*/
+	wp_enqueue_style( 'shareable', get_template_directory_uri() . '/css/shareable.css' );
+	wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 
-// Add Google Fonts
-function lift_google_fonts() {
-				wp_register_style('Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-				wp_enqueue_style('Open Sans');
-		}
+/* Fonts
+ * ----------------------------------------*/
+ function lift_google_fonts() {
+	wp_register_style('Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+	wp_enqueue_style('Open Sans');
+	wp_register_style('Roboto Slab', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+	wp_enqueue_style('Roboto Slab');
+}
 
 add_action('wp_print_styles', 'lift_google_fonts');
 
-// WordPress Titles
-add_theme_support( 'title-tag' );
 
-// Support Featured Images
-add_theme_support( 'post-thumbnails' );
+/* Wordpress Theme Support
+ * ----------------------------------------*/
+add_theme_support( 'title-tag' ); // Titles
+add_theme_support( 'post-thumbnails' ); // Support Featured Images
 
-// Custom settings
+// function new_excerpt_more( $more ) {
+//     return '...';
+// }
+// add_filter('excerpt_more', 'new_excerpt_more');
+
+// function custom_excerpt_length( $length ) {
+// 	return 80;
+// }
+// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function wpse_allowedtags() {
+    // Add custom tags to this string
+        return '<p>';
+    }
+
+if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
+
+    function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
+    $raw_excerpt = $wpse_excerpt;
+        if ( '' == $wpse_excerpt ) {
+
+            $wpse_excerpt = get_the_content('');
+            $wpse_excerpt = strip_shortcodes( $wpse_excerpt );
+            $wpse_excerpt = apply_filters('the_content', $wpse_excerpt);
+            $wpse_excerpt = str_replace(']]>', ']]>', $wpse_excerpt);
+            $wpse_excerpt = strip_tags($wpse_excerpt, wpse_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
+
+            //Set the excerpt word count and only break after sentence is complete.
+            $excerpt_word_count = 35;
+            $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+            $tokens = array();
+            $excerptOutput = '';
+            $count = 0;
+
+            // Divide the string into tokens; HTML tags, or words, followed by any whitespace
+            preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $wpse_excerpt, $tokens);
+
+            foreach ($tokens[0] as $token) {
+
+                if ($count >= $excerpt_length && preg_match('/[\,\;\?\.\!]\s*$/uS', $token)) {
+                // Limit reached, continue until , ; ? . or ! occur at the end
+                    $excerptOutput .= trim($token);
+                    break;
+                }
+
+                // Add words to complete sentence
+                $count++;
+
+                // Append what's left of the token
+                $excerptOutput .= $token;
+            }
+
+            $wpse_excerpt = trim(force_balance_tags($excerptOutput));
+
+            $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . ' » ' . sprintf(__( 'Read more about: %s  »', 'wpse' ), get_the_title()) . '</a>';
+            $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+
+            // $pos = strrpos($wpse_excerpt, '</');
+            // if ($pos !== false)
+            // 	// Inside last HTML tag
+            // 	$wpse_excerpt = substr_replace($wpse_excerpt, $excerpt_end, $pos, 0); /* Add read more next to last word */
+            // else
+            // 	// After the content
+            // 	$wpse_excerpt .= $excerpt_more; /*Add read more in new paragraph */
+
+        	// lets remove any punctuation that may be at the end of the excerpt
+
+        	$wpse_excerpt = rtrim(trim($wpse_excerpt), '.!?,<>\/p') . "...";
+
+            return $wpse_excerpt;
+
+        }
+        return apply_filters('wpse_custom_wp_trim_excerpt', $wpse_excerpt, $raw_excerpt);
+    }
+
+endif;
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt');
+
+function lift_theme_menu() {
+  register_nav_menus( array(
+    'header' => 'Header menu'
+  ) );
+ }
+
+add_action( 'after_setup_theme', 'lift_theme_menu' );
+
+/* ----------------------------------------*
+ * Settings Menu
+ * ----------------------------------------*/
 function custom_settings_add_menu() {
   add_menu_page( 'Custom Settings', 'Custom Settings', 'manage_options', 'custom-settings', 'custom_settings_page', null, 99);
 }
-add_action( 'admin_menu', 'custom_settings_add_menu' );
-
-// Create Custom Global Settings
-function custom_settings_page() { ?>
-  <div class="wrap">
-    <h1>Custom Settings</h1>
-    <form method="post" action="options.php">
-       <?php
-           settings_fields('section');
-           do_settings_sections('theme-options');
-           submit_button();
-       ?>
-    </form>
-  </div>
-<?php }
-
-// Twitter
-function setting_twitter() { ?>
-  <input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter'); ?>" />
-<?php }
-
-function setting_facebook() { ?>
-  <input type="text" name="facebook" id="facebook" value="<?php echo get_option('facebook'); ?>" />
-<?php }
-
-function custom_settings_page_setup() {
-  add_settings_section('section', 'All Settings', null, 'theme-options');
-  add_settings_field('twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'section');
-  add_settings_field('facebook', 'Facebook URL', 'setting_facebook', 'theme-options', 'section');
-
-	register_setting('section', 'twitter');
-  register_setting('section', 'facebook');
-}
-add_action( 'admin_init', 'custom_settings_page_setup' );
-
+// add_action( 'admin_menu', 'custom_settings_add_menu' );
 
 class comment_walker extends Walker_Comment {
 	var $tree_type = 'comment';
@@ -109,18 +176,16 @@ class comment_walker extends Walker_Comment {
 		} ?>
 
 		<li <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>">
-			<div class="cm-gravatar"><?php echo get_avatar( $comment, 75, '[default gravatar URL]', 'Author’s gravatar' ); ?></div>
-			<!-- <div class="comment-meta post-meta" role="complementary">
-			</div> -->
-			<div class="cm-content">
-				<strong><a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a></strong>
-				<?php if ($comment->comment_approved == '0') : ?>
-				<p class="cm-comment">Your comment is awaiting moderation.</p>
-				<?php endif; ?>
-				<?php comment_text() ?>
-				<div class="cm-buttons">
-					<?php edit_comment_link('Edit this comment','',''); ?>
+			<div class="cm-content-wrap">
+				<a href="<?php comment_author_url(); ?>"><?php echo get_avatar( $comment, 60, 'mystery', 'Author’s gravatar' ); ?></a>
+				<div class="cm-content">
+					<strong><a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a></strong> -
 					<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+					<!-- <?php edit_comment_link('Edit this comment','',''); ?> -->
+					<?php if ($comment->comment_approved == '0') : ?>
+					<p class="cm-comment">Your comment is awaiting moderation.</p>
+					<?php endif; ?>
+					<?php comment_text() ?>
 				</div>
 			</div>
 

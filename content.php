@@ -1,21 +1,18 @@
-<div class="blog-post">
-	<h2 class="blog-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a> - <a href="<?php comments_link(); ?>">
-		<?php
-			printf( _nx( 'One Comments99', '%1$s Comments99', get_comments_number(), 'comments title', 'textdomain' ), number_format_i18n( 						get_comments_number() ) ); ?>
-	</a></p>
-
+<article class="post-entry col span-col">
 	<?php if ( has_post_thumbnail() ) {?>
-		<div class="row">
-			<div class="col-md-4">
-				<?php	the_post_thumbnail('thumbnail'); ?>
+		<a href="<?php echo the_permalink(); ?>">
+			<div class="post-list-image" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ); ?>);">
 			</div>
-			<div class="col-md-6">
-				<?php the_excerpt(); ?>
-			</div>
-		</div>
-		<?php } else { ?>
-		<?php the_excerpt(); ?>
-		<?php } ?>
+		</a>
+	<?php } ?>
 
-</div><!-- /.blog-post -->
+	<div class="entry-wrap">
+		<h3><a class="post-list-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+		<div class="post-list-content">
+			<?php the_excerpt(); ?>
+			<a class="button" href="<?php echo the_permalink(); ?>">Continue reading</a>
+		</div>
+	</div>
+
+</article>
