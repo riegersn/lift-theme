@@ -24,6 +24,7 @@
 					<ul class="h-menu-ul">
 						<li><a href="<?php bloginfo( 'wpurl' );?>">Blog</a></li>
 						<?php wp_list_pages( '&title_li=' ); ?>
+						<!-- TODO: must have proper nav menu here so that it can be modified from wordpress. -->
 						<a class="mobile-only drive-now buttons-border" href="#">START DRIVING NOW</a>
 					</ul>
 
