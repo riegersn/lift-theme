@@ -353,12 +353,12 @@ table thead {
     display: block;
 }
 
-.header-nav ul {
+.header-menu ul {
     margin:  0;
     line-height: 70px;
 }
 
-.header-nav li {
+.header-menu li {
     margin:  0;
     display: inline-block;
     padding: 0 15px;
@@ -369,7 +369,7 @@ table thead {
     /* fixme: current_page_item not working */
 }
 
-.header-nav {
+.header-menu {
     display: block;
     overflow: visible;
 }
@@ -390,13 +390,13 @@ table thead {
         display: block;
     }
 
-    .header-nav {
+    .header-menu {
         padding-top: 20px;
         clear: both;
         display: none;
     }
 
-    .header-nav li {
+    .header-menu li {
         display: block;
         font-size: 1.2em;
         line-height: 1.2em;

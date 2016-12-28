@@ -26,7 +26,7 @@
 			</div>
 
 			<!-- the main menu -->
-			<nav class="header-nav nav-item-highlight floatright">
+			<nav class="header-menu nav-item-highlight floatright">
 				<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
 			</nav>
 
