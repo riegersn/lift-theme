@@ -326,7 +326,6 @@ table thead {
     width: 100%;
     font-size: 1.176rem;
     overflow: hidden;
-    text-align: center;
     color: #fafafa;
     background-color: #1e1e1e;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
@@ -334,7 +333,6 @@ table thead {
 
 .header a {
     color: #fafafa;
-    text-decoration: none;
     letter-spacing: -.5px;
     text-transform: lowercase;
     display: block;
