@@ -380,6 +380,7 @@ table thead {
     display: none;
     font-size: 34px;
     line-height: 70px;
+    cursor: pointer;
 }
 
 .mobile-bars i {
