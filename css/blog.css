@@ -332,12 +332,25 @@ table thead {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
 }
 
+.header-wrap {
+    position: relative;
+    max-width: 1336px;
+    margin: 0 auto;
+    overflow: hidden;
+    line-height: 1em;
+    padding: 14px 20px;
+}
+
+.header-logo {
+    height: 70px;
+    width: auto;
+}
+
 .header a {
     color: #fafafa;
     letter-spacing: -.5px;
     text-transform: lowercase;
     display: block;
-    /* line-height: 1.2em; */
 }
 
 .header-nav ul {
@@ -351,23 +364,9 @@ table thead {
     padding: 0 15px;
 }
 
-.current_page_item, header a:hover {
+.current_page_item, .header a:hover {
     color: #e91e78;
     /* fixme: current_page_item not working */
-}
-
-.header-wrap {
-    position: relative;
-    max-width: 1336px;
-    margin: 0 auto;
-    overflow: hidden;
-    line-height: 1em;
-    padding: 14px 20px;
-}
-
-.header-logo {
-    height: 70px;
-    width: auto;
 }
 
 .header-nav {
