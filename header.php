@@ -28,18 +28,21 @@
 					?>
 			</div>
 
-			<!-- the three bars -->
-			<div class="mobile-only h-three-bars">
-				<a href="#">
-					<i class='fa fa-bars' aria-hidden='true'></i>
-				</a>
-			</div>
 
 			<!-- tiny menu -->
-			<div class="mobile-nav-menu">
+			<div class="mobile-menu">
+
+				<!-- the three bars -->
+				<div class="mobile-bars">
+					<a href="#">
+						<i class='fa fa-bars' aria-hidden='true'></i>
+					</a>
+				</div>
+
 				<?php wp_nav_menu( array(
-					'menu' => 'main-nav-menu',
-					'container_class' => 'nav-mobile-menu-ul' ) );
+					'container' => '',
+					'container_class' => '',
+					'id' => '' ) );
 					?>
 			</div>
 
