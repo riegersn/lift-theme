@@ -338,7 +338,7 @@ table thead {
     letter-spacing: -.5px;
     text-transform: lowercase;
     display: block;
-    line-height: 1.2em;
+    /* line-height: 1.2em; */
 }
 
 .header-nav ul {
