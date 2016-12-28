@@ -413,13 +413,13 @@ table thead {
 -------------------------------------------------------------------*/
 
 .m-content {
-    padding: 98px 0 40px;
+    margin: 98px 0 40px;
     background-color: #edf2f4;
 }
 
 @media only screen and (max-width: 1050px) {
     .m-content {
-        padding: 98px 0 0 0;
+        margin: 98px 0 0 0;
     }
 }
 
