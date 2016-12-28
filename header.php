@@ -11,42 +11,26 @@
 	<body>
 
 	<header>
-		<nav class="h-wrap">
+		<div class="header-wrap">
 
 			<!-- the logo -->
-			<div class="h-logo">
+			<div class="floatleft">
 				<a href="<?php bloginfo( 'wpurl' );?>">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
+					<img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
 				</a>
 			</div>
 
+			<!-- mobile bars -->
+			<div class="mobile-bars floatright">
+				<i class='fa fa-bars' aria-hidden='true'></i>
+			</div>
+
 			<!-- the main menu -->
-			<div class="nav-menu nav-item-highlight">
-				<?php wp_nav_menu( array(
-					'menu' => 'main-nav-menu',
-					'container_class' => 'nav-menu-ul' ) );
-					?>
-			</div>
+			<nav class="nav-item-highlight floatright">
+				<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
+			</nav>
 
-
-			<!-- tiny menu -->
-			<div class="mobile-menu">
-
-				<!-- the three bars -->
-				<div class="mobile-bars">
-					<a href="#">
-						<i class='fa fa-bars' aria-hidden='true'></i>
-					</a>
-				</div>
-
-				<?php wp_nav_menu( array(
-					'container' => '',
-					'container_class' => '',
-					'id' => '' ) );
-					?>
-			</div>
-
-		</nav>
+		</div>
 	</header>
 
 	<!-- start content -->
