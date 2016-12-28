@@ -12,11 +12,4 @@
 	<?php the_content(); ?>
 </div>
 
-<!-- <div id="bp-signup">
-	<div class="bp-signup-content">
-		Work smarter, work less.<br/>
-		<a href="#">Sign Up Now!</a>
-	</div>
-</div> -->
-
 </div>
