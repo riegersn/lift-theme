@@ -298,12 +298,27 @@ table thead {
     box-shadow: 0 0 3px 1px rgba(14, 177, 210, .5);
 }
 
+.nav-item-highlight a:not(.mobile-only):after {
+    display: block;
+    height: 3px;
+    width: 0;
+    margin: auto;
+    content: "";
+    transition: width .3s ease, background-color .3s ease;
+    background: transparent;
+}
+
+.nav-item-highlight a:hover:after {
+    width: 100%;
+    background: #0eb1d2;
+}
+
 
 /*-----------------------------------------------------------------
 [# Header]
 -------------------------------------------------------------------*/
 
-.m-header {
+header {
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -339,7 +354,7 @@ table thead {
     display: block;
 }
 
-.h-menu {
+.nav-menu {
     float: right;
     font-size: 1.176rem;
     display: block;
@@ -350,7 +365,7 @@ table thead {
     -o-transition: height .3s linear;
 }
 
-.h-menu ul {
+.nav-menu ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -365,49 +380,28 @@ table thead {
     /* TODO: rotate 90deg on click */
 }
 
-.h-menu li {
+
+.nav-menu li {
     display: inline-block;
     line-height: 98px;
 }
 
-.h-menu li a {
+.nav-menu li a {
     position: relative;
     display: inline-block;
     padding: 0 15px;
     color: #fafafa;
-    -webkit-transition: color 300ms linear;
-    -moz-transition: color 300ms linear;
-    -o-transition: color 300ms linear;
-    transition: color 300ms linear;
     text-decoration: none;
     letter-spacing: -.5px;
     text-transform: lowercase;
     line-height: 1.3em;
 }
 
-.h-menu li a:hover,
-.h-menu .current_page_item a {
+.nav-menu li a:hover,
+.nav-menu .current_page_item a {
     color: #e91e78;
 }
 
-.h-menu a:not(.mobile-only):after {
-    display: block;
-    height: 3px;
-    width: 0;
-    margin: auto;
-    content: "";
-    transition: width .3s ease, background-color .3s ease;
-    background: transparent;
-}
-
-.h-menu a:hover:after {
-    width: 100%;
-    background: #0eb1d2;
-}
-
-.h-menu li:last-child a {
-    border-right: 0;
-}
 
 .h-button {
     float: right;
@@ -426,18 +420,18 @@ table thead {
         display: inline-block;
         margin-right: 20px;
     }
-    .h-menu {
+    .nav-menu {
         margin: -3px 0 0 0;
         position: fixed;
         right: 0;
         text-align: right;
         width: 100% height: 98px;
     }
-    .h-menu ul {
+    .nav-menu ul {
         display: none;
         background-color: #1e1e1e;
     }
-    .h-menu li {
+    .nav-menu li {
         display: block;
         line-height: 3em;
         font-size: 1.2em;
