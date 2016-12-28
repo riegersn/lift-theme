@@ -117,13 +117,10 @@ endif;
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt');
 
-function lift_theme_menu() {
-  register_nav_menus( array(
-    'header' => 'Header menu'
-  ) );
- }
-
-add_action( 'after_setup_theme', 'lift_theme_menu' );
+function register_main_menu() {
+  register_nav_menu( 'main-nav-menu',__( 'Main Nav Menu' ));
+}
+add_action( 'init', 'register_main_menu' );
 
 /* ----------------------------------------*
  * Settings Menu
