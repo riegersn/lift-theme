@@ -354,6 +354,21 @@ table thead {
     line-height: 0;
 }
 
+.header a:hover,
+.current_page_item {
+    color: #e91e78;
+    /* fixme: current_page_item not working */
+}
+
+.header-menu {
+    display: block;
+    overflow: visible;
+}
+
+.header-menu a {
+    line-height: 1.2;
+}
+
 .header-menu ul {
     margin:  0;
     line-height: 70px;
@@ -363,16 +378,6 @@ table thead {
     margin:  0;
     display: inline-block;
     padding: 0 15px;
-}
-
-.current_page_item, .header a:hover {
-    color: #e91e78;
-    /* fixme: current_page_item not working */
-}
-
-.header-menu {
-    display: block;
-    overflow: visible;
 }
 
 .mobile-bars {
