@@ -331,6 +331,18 @@ header {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
 }
 
+header a {
+    color: #fafafa;
+    text-decoration: none;
+    letter-spacing: -.5px;
+    text-transform: lowercase;
+}
+
+a.current_page_item, header a:hover {
+    color: #e91e78;
+    /* fixme: current_page_item not working */
+}
+
 .h-wrap {
     position: relative;
     max-width: 1336px;
@@ -390,18 +402,8 @@ header {
     position: relative;
     display: inline-block;
     padding: 0 15px;
-    color: #fafafa;
-    text-decoration: none;
-    letter-spacing: -.5px;
-    text-transform: lowercase;
     line-height: 1.3em;
 }
-
-.nav-menu li a:hover,
-.nav-menu .current_page_item a {
-    color: #e91e78;
-}
-
 
 .h-button {
     float: right;
@@ -409,10 +411,6 @@ header {
     text-align: right;
     margin-top: 41px;
     letter-spacing: -.5px;
-}
-
-.mobile-only {
-    display: none;
 }
 
 @media only screen and (max-width: 1010px) {
@@ -440,6 +438,30 @@ header {
     .drive-now {
         margin: 10px 20px 20px;
     }
+}
+
+
+/*-----------------------------------------------------------------
+[# Mobile Nav]
+-------------------------------------------------------------------*/
+
+.mobile-menu {
+    float: right;
+    z-index: 99999;
+    text-align: right;
+}
+
+.mobile-bars {
+    display: none;
+    font-size: 34px;
+    color: #fafafa;
+    line-height: 98px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    font-size: 1.176rem;
+    display: block;
 }
 
 
