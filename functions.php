@@ -4,16 +4,14 @@ show_admin_bar( false ); // disable the admin bar.
 
 function lift_scripts() {
 
-	/* Scripts
-	 * ----------------------------------------*/
+	/*-- Scripts -----------------------------*/
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 	wp_enqueue_script( 'shareable', get_template_directory_uri() . '/js/shareable.js');
 	// wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
 	wp_enqueue_script( 'masonary', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js');
 
-	/* Stylesheets
-	 * ----------------------------------------*/
+	/*-- Stylesheets -------------------------*/
 	wp_enqueue_style( 'shareable', get_template_directory_uri() . '/css/shareable.css' );
 	wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );
 }
