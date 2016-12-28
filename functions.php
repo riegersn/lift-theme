@@ -9,6 +9,7 @@ function lift_scripts() {
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 	wp_enqueue_script( 'shareable', get_template_directory_uri() . '/js/shareable.js');
 	// wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js');
+	wp_enqueue_script( 'lift', get_template_directory_uri() . '/js/lift.js');
 	wp_enqueue_script( 'masonary', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js');
 
 	/*-- Stylesheets -------------------------*/
