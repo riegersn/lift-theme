@@ -318,7 +318,7 @@ table thead {
 [# Header]
 -------------------------------------------------------------------*/
 
-header {
+.header {
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -332,7 +332,7 @@ header {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
 }
 
-header a {
+.header a {
     color: #fafafa;
     text-decoration: none;
     letter-spacing: -.5px;
@@ -341,12 +341,12 @@ header a {
     line-height: 1.2em;
 }
 
-nav ul {
+.header-nav ul {
     margin:  0;
     line-height: 70px;
 }
 
-nav li {
+.header-nav li {
     margin:  0;
     display: inline-block;
     padding: 0 15px;
@@ -371,7 +371,7 @@ nav li {
     width: auto;
 }
 
-nav {
+.header-nav {
     display: block;
     overflow: visible;
 }
@@ -391,13 +391,13 @@ nav {
         display: block;
     }
 
-    nav {
+    .header-nav {
         padding-top: 20px;
         clear: both;
         display: none;
     }
 
-    nav li {
+    .header-nav li {
         display: block;
         font-size: 1.2em;
         line-height: 1.2em;

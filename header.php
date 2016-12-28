@@ -10,7 +10,7 @@
 	</head>
 	<body>
 
-	<header>
+	<header class="header">
 		<div class="header-wrap">
 
 			<!-- the logo -->
@@ -26,7 +26,7 @@
 			</div>
 
 			<!-- the main menu -->
-			<nav class="nav-item-highlight floatright">
+			<nav class="header-nav nav-item-highlight floatright">
 				<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
 			</nav>
 
