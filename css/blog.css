@@ -391,14 +391,27 @@ table thead {
 }
 
 @media only screen and (max-width: 1050px) {
+
+    .header-logo {
+        height: 60px;
+    }
+
     .mobile-bars {
         display: block;
+    }
+
+    .mobile-bars i {
+        line-height: 60px;
     }
 
     .header-menu {
         padding-top: 20px;
         clear: both;
         display: none;
+    }
+
+    .header-menu ul {
+        line-height: 60px;
     }
 
     .header-menu li {
@@ -418,13 +431,13 @@ table thead {
 -------------------------------------------------------------------*/
 
 .m-content {
-    margin: 98px 0 40px;
+    margin: 0 0 40px;
     background-color: #edf2f4;
 }
 
 @media only screen and (max-width: 1050px) {
     .m-content {
-        margin: 98px 0 0 0;
+        margin: 0;
     }
 }
 
@@ -553,7 +566,7 @@ table thead {
 .post-featured-image {
     position: relative;
     display: block;
-    height: 550px;
+    height: 650px;
     width: 100%;
     background-position: 50% 50%;
     -webkit-background-size: cover;
