@@ -351,6 +351,7 @@ table thead {
     letter-spacing: -.5px;
     text-transform: lowercase;
     display: block;
+    line-height: 0;
 }
 
 .header-menu ul {
@@ -377,7 +378,6 @@ table thead {
 .mobile-bars {
     display: none;
     font-size: 34px;
-    line-height: 70px;
     cursor: pointer;
 }
 
