@@ -4,6 +4,16 @@ jQuery(document).ready(function($) {
 	// mobile nav menu, slide on click
 	$('.mobile-bars').click(function(){ $('.header-menu').slideToggle(); });
 	// fixme: when resized above mobile switch, if toggle was triggered menu display is none
+
+
+	// cleanup the dispaly property left by jquery toggle
+	$(window).resize(function() {
+		if ( $(window).width() > 860 ) {
+			if ( $('.header-menu').css('display') == 'none' )
+				$('.header-menu').css('display', '');
+		}
+	});
+
 	// switch to slim-nav once scroll reaches content
 	$(window).scroll(function() {
     	var header = $('.header'),
