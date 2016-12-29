@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 	// switch to slim-nav once scroll reaches content
 	$(window).scroll(function() {
     	var header = $('.header'),
-    		content = $('.post-title').position().top - 138,
+    		content = $('.post-title').position().top - 220,
 			scroll_top = Math.round($(window).scrollTop());
 
 		if (scroll_top >= content) {
