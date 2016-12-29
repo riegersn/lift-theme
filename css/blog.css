@@ -405,6 +405,20 @@ table thead {
 }
 
 @media only screen and (max-width: 1060px) {
+
+    .header-logo {
+        height: 50px;
+    }
+
+    .header-menu ul {
+        display: block;
+        line-height: 50px;
+    }
+
+    .header-wrap {
+        font-size: 1rem;
+    }
+}
     .header-logo {
         height: 60px;
     }
