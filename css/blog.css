@@ -345,6 +345,8 @@ table thead {
 .header-logo {
     height: 70px;
     width: auto;
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
 }
 
 .header a {
