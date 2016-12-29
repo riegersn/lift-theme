@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="c-row c-header">
-			<img class="c-header" src="<?php echo get_template_directory_uri(); ?>/img/the_blog_154.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/the_blog_154_fallback.png'">
+			<img class="c-header" src="<?php echo get_template_directory_uri(); ?>/img/the_blog_140.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/the_blog_140_fallback.png'">
 		</div>
 
 		<div class="c-post-panel">
