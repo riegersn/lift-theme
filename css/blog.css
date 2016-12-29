@@ -241,7 +241,7 @@ table thead {
     width: 31.33%;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
     .span-col {
         width: 48%;
     }
@@ -393,7 +393,6 @@ table thead {
     line-height: 70px;
 }
 
-@media only screen and (max-width: 1050px) {
 .slim-nav .header-logo {
     height: 50px;
 }
@@ -406,6 +405,7 @@ table thead {
     font-size: 1rem;
 }
 
+@media only screen and (max-width: 1060px) {
     .header-logo {
         height: 60px;
     }
@@ -449,7 +449,7 @@ table thead {
     background-color: #edf2f4;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
     .m-content {
         margin: 0;
     }
@@ -513,7 +513,7 @@ table thead {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
     .post-entry {
         border-radius: 0;
     }
@@ -525,7 +525,7 @@ table thead {
     background-color: #fafafa;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
     .entry-wrap {
         border-radius: 0;
     }
@@ -590,7 +590,7 @@ table thead {
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, .15);
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
     .post-featured-image {
         height: 460px;
         border-radius: 0;
@@ -607,7 +607,7 @@ table thead {
     background-color: #fafafa;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
     .post-content {
         margin: 0;
         border-radius: 0;
