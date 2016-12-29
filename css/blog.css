@@ -603,7 +603,7 @@ table thead {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    box-shadow: 0 0 7px 2px rgba(0, 0, 0, .15);
+    box-shadow: 0 10px 12px -5px rgba(0, 0, 0, 0.15);
 }
 
 @media only screen and (max-width: 1060px) {
