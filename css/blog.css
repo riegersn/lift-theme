@@ -394,6 +394,17 @@ table thead {
 }
 
 @media only screen and (max-width: 1050px) {
+.slim-nav .header-logo {
+    height: 50px;
+}
+
+.slim-nav .header-menu ul {
+    line-height: 50px;
+}
+
+.slim-nav .header-wrap {
+    font-size: 1rem;
+}
 
     .header-logo {
         height: 60px;
