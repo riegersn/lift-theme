@@ -6,7 +6,7 @@
 	<div class="c-column">
 
 		<div class="c-row c-header">
-			<strong>Welcome</strong>
+			<img class="c-header" src="<?php echo get_template_directory_uri(); ?>/img/welcome_76.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/welcome_76_fallback.png'">
 		</div>
 
 		<div class="c-row c-panel">
