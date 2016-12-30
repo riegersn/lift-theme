@@ -344,8 +344,8 @@ table thead {
 .header-logo {
     height: 70px;
     width: auto;
-    -webkit-transition: all 100ms;
-    transition: all 100ms;
+    -webkit-transition: height .5s ease-in;
+    transition: height .5s ease-in;
 }
 
 .header a {
@@ -369,6 +369,8 @@ table thead {
 
 .header-menu a {
     line-height: 1.2;
+    -webkit-transition: font-size .5s ease-in;
+    transition: font-size .5s ease-in;
 }
 
 .header-menu ul {
