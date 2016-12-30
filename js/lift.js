@@ -1,6 +1,12 @@
 
 jQuery(document).ready(function($) {
 
+	// set the content to masonary style
+	$('.c-post-panel').masonry({
+  		itemSelector: '.post-entry',
+  		isAnimated: false
+  	});
+
 	// mobile nav menu, slide on click
 	$('.mobile-bars').click(function(){ $('.header-menu').slideToggle(); });
 	// fixme: when resized above mobile switch, if toggle was triggered menu display is none

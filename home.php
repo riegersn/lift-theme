@@ -43,11 +43,5 @@
 	</div> <!-- /.c-column -->
 </div> <!-- /.m-content -->
 
-<script type="text/javascript">
-	jQuery('.c-post-panel').masonry({
-  		itemSelector: '.post-entry',
-  		// isAnimated: false
-	});
-</script>
 
 <?php get_footer(); ?>
