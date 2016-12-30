@@ -328,8 +328,8 @@ table thead {
     font-size: 1.176rem;
     overflow: hidden;
     color: #fafafa;
-    background-color: #1e1e1e;
-    background-color: rgba(30, 30, 30, .9);
+    /* background-color: #1a1a1a; */
+    background-color: rgba(0, 0, 0, .85);
 }
 
 .header-wrap {
