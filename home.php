@@ -10,7 +10,9 @@
 		</div>
 
 		<div class="c-row c-panel">
-			This is just some text.
+			<p>Hi, I'm Shawn. I'm a husband, father and a Lyft driver in the NJ area. After driving with both Uber &amp; Lyft for some time, I found it to be exciting, stimulating and financially bennificial. As I began to see weekly payouts ranging from $400-600, then nearly $800 a week, I knew this driving thing was real.</p>
+			<p></p>
+			<p></p>
 		</div>
 
 		<div class="c-row c-header">
