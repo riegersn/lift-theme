@@ -864,16 +864,24 @@ table thead {
 -------------------------------------------------------------------*/
 
 .m-footer {
-    padding: 40px 26px;
+    padding: 20px;
     text-align: center;
-    color: #adacb5;
+    color: #666;
 }
 
-.m-footer p:last-child {
+.m-footer p {
     margin-bottom: 0;
+}
+
+/* .m-footer p:last-child {
+    margin-top: 10px;
 }
 
 .m-footer i {
     padding: 0 6px;
     font-size: 26px;
 }
+
+.m-footer a {
+    color:  #666;
+} */
