@@ -395,14 +395,14 @@ table thead {
 
 /* slim-nav */
 
-.header-logo-slim {
+.slim-header-logo {
     display: none;
     height: 45px;
     float: left;
     line-height: 0;
 }
 
-.header-logo-slim img {
+.slim-header-logo img {
     height: inherit;
     width: auto;
 }
@@ -429,7 +429,7 @@ table thead {
     display: none;
 }
 
-.slim-header .header-logo-slim {
+.slim-header .slim-header-logo {
     display: block;
 }
 
