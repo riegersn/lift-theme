@@ -392,6 +392,7 @@ table thead {
     line-height: 80px;
 }
 
+
 /* slim-nav */
 
 .header-logo-slim {
@@ -405,7 +406,6 @@ table thead {
     height: inherit;
     width: 100%;
 }
-
 
 .slim-header {
     position: fixed;
@@ -484,7 +484,6 @@ table thead {
         clear: both;
     } */
 }
-
 
 .m-content {
     margin-top: 120px;
@@ -923,6 +922,7 @@ table thead {
 .m-footer p {
     margin-bottom: 0;
 }
+
 
 /* .m-footer p:last-child {
     margin-top: 10px;
