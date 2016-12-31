@@ -379,7 +379,7 @@ table thead {
 
 .header-logo img {
     height: inherit;
-    width: 100%;
+    width: auto;
 }
 
 .mobile-bars {
@@ -404,7 +404,7 @@ table thead {
 
 .header-logo-slim img {
     height: inherit;
-    width: 100%;
+    width: auto;
 }
 
 .slim-header {
