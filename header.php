@@ -15,7 +15,7 @@
 
 			<!-- the logo -->
 			<a class="slim-header-logo" href="<?php bloginfo( 'wpurl' );?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_text_75.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_text_75_fallback.png'">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_text_alt_75.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_text_alt_75_fallback.png'">
 			</a>
 
 			<a class="header-logo" href="<?php bloginfo( 'wpurl' );?>">
