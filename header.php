@@ -14,6 +14,10 @@
 		<div class="header-wrap">
 
 			<!-- the logo -->
+			<a class="header-logo-slim" href="<?php bloginfo( 'wpurl' );?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_text_75.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_text_75_fallback.png'">
+			</a>
+
 			<a class="header-logo" href="<?php bloginfo( 'wpurl' );?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_dark_80.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_dark_80_fallback.png'">
 			</a>
