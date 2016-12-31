@@ -411,8 +411,10 @@ table thead {
     position: fixed;
     z-index: 1;
     top: -120px;
-    background-color: #1e1e1e;
-    background-color: rgba(30, 30, 30, .95);
+    background-color: #edf2f4;
+    border-bottom: 1px solid #cbcfd3;
+    border-bottom: 1px solid rgba(203, 207, 211, .8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
 .slim-header .header-wrap {
@@ -422,8 +424,12 @@ table thead {
 
 .slim-header .header-menu a {
     font-size: 1rem;
-    color: #fafafa;
+    color: #666;
     font-weight: 400;
+}
+
+.slim-header .header-menu a:hover {
+    color: #e91e78;
 }
 
 .slim-header .header-logo {
@@ -506,6 +512,19 @@ table thead {
 [# Home/Welcome]
 -------------------------------------------------------------------*/
 
+.home-featured-image {
+    position: relative;
+    display: block;
+    height: 500px;
+    width: 100%;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
 .c-column {
     display: block;
     height: auto;
@@ -518,6 +537,10 @@ table thead {
     margin: 15px 9px;
     padding: 26px;
     overflow: hidden;
+}
+
+.the-blog {
+    padding-bottom: 0;
 }
 
 .c-header {
@@ -620,7 +643,7 @@ table thead {
 -------------------------------------------------------------------*/
 
 .post-container {
-    overflow: auto;
+    overflow: visible;
 }
 
 .post-featured-image {
@@ -633,7 +656,7 @@ table thead {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    box-shadow: 0 0 20px #888888;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
 @media only screen and (max-width: 1060px) {
