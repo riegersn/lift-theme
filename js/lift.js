@@ -20,19 +20,19 @@ jQuery(document).ready(function($) {
 	});
 
 	// switch to slim-nav once scroll reaches content
-	$(window).scroll(function() {
-    	var header = $('.header'),
-    		content = $('.post-title').position().top - 220,
-			scroll_top = Math.round($(window).scrollTop());
+	// $(window).scroll(function() {
+ //    	var header = $('.header'),
+ //    		content = $('.post-title').position().top - 220,
+	// 		scroll_top = Math.round($(window).scrollTop());
 
-		if (scroll_top >= content) {
-			if ( !header.hasClass('slim-nav') )
-				header.addClass('slim-nav');
-		}
-		else {
-			if ( header.hasClass('slim-nav') )
-				header.removeClass('slim-nav');
-		}
-    });
+	// 	if (scroll_top >= content) {
+	// 		if ( !header.hasClass('slim-nav') )
+	// 			header.addClass('slim-nav');
+	// 	}
+	// 	else {
+	// 		if ( header.hasClass('slim-nav') )
+	// 			header.removeClass('slim-nav');
+	// 	}
+ //    });
 
 });

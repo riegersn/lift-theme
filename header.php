@@ -14,11 +14,9 @@
 		<div class="header-wrap">
 
 			<!-- the logo -->
-			<div class="floatleft">
-				<a href="<?php bloginfo( 'wpurl' );?>">
-					<img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
-				</a>
-			</div>
+			<a class="header-logo" href="<?php bloginfo( 'wpurl' );?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_logo_fallback.png'">
+			</a>
 
 			<!-- mobile bars -->
 			<div class="mobile-bars floatright">
