@@ -412,11 +412,12 @@ table thead {
     z-index: 1;
     top: -120px;
     background-color: #1e1e1e;
-    background-color: rgba(30, 30, 30, .5);
+    background-color: rgba(30, 30, 30, .95);
 }
 
 .slim-header .header-wrap {
     padding: 5px 20px;
+    color: #fafafa;
 }
 
 .slim-header .header-menu a {
@@ -437,6 +438,10 @@ table thead {
     line-height: 45px;
 }
 
+.slim-header i {
+    line-height: 45px !important;
+}
+
 @media only screen and (max-width: 1100px) {
     .header-logo {
         height: 60px;
@@ -452,9 +457,9 @@ table thead {
     }
 }
 
-@media only screen and (max-width: 860px) {
-    /*     .header-logo {
-        height: 50px;
+@media only screen and (max-width: 1000px) {
+    .header-logo {
+        height: 60px;
     }
 
     .mobile-bars {
@@ -462,7 +467,7 @@ table thead {
     }
 
     .mobile-bars i {
-        line-height: 50px;
+        line-height: 60px;
     }
 
     .header-menu {
@@ -483,7 +488,7 @@ table thead {
         text-align: right;
         float: right;
         clear: both;
-    } */
+    }
 }
 
 .m-content {
