@@ -392,6 +392,50 @@ table thead {
     line-height: 80px;
 }
 
+/* slim-nav */
+
+.header-logo-slim {
+    display: none;
+    height: 45px;
+    float: left;
+    line-height: 0;
+}
+
+.header-logo-slim img {
+    height: inherit;
+    width: 100%;
+}
+
+
+.slim-header {
+    position: fixed;
+    z-index: 1;
+    top: -120px;
+    background-color: #1e1e1e;
+}
+
+.slim-header .header-wrap {
+    padding: 5px;
+}
+
+.slim-header .header-menu a {
+    font-size: 1rem;
+    color: #fafafa;
+    font-weight: 400;
+}
+
+.slim-header .header-logo {
+    display: none;
+}
+
+.slim-header .header-logo-slim {
+    display: block;
+}
+
+.slim-header ul {
+    line-height: 45px;
+}
+
 @media only screen and (max-width: 1060px) {
     /*     .header-logo {
         height: 50px;
