@@ -412,6 +412,7 @@ table thead {
     z-index: 1;
     top: -120px;
     background-color: #1e1e1e;
+    background-color: rgba(30, 30, 30, .5);
 }
 
 .slim-header .header-wrap {
