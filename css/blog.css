@@ -324,6 +324,8 @@ table thead {
     width: 100%;
     font-size: 1.176rem;
     overflow: hidden;
+    position: fixed;
+    top: 0;
 }
 
 .header-wrap {
