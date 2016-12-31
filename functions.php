@@ -2,6 +2,13 @@
 
 show_admin_bar( false ); // disable the admin bar.
 
+function print_svg_image($img_class, $svg_img, $fallback_img) {
+	$template = "<img class=\"%s\" src=\"%s\" onerror=\"this.onerror=null; this.src='%s'\">";
+	$svg_img = get_template_directory_uri() . '/img/' . $svg_img;
+	$fallback_img = get_template_directory_uri() . '/img/' . $fallback_img;
+	echo sprintf($template, $img_class, $svg_img, $fallback_img);
+}
+
 function lift_scripts() {
 
 	/*-- Scripts -----------------------------*/
