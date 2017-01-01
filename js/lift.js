@@ -8,7 +8,6 @@ jQuery(document).ready(function($) {
   	});
 
 	// mobile nav menu, slide on click
-	// fixme: when resized above mobile switch, if toggle was triggered menu display is none
 	$('.mobile-bars').click(function(){ $('.mobile-menu').slideToggle(); });
 
 	// cleanup the dispaly property left by jquery toggle
@@ -21,32 +20,29 @@ jQuery(document).ready(function($) {
 
 	// switch to slim-header once scroll reaches content
 	$(window).scroll(function() {
-    	var header = $('.header'),
-    		mobile = $('.mobile-menu'),
-    		switch_point = 400,
+    	var switch_point = 600,
+    		header = $('.header'),
+    		content = $('.m-content'),
 			scroll_point = $(window).scrollTop();
+
+    	// if (header.hasClass('toggled') && scroll_point <= 750)
+    	// 	header.finish();
 
 		if (scroll_point >= switch_point) {
 			if ( !header.hasClass('toggled') ) {
-				mobile.css('top', '55px');
-				header.css('top', '');
+				content.addClass('freeze-content');
 				header.addClass('toggled').addClass('slim-header');
-				header.animate({top: '0'}, 'fast');
+				header.css('top', '');
+				header.animate({top: '0'}, '1000');
 			}
 		}
 		else {
 			if ( header.hasClass('toggled') ) {
 				header.removeClass('toggled');
-
-				if (mobile.is(':visible')) {
-					mobile.hide();
-				}
-
-				mobile.css('top', '90px');
-
-				header.animate({top: '-120px'}, 'fast', function() {
-					header.removeClass('slim-header');
+				header.animate({top: '-120px'}, '200', function() {
 					header.css('top', '');
+					header.removeClass('slim-header');
+					content.removeClass('freeze-content');
 				});
 			}
 		}

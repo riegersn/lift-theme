@@ -323,9 +323,6 @@ table thead {
 .header {
     width: 100%;
     font-size: 1.176rem;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
 }
 
 .header-wrap {
@@ -431,6 +428,17 @@ table thead {
     color: #e91e78;
 }
 
+.mobile-header {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    /* top: -120px; */
+    top: 0;
+}
+
+.mobile-header .header-menu a {
+    height: 45px;
+}
 
 /* slim-nav */
 
@@ -450,9 +458,7 @@ table thead {
     position: fixed;
     z-index: 1;
     top: -120px;
-    background-color: #edf2f4;
-    border-bottom: 1px solid #cbcfd3;
-    border-bottom: 1px solid rgba(203, 207, 211, .8);
+    background-color: #1e1e1e;
     box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
@@ -463,7 +469,7 @@ table thead {
 
 .slim-header .header-menu a {
     font-size: 1rem;
-    color: #666;
+    color: #fafafa;
     font-weight: 400;
 }
 
@@ -524,13 +530,21 @@ table thead {
     }
 }
 
+
 .m-content {
-    margin-top: 120px;
+    position: relative;
+    top: 0;
 }
+
+.freeze-content {
+    top: 120px;
+}
+
+.freeze-slim-nav
 
 @media only screen and (max-width: 1100px) {
     .m-content {
-        margin-top: 100px;
+        /* margin-top: 100px; */
     }
 }
 
