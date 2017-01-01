@@ -113,11 +113,14 @@ h3 {
 }
 
 p,
-ul,
 table {
     padding: 0;
     margin: 0 0 28px 0;
     overflow: visible;
+}
+
+ul {
+    margin: 5px 5px 26px 5px;
 }
 
 table {
@@ -419,7 +422,7 @@ table thead {
 }
 
 .mobile-menu a {
-    color:  #333;
+    color: #333;
     display: block;
     line-height: 45px;
 }
@@ -439,6 +442,7 @@ table thead {
 .mobile-header .header-menu a {
     height: 45px;
 }
+
 
 /* slim-nav */
 
@@ -501,12 +505,10 @@ table thead {
     .header-logo {
         height: 60px;
     }
-
     .header-menu ul {
         /* display: block; */
         line-height: 60px;
     }
-
     .header-wrap {
         font-size: 1.1rem;
     }
@@ -516,20 +518,16 @@ table thead {
     .header-logo {
         height: 60px;
     }
-
     .mobile-bars {
         display: block;
     }
-
     .mobile-bars i {
         line-height: 60px;
     }
-
     .header-menu {
         display: none;
     }
 }
-
 
 .m-content {
     position: relative;
@@ -540,9 +538,7 @@ table thead {
     top: 120px;
 }
 
-.freeze-slim-nav
-
-@media only screen and (max-width: 1100px) {
+.freeze-slim-nav @media only screen and (max-width: 1100px) {
     .m-content {
         /* margin-top: 100px; */
     }
