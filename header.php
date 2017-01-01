@@ -35,5 +35,10 @@
 		</div>
 	</header>
 
+	<!-- the main menu -->
+	<div class="mobile-menu">
+		<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
+	</div>
+
 	<!-- start content -->
 	<div class="m-content">
