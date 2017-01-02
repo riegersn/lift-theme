@@ -8,18 +8,10 @@ jQuery(document).ready(function($) {
   	});
 
 	// mobile nav menu, slide on click
-	$('.mobile-bars').click(function(){ $('.mobile-menu').slideToggle(); });
-
-	// switch to skinny when header runs out of room
-	// $(window).resize(function() {
-	// 	var header = $('.header');
-	// 	if ( !header.hasClass('.skinny') ) {
-	// 		var space = $(window).width() - $('.header-logo:visible').width() - $('.header-menu').width();
-	// 		if ( space <= 100 ) {
-	// 			header.addClass('skinny');
-	// 		}
-	// 	}
-	// });
+	$('.mobile-bars').click(function() {
+		var menu = $('.header-menu');
+		$('.header-menu').slideToggle();
+	});
 
 	// switch to slim-header once scroll reaches content
 	$(window).scroll(function() {

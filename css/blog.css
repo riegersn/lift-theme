@@ -505,7 +505,29 @@ table thead {
         display: block;
     }
     .header-menu {
-        display: none;
+        /* display: none; */
+        width: 100%;
+        position: fixed;
+        right: 0;
+        top: 100px;
+        z-index: 3;
+        transform: none;
+        background-color: #edf2f4;
+    }
+
+    .header.skinny .header-menu {
+        top:  60px;
+        background-color: #1e1e1e;
+    }
+
+    .header-menu li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .header-menu a {
+        display: block;
     }
 }
 
