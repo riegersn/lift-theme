@@ -330,7 +330,7 @@ table thead {
     background-color: #edf2f4;
     z-index: 2;
     top: 0;
-    transition: all .3s linear;
+    transition: all 200ms ease;
 }
 
 .header-wrap {
@@ -338,18 +338,27 @@ table thead {
     max-width: 1336px;
     margin: 0 auto;
     overflow: hidden;
-    transition: all .3s linear;
 }
 
 
 /* header defaults */
+
+.mobile-bars {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    font-size: 29px;
+    cursor: pointer;
+}
 
 .header-menu {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all .3s linear;
+    transition: all 200ms ease;
 }
 
 .header ul {
@@ -387,24 +396,15 @@ table thead {
     height: 60px;
     padding: 20px;
     line-height: 0;
+    position: static;
     display: inline-block;
     vertical-align: top;
-    transition: all .3s linear;
+    transition: all 200ms ease;
 }
 
 .header-logo img {
     height: inherit;
     width: auto;
-}
-
-.mobile-bars {
-    display: none;
-    font-size: 29px;
-    cursor: pointer;
-}
-
-.mobile-bars i {
-    line-height: 80px;
 }
 
 
@@ -464,18 +464,22 @@ table thead {
 }
 
 .header-logo.skinny {
-    display: none;
-    transition: all .3s linear;
+    position: absolute;
+    top: -100px;
+    height: 60px;
+    display: inline-block;
 }
 
 .header.skinny .header-logo.skinny {
-    display: inline-block;
+    position: static;
     height: 45px;
     padding: 10px 20px;
 }
 
 .header.skinny .header-logo:not(.skinny) {
-    display: none;
+    position: absolute;
+    top: -100px;
+    height:  45px;
 }
 
 .header.skinny .header-menu a {
@@ -487,12 +491,18 @@ table thead {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
+    .header-menu a {
+        font-size: 1.1rem;
+    }
+    .header li:not(:last-child) {
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
     .mobile-bars {
         display: block;
-    }
-    .mobile-bars i {
-        line-height: 60px;
     }
     .header-menu {
         display: none;
