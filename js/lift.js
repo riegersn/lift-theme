@@ -11,15 +11,15 @@ jQuery(document).ready(function($) {
 	$('.mobile-bars').click(function(){ $('.mobile-menu').slideToggle(); });
 
 	// switch to skinny when header runs out of room
-	$(window).resize(function() {
-		var header = $('.header');
-		if ( !header.hasClass('.skinny') ) {
-			var space = $(window).width() - $('.header-logo:visible').width() - $('.header-menu').width();
-			if ( space <= 100 ) {
-				header.addClass('skinny');
-			}
-		}
-	});
+	// $(window).resize(function() {
+	// 	var header = $('.header');
+	// 	if ( !header.hasClass('.skinny') ) {
+	// 		var space = $(window).width() - $('.header-logo:visible').width() - $('.header-menu').width();
+	// 		if ( space <= 100 ) {
+	// 			header.addClass('skinny');
+	// 		}
+	// 	}
+	// });
 
 	// switch to slim-header once scroll reaches content
 	$(window).scroll(function() {
