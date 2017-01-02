@@ -14,7 +14,7 @@
 		<div class="header-wrap">
 
 			<!-- the logo -->
-			<a class="slim-header-logo" href="<?php bloginfo( 'wpurl' );?>">
+			<a class="header-logo skinny" href="<?php bloginfo( 'wpurl' );?>">
 				<?php echo print_svg_image('', 'lyftguy_logo.svg', 'lyftguy_logo_fallback.png'); ?>
 			</a>
 
@@ -28,7 +28,7 @@
 			</div>
 
 			<!-- the main menu -->
-			<nav class="header-menu nav-item-highlight floatright">
+			<nav class="header-menu nav-item-highlight">
 				<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
 			</nav>
 

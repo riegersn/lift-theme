@@ -326,6 +326,11 @@ table thead {
 .header {
     width: 100%;
     font-size: 1.176rem;
+    position: fixed;
+    background-color: #edf2f4;
+    z-index: 2;
+    top: 0;
+    transition: all .3s linear;
 }
 
 .header-wrap {
@@ -333,16 +338,23 @@ table thead {
     max-width: 1336px;
     margin: 0 auto;
     overflow: hidden;
-    padding: 20px;
+    transition: all .3s linear;
 }
 
 
 /* header defaults */
 
+.header-menu {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s linear;
+}
+
 .header ul {
     margin: 0;
     padding: 0;
-    line-height: 80px;
 }
 
 .header li {
@@ -372,9 +384,12 @@ table thead {
 /* header logo */
 
 .header-logo {
-    height: 80px;
-    float: left;
+    height: 60px;
+    padding: 20px;
     line-height: 0;
+    display: inline-block;
+    vertical-align: top;
+    transition: all .3s linear;
 }
 
 .header-logo img {
@@ -432,11 +447,9 @@ table thead {
 }
 
 .mobile-header {
-    /* display: none; */
     position: fixed;
-    z-index: 1;
-    /* top: -120px; */
     top: 0;
+    z-index: 1;
 }
 
 .mobile-header .header-menu a {
@@ -444,80 +457,37 @@ table thead {
 }
 
 
-/* slim-nav */
+/* skinny nav */
 
-.slim-header-logo {
-    display: none;
-    height: 45px;
-    float: left;
-    line-height: 0;
-}
-
-.slim-header-logo img {
-    height: inherit;
-    width: auto;
-}
-
-.slim-header {
-    position: fixed;
-    z-index: 1;
-    top: -120px;
+.header.skinny {
     background-color: #1e1e1e;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
-.slim-header .header-wrap {
-    padding: 5px 20px;
-    color: #666;
+.header-logo.skinny {
+    display: none;
+    transition: all .3s linear;
 }
 
-.slim-header .header-menu a {
-    font-size: 1rem;
+.header.skinny .header-logo.skinny {
+    display: inline-block;
+    height: 45px;
+    padding: 10px 20px;
+}
+
+.header.skinny .header-logo:not(.skinny) {
+    display: none;
+}
+
+.header.skinny .header-menu a {
     color: #fafafa;
-    font-weight: 400;
 }
 
-.slim-header .header-menu a:hover {
+.header.skinny .header-menu a:hover {
     color: #e91e78;
 }
 
-.slim-header .header-logo {
-    display: none;
-}
 
-.slim-header .slim-header-logo {
-    display: block;
-}
-
-.slim-header ul {
-    line-height: 45px;
-}
-
-.slim-header i {
-    line-height: 45px !important;
-}
-
-.mobile-menu .slim-header {
-    top: 55px;
-}
-
-@media only screen and (max-width: 1100px) {
-    .header-logo {
-        height: 60px;
-    }
-    .header-menu ul {
-        /* display: block; */
-        line-height: 60px;
-    }
-    .header-wrap {
-        font-size: 1.1rem;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .header-logo {
-        height: 60px;
-    }
+@media only screen and (max-width: 500px) {
     .mobile-bars {
         display: block;
     }
@@ -530,18 +500,7 @@ table thead {
 }
 
 .m-content {
-    position: relative;
-    top: 0;
-}
-
-.freeze-content {
-    top: 120px;
-}
-
-.freeze-slim-nav @media only screen and (max-width: 1100px) {
-    .m-content {
-        /* margin-top: 100px; */
-    }
+    margin-top: 100px;
 }
 
 
