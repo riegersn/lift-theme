@@ -22,16 +22,15 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/img/lyftguy_dark_80.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/lyftguy_dark_80_fallback.png'">
 			</a>
 
-			<!-- mobile bars -->
-			<div class="mobile-bars floatright">
-				<i class='fa fa-bars' aria-hidden='true'></i>
-			</div>
-
 			<!-- the main menu -->
 			<nav class="header-menu nav-item-highlight">
 				<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
 			</nav>
 
+			<!-- mobile bars -->
+			<div class="mobile-bars">
+				<i class='fa fa-bars' aria-hidden='true'></i>
+			</div>
 		</div>
 	</header>
 
