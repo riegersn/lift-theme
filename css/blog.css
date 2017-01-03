@@ -65,6 +65,10 @@ a:hover {
     text-decoration: none;
 }
 
+a[onclick], a:not([name]) {
+    cursor: pointer
+}
+
 img {
     height: auto;
     max-height: 100%;
