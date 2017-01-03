@@ -29,19 +29,24 @@
 
 html,
 body {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
     color: #666;
     background-color: #edf2f4;
-    font: 300 17px/27px "Open Sans", Arial, Helvetica, sans-serif;
-    margin: 0;
-    min-width: 100%;
-    padding: 0;
+    font-size: 1.0625em;
+    -webkit-text-size-adjust: 1.0625em;
+    -ms-text-size-adjust: 1.0625em;
+    line-height: 1.588em;
+    font-weight: 300;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 @media (max-width: 400px) {
     html,
     body {
-        font-size: 16px;
-        line-height: 1.8em;
+        font-size: 1em;
+        line-height: 1.75em;
     }
 }
 
