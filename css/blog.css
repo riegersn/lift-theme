@@ -56,26 +56,6 @@ div {
     box-sizing: border-box;
 }
 
-.clearfix:after {
-    display: table;
-    clear: both;
-    content: "";
-}
-
-.outer-width {
-    max-width: 1366px;
-    /* TODO:  Implement outer/inner width selectors */
-}
-
-.inner-width {
-    max-width: 900px;
-}
-
-
-/*-----------------------------------------------------------------
-[# Global stuff]
--------------------------------------------------------------------*/
-
 a {
     text-decoration: none;
     color: #e91e78;
