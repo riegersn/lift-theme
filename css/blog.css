@@ -1,31 +1,28 @@
-/*-----------------------------------------------------------------
-
- Theme Name: theLyftGuy
- Version: 1.0.0
- Description: Custom theme for thelyftguy.net
- Author: Shawn Rieger
- Author URI: https://about.me/shawnrieger
- License: MIT License Copyright (c) 2016 Shawn Rieger
-
--------------------------------------------------------------------
-
--------------------------------------------------------------------
-[# Colors]
--------------------------------------------------------------------
-
-# Black     : #333333
-# White     : #fafafa
-# Grey      : #adacb5
-# Accent    : #e91e78
-# Secondary : #0eb1d2
-# Background: #edf2f4
-
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Theme Name: theLyftGuy
+    Version: 1.0.0
+    Description: Custom theme for thelyftguy.net
+    Author: Shawn Rieger
+    Author URI: https://about.me/shawnrieger
+    License: MIT License Copyright (c) 2016 Shawn Rieger
+   ------------------------------------------------------------ */
 
 
-/*-----------------------------------------------------------------
-[# Setup
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Colors
+
+        Black       #333333
+        White       #fafafa
+        Grey        #adacb5
+        Accent      #e91e78
+        Secondary   #0eb1d2
+        Background  #edf2f4
+   ------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------
+    Setup
+   ------------------------------------------------------------ */
 
 html,
 body {
@@ -50,6 +47,15 @@ body {
     }
 }
 
+@media only screen and (max-width: 680px) {
+    iframe {
+        width: 100%;
+    }
+    .scrollx {
+        overflow-x: scroll;
+    }
+}
+
 div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -65,7 +71,8 @@ a:hover {
     text-decoration: none;
 }
 
-a[onclick], a:not([name]) {
+a[onclick],
+a:not([name]) {
     cursor: pointer
 }
 
@@ -133,7 +140,9 @@ table thead {
 }
 
 
-/*---aligns---*/
+/* ------------------------------------------------------------
+    Wordpress Classes
+   ------------------------------------------------------------ */
 
 .aligncenter {
     display: block;
@@ -155,9 +164,6 @@ table thead {
     vertical-align: bottom;
 }
 
-
-/*---floats---*/
-
 .floatleft {
     float: left;
 }
@@ -165,9 +171,6 @@ table thead {
 .floatright {
     float: right;
 }
-
-
-/*---text-style---*/
 
 .textcenter {
     text-align: center;
@@ -181,19 +184,10 @@ table thead {
     text-align: left;
 }
 
-@media only screen and (max-width: 680px) {
-    iframe {
-        width: 100%;
-    }
-    .scrollx {
-        overflow-x: scroll;
-    }
-}
 
-
-/*-----------------------------------------------------------------
-[# Grid stuff
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Content Grid
+   ------------------------------------------------------------ */
 
 .section {
     padding: 0;
@@ -232,9 +226,9 @@ table thead {
 }
 
 
-/*-----------------------------------------------------------------
-[# Custom Elements]
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Custom Elements
+   ------------------------------------------------------------ */
 
 .button {
     display: inline-block;
@@ -290,12 +284,9 @@ table thead {
 }
 
 
-/*-----------------------------------------------------------------
-[# Header]
--------------------------------------------------------------------*/
-
-
-/* header containers */
+/* ------------------------------------------------------------
+    Main Header
+   ------------------------------------------------------------ */
 
 .header {
     width: 100%;
@@ -316,16 +307,21 @@ table thead {
 }
 
 
-/* header defaults */
+/* --- Header Logo --- */
 
-.mobile-bars {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-    font-size: 29px;
-    cursor: pointer;
+.header-logo {
+    height: 60px;
+    padding: 20px;
+    line-height: 0;
+    position: static;
+    display: inline-block;
+    vertical-align: top;
+    transition: all 200ms ease;
+}
+
+.header-logo img {
+    height: inherit;
+    width: auto;
 }
 
 .header-menu {
@@ -336,16 +332,16 @@ table thead {
     transition: all 200ms ease;
 }
 
-.header ul {
+.header-menu ul {
     margin: 0;
     padding: 0;
 }
 
-.header li {
+.header-menu li {
     display: inline-block;
 }
 
-.header li:not(:last-child) {
+.header-menu li:not(:last-child) {
     padding-right: 30px;
 }
 
@@ -364,26 +360,18 @@ table thead {
     color: #e91e78;
 }
 
-
-/* header logo */
-
-.header-logo {
-    height: 60px;
-    padding: 20px;
-    line-height: 0;
-    position: static;
-    display: inline-block;
-    vertical-align: top;
-    transition: all 200ms ease;
-}
-
-.header-logo img {
-    height: inherit;
-    width: auto;
+.mobile-bars {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    font-size: 29px;
+    cursor: pointer;
 }
 
 
-/* skinny nav */
+/* --- Skinny header --- */
 
 .header.skinny {
     background-color: #1e1e1e;
@@ -405,7 +393,7 @@ table thead {
 .header.skinny .header-logo:not(.skinny) {
     position: absolute;
     top: -100px;
-    height:  45px;
+    height: 45px;
 }
 
 .header.skinny .header-menu a {
@@ -420,6 +408,8 @@ table thead {
     color: #fafafa;
 }
 
+
+/* --- Header media adjustments --- */
 
 @media only screen and (max-width: 1000px) {
     .header-menu a {
@@ -443,31 +433,25 @@ table thead {
         transform: none;
         background-color: #edf2f4;
     }
-
     .header.skinny .header-menu {
-        top:  60px;
+        top: 60px;
         background-color: #1e1e1e;
     }
-
     .header-menu li {
         padding: 0;
         display: block;
         text-align: center;
     }
-
     .header-menu li:not(:last-child) {
         padding-right: 0;
     }
-
     .header-menu a {
         display: block;
         padding: 10px 0;
     }
-
     .header-menu a:hover {
         color: #e91e78;
         background-color: #1e1e1e;
-
     }
 }
 
@@ -475,9 +459,10 @@ table thead {
     margin-top: 100px;
 }
 
-/*-----------------------------------------------------------------
-[# Home/Welcome]
--------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------
+    Home / Landing Page
+   ------------------------------------------------------------ */
 
 .home-featured-image {
     position: relative;
@@ -605,9 +590,9 @@ table thead {
 }
 
 
-/*-----------------------------------------------------------------
-[# Blog Post/Page]
--------------------------------------------------------------------*/
+/* ------------------------------------------------
+    Post / Page
+   ------------------------------------------------ */
 
 .post-container {
     overflow: visible;
@@ -685,9 +670,9 @@ table thead {
 }
 
 
-/*-----------------------------------------------------------------
-[# Blog pager]
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Content Pager
+   ------------------------------------------------------------ */
 
 .pager {
     margin-bottom: 60px;
@@ -702,9 +687,9 @@ table thead {
 }
 
 
-/*-----------------------------------------------------------------
-[# Comments]
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Comments
+   ------------------------------------------------------------ */
 
 .cm-container {
     max-width: 660px;
@@ -841,9 +826,9 @@ table thead {
 }
 
 
-/*-----------------------------------------------------------------
-[# Subscribe Banner]
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Subscribe Banner
+   ------------------------------------------------------------ */
 
 .hp-promo-wrap {
     position: absolute;
@@ -911,9 +896,9 @@ table thead {
 }
 
 
-/*-----------------------------------------------------------------
-[# Footer]
--------------------------------------------------------------------*/
+/* ------------------------------------------------------------
+    Footer
+   ------------------------------------------------------------ */
 
 .m-footer {
     padding: 40px;
@@ -924,7 +909,7 @@ table thead {
 }
 
 .m-footer p {
-    margin:  0;
+    margin: 0;
 }
 
 .m-footer p:first-child {
