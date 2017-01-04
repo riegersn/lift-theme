@@ -4,11 +4,8 @@
 
 <div class="post-content">
 	<?php get_template_part('shareable') ?>
-
+	<p class="post-meta">/theLyftGuy/<?php the_date(); ?></a></p>
 	<h1 class="post-title"><?php the_title(); ?></h1>
-	<p class="post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a>
-	</p>
-
 	<?php the_content(); ?>
 </div>
 
