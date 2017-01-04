@@ -99,15 +99,28 @@ blockquote {
 dl,
 ol,
 ul {
-    font-size: 1em;
-    margin: 0 0 1.5em;
-    padding: 0;
+    font-size: 1.125rem; /* 1.125x16 = 18px */
+    margin: 0 0 1.5em 2em;
 }
 dd,
 dt,
 li {
     line-height: 1.5;
-    margin: 0;
+}
+table td {
+    font-size: 1.125em; /* 1.125x16 = 18px */
+    padding: 0.5555em;
+}
+table th {
+    font-size: 1.125em; /* 1.125x16 = 18px */
+    padding: 0.5555em;
+    font-weight: bold;
+}
+table ul {
+    margin-left: 1.2222em;
+}
+table p {
+
 }
 
 @media only screen and (max-width: 680px) {
