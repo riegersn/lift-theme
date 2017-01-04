@@ -1,5 +1,6 @@
+
 /* ------------------------------------------------------------
-    Theme Name: theLyftGuy
+    Theme Name: LiftGuy
     Version: 1.0.0
     Description: Custom theme for thelyftguy.net
     Author: Shawn Rieger
@@ -9,14 +10,14 @@
 
 
 /* ------------------------------------------------------------
-    Colors
+    Colors:
 
-        Black       #333333
-        White       #fafafa
-        Grey        #adacb5
-        Accent      #e91e78
-        Secondary   #0eb1d2
-        Background  #edf2f4
+    # Black       #293133
+    # White       #fafafa
+    # Grey        #adacb5
+    # Accent      #e91e78
+    # Secondary   #0eb1d2
+    # Background  #edf2f4
    ------------------------------------------------------------ */
 
 
@@ -24,18 +25,19 @@
     Setup
    ------------------------------------------------------------ */
 
-html { font-size: 100%; }
+/* Basic Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
 
+/* Define Body */
 body {
-    margin: 0;
-    padding: 0;
-    min-width: 100%;
-    color: #222;
+    color: #293133;
     background-color: #edf2f4;
-    font-size: 1.125em;
-    -webkit-text-size-adjust: 1.125em;
-    -ms-text-size-adjust: 1.125em;
-    line-height: 1.647em;
     font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
     text-rendering: optimizeLegibility;
@@ -43,41 +45,106 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: 400px) {
-    html,
-    body {
-        font-size: 1em;
-        line-height: 1.75em;
-    }
+
+/* ------------------------------------------------------------
+    Em Baseline
+   ------------------------------------------------------------ */
+
+h1, .alpha,
+h2, .beta,
+h3, .gamma,
+h4, .delta,
+h5, .epsilon,
+h6, .zeta {
+    font-weight: bold;
+    font-weight: 700;
+    font-family: "Lato";
+    margin-bottom: 1.5em;
+}
+h1, .alpha {
+    font-size: 2.75em;
+    line-height: 1.1;
+    margin: 0.1818em 0 0.5454em;
+}
+h2, .beta {
+    font-size: 1.75em;
+    line-height: 1.3827;
+    margin-bottom: 0.6913em;
+}
+h3, .gamma {
+    font-size: 1.6875em;
+    line-height: 1.0370;
+    margin-bottom: 1.0370em;
+}
+h4, .delta {
+    font-size: 1.4765em;
+    line-height: 1.1851;
+    margin-bottom: 1.1851em;
+}
+h5, .epsilon {
+    font-size: 1.2656em;
+    line-height: 1.3827;
+    margin-bottom: 1.3827em;
+}
+h6, .zeta {
+    font-size: 1.125em;
+    line-height: 1.5555;
+    margin-bottom: 1.5555em;
+}
+p,
+blockquote {
+    font-size: 1.125em;
+    margin: 0 0 1.5555em;
+    line-height: 1.5555;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+}
+dl,
+ol,
+ul {
+    font-size: 1em;
+    margin: 0 0 1.5555em;
+    padding: 0;
+}
+dd,
+dt,
+li {
+    line-height: 1.5555;
+    margin: 0;
 }
 
-@media only screen and (max-width: 680px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width: 680px) {
     iframe {
         width: 100%;
     }
     .scrollx {
         overflow-x: scroll;
     }
-}
+} */
 
 div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
     color: #e91e78;
-}
-
-a:hover {
     text-decoration: none;
-}
-
-a[onclick],
-a:not([name]) {
-    cursor: pointer
+    cursor: pointer;
 }
 
 img {
@@ -87,33 +154,8 @@ img {
     border-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #222;
-    line-height: 1.1em;
-    margin: 0 0 24px 0;
-    font-weight: 700;
-    font-family: "Lato";
-}
 
-h1 {
-    font-size: 2.875rem;
-    margin:  5px 0 20px 0;
-}
-
-h2 {
-    font-size: 1.412rem;
-}
-
-h3 {
-    font-size: 1.118rem;
-}
-
-p,
+/* p,
 table {
     padding: 0;
     margin: 0 0 28px 0;
@@ -123,7 +165,7 @@ table {
 ul {
     margin: 5px 5px 26px 5px;
 }
-
+ */
 table {
     width: 100%;
     font-size: .9em;
@@ -295,7 +337,6 @@ table thead {
 
 .header {
     width: 100%;
-    font-size: 1.111em;
     font-weight: 400;
     position: fixed;
     background-color: #edf2f4;
@@ -341,6 +382,7 @@ table thead {
 .header-menu ul {
     margin: 0;
     padding: 0;
+    font-size: 1.1875em;
 }
 
 .header-menu li {
@@ -416,8 +458,8 @@ table thead {
 /* --- Header media adjustments --- */
 
 @media only screen and (max-width: 1000px) {
-    .header-menu a {
-        font-size: 1.1rem;
+    .header-menu ul {
+        font-size: 1.125rem;
     }
     .header-menu li:not(:last-child) {
         padding-right: 15px;
@@ -625,7 +667,7 @@ table thead {
 
 .post-content {
     max-width: 900px;
-    padding: 30px;
+    padding: 40px;
     margin: 0 auto;
     overflow: hidden;
     background-color: #fafafa;
@@ -647,7 +689,7 @@ table thead {
     color: #777;
     margin: 0;
     box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.2);
-    font-size: 0.882em;
+    font-size: 0.9375em;
     display: inline-block;
 }
 
