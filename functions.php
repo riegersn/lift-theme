@@ -30,10 +30,10 @@ add_action( 'wp_enqueue_scripts', 'lift_scripts' );
  function lift_google_fonts() {
 	wp_register_style('Open Sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 	wp_enqueue_style('Open Sans');
-	wp_register_style('PT Serif', 'https://fonts.googleapis.com/css?family=PT+Serif:700');
-	wp_enqueue_style('PT Serif');
 	wp_register_style('Source Sans Pro', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
 	wp_enqueue_style('Source Sans Pro');
+	wp_register_style('Lato', 'https://fonts.googleapis.com/css?family=Lato:700');
+	wp_enqueue_style('Lato');
 }
 
 add_action('wp_print_styles', 'lift_google_fonts');
