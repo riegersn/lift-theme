@@ -427,8 +427,8 @@ table thead {
 
 .header.skinny .header-logo.skinny {
     position: static;
-    height: 45px;
-    padding: 10px 20px;
+    height: 50px;
+    padding: 8px 20px;
 }
 
 .header.skinny .header-logo:not(.skinny) {
