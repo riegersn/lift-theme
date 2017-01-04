@@ -64,27 +64,27 @@ h6, .zeta {
 }
 h1, .alpha {
     font-size: 2.75em; /* 2.75x16 = 44px */
-    margin: 0.1818em 0 0.5454em;
+    margin-bottom: 0.5454em; /* 0.5454x18 = 24px */
 }
 h2, .beta {
     font-size: 1.75em; /* 1.75x16 = 28px */
-    margin-bottom: 0.6913em;
+    margin-bottom: 0.7142em; /* 0.7142x28 = 20px */
 }
 h3, .gamma {
     font-size: 1.5em; /* 1.5x16 = 24px */
-    margin-bottom: 1.0370em;
+    margin-bottom: 0.6666em; /* 0.6666x18 = 16px */
 }
 h4, .delta {
     font-size: 1.375em; /* 1.375x16 = 22px */
-    margin-bottom: 1.1851em;
+    margin-bottom: 0.7272em; /* 0.7272x22 = 16px */
 }
 h5, .epsilon {
     font-size: 1.25em; /* 1.25x16 = 20px */
-    margin-bottom: 1.3827em;
+    margin-bottom: 0.5em; /* 0.5x20 = 10px */
 }
 h6, .zeta {
     font-size: 1.125em; /* 1.125x16 = 18px */
-    margin-bottom: 1.5555em;
+    margin-bottom: 0.5555em; /* 0.5555x18 = 10px */
 }
 p,
 blockquote {
@@ -110,27 +110,14 @@ li {
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media only screen and (max-width: 680px) {
+@media only screen and (max-width: 680px) {
     iframe {
         width: 100%;
     }
     .scrollx {
         overflow-x: scroll;
     }
-} */
+}
 
 div {
     box-sizing: border-box;
