@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
 	    $(window).scroll(function() {
 
 		    var sb = $('.sb-content-wrap'),
-		    	mobile = $('mobile-bars'),
+		    	mobile = $('.mobile-bars'),
 		    	post_image = $('.post-featured-image'),
 		    	header = $('.header'),
 				win_height = $(window).height(),
@@ -71,6 +71,8 @@ jQuery(document).ready(function($) {
 
             // console.log('scroll_top:'+scroll_top+' - fp_bottom:'+fp_bottom);
 
+            var win_width = $(window).width();
+
 	        if (mobile.is(':visible')) {
 
 	            sb.css({
@@ -80,7 +82,7 @@ jQuery(document).ready(function($) {
 
 	            fp_bottom = fp_bottom - win_height;
 
-	            // console.log(scroll_top + ' / ' + fp_top + ' / ' + fp_bottom);
+	            console.log(scroll_top + ' / ' + fp_top + ' / ' + fp_bottom);
 
 	            if (scroll_top >= fp_top && scroll_top < fp_bottom) {
 	                sb.css({ 'display': 'inline-block'});
@@ -108,18 +110,20 @@ jQuery(document).ready(function($) {
 		        // console.log(scroll_top + ' / ' + fp_start + ' / ' + fp_stop);
 
 	            if (scroll_top >= fp_start && scroll_top < fp_stop) {
-	                if (!sb.hasClass('sb-fixed-content-wrap')) {
-		                sb.css({ 'top': '', 'position': '' });
-		                sb.addClass('sb-fixed-content-wrap');
-		                console.log('freeze at: ' + fp_start);
-	            	}
+
+	            	// freeze the container when scroll reaches the defined freeze pos
+	                if (!sb.hasClass('sb-fixed-content-wrap'))
+		                sb.css({'top':'','position':'' }).addClass('sb-fixed-content-wrap');
+
 	            } else if (scroll_top >= fp_stop) {
-                	if (sb.hasClass('sb-fixed-content-wrap')) {
-                		sb.removeClass('sb-fixed-content-wrap');
-                		sb.css({ 'position': 'absolute', 'top': fp_stop + 100 });
-                		console.log('stopped at: ' + scroll_top);
-                	}
+
+	            	// unfreeze the container when scroll reaches the defined freeze pos
+                	if (sb.hasClass('sb-fixed-content-wrap'))
+                		sb.removeClass('sb-fixed-content-wrap').css({'position':'absolute','top':fp_stop+100});
+
 	            } else {
+
+	            	// return to normal pos
 	                sb.css({ 'top': '', 'position': '' });
 	                sb.removeClass('sb-fixed-content-wrap');
 	            }
