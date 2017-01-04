@@ -13,17 +13,14 @@
 
 .sb-content-wrap {
     position: absolute;
-    width: 40px;
-    margin: 0 0 0 -73px;
-    clear: both;
+    width: 48px;
+    margin: 30px 0 0 -88px;
     opacity: 1;
-    display: block;
 }
 
 .sb-fixed-content-wrap {
     position: fixed;
-    top: 154px;
-    /* padding(26) + header(128) */
+    top: 100px;
     clear: both;
 }
 
@@ -51,10 +48,10 @@
 
 .sb-button .fa {
     color: #f2f4f4;
-    height: 47px;
-    width: 47px;
+    height: 48px;
+    width: 48px;
     font-size: 1.3rem;
-    line-height: 47px;
+    line-height: 48px;
     cursor: pointer;
     -webkit-transition: color .3s linear;
     -moz-transition: color .3s linear;
