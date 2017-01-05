@@ -323,26 +323,10 @@ table thead {
     margin: 5px;
 }
 
-.buttons-border {
-    display: inline-block;
-    width: auto;
-    padding: 8px 10px;
-    cursor: pointer;
-    -webkit-transition: all 100ms linear;
-    -moz-transition: all 100ms linear;
-    -o-transition: all 100ms linear;
-    transition: all 100ms linear;
-    text-align: center;
-    color: #fafafa;
-    border: 1px solid #e91e78;
-    border-radius: 4px;
+.button:hover {
+    background-color: #293133;
 }
 
-.buttons-border:hover {
-    color: #e91e78;
-    border-color: #0eb1d2;
-    box-shadow: 0 0 3px 1px rgba(14, 177, 210, .5);
-}
 
 .nav-item-highlight a:after {
     display: block;
