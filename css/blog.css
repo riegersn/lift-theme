@@ -121,7 +121,6 @@ dt:first-child {
 
 .post-table {
     font-size: 1rem;
-    box-sizing: content-box;
     display: inline-block;
     margin-bottom: 1.6875em; /* 1.6875x16 = 27px */
 }
@@ -138,30 +137,35 @@ dt:first-child {
 
 .post-table table {
     width: 100%;
-    border-collapse: collapse;
 }
 
-
-/* table:first-child {
-
-}
-
-table:last-child {
-
-} */
-
-.post-table table td {
-    padding: 0.5555em; /* 0.5555x18 = 10px */
-}
 .post-table table th {
-    padding: 0.5555em; /* 0.5555x18 = 10px */
+    padding: 0.625em; /* 0.625x16 = 10px */
     font-weight: bold;
 }
-.post-table ul {
-    margin-left: 1.2222em; /* 1.2222x18 = 22px */
+
+.post-table table td {
+    padding: 0.625em; /* 0.625x16 = 10px */
+    vertical-align: top;
 }
+
+.post-table table td *:last-child {
+    margin-bottom: 0;
+}
+
+.post-table table td *:first-child {
+    margin-top:  0;
+}
+
+.post-table ul {
+    font-size: 1em;
+    margin-left: 1.375em; /* 1.375x16 = 22px */
+    list-style-type: disc;
+}
+
 .post-table p {
-    margin-bottom: 1.1111111111em; /* 1.1111111111x18 = 20px */
+    font-size: 1em;
+    margin-bottom: 1.25em; /* 1.25x16 = 20px */
 }
 
 @media only screen and (max-width: 680px) {
@@ -171,10 +175,6 @@ table:last-child {
     .scrollx {
         overflow-x: scroll;
     }
-}
-
-div {
-    box-sizing: border-box;
 }
 
 a {
@@ -715,11 +715,13 @@ table thead {
 }
 
 .post-meta {
-    color: #777;
+    color: #ef71a9;
     margin: 0;
     box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.2);
-    font-size: 0.9375em;
+    font-size: 0.875em; /* 14/16 */
     display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .wp-caption-text {
