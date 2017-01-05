@@ -371,8 +371,7 @@ table thead {
     background-color: #edf2f4;
     z-index: 2;
     top: 0;
-    transition: all 200ms ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+    transition: all .4s ease;
 }
 
 .header-wrap {
@@ -392,7 +391,7 @@ table thead {
     position: static;
     display: inline-block;
     vertical-align: top;
-    transition: all 200ms ease;
+    transition: all .4s ease;
 }
 
 .header-logo img {
@@ -405,7 +404,7 @@ table thead {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 200ms ease;
+    transition: all .4s ease;
 }
 
 .header-menu ul {
@@ -450,6 +449,7 @@ table thead {
 
 .header.skinny {
     background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
 }
 
 .header-logo.skinny {
