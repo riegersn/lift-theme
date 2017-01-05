@@ -24,8 +24,10 @@
 
 .sb-button {
     display: inline-block;
-    -webkit-transition: background-color .3s linear;
-    transition: background-color .3s linear;
+    -webkit-transition: background-color .2s ease-in;
+    -moz-transition: background-color .2s ease-in;
+    -o-transition: background-color .2s ease-in;
+    transition: background-color .2s ease-in;
     background-color: #cbcfd3;
     text-align: center;
 }
@@ -37,8 +39,10 @@
     font-size: 1.3rem;
     line-height: 48px;
     cursor: pointer;
-    -webkit-transition: color .3s linear;
-    transition: color .3s linear;
+    -webkit-transition: color .2s ease-in;
+    -moz-transition: color .2s ease-in;
+    -o-transition: color .2s ease-in;
+    transition: color .2s ease-in;
     text-align: center;
     vertical-align: middle;
 }
