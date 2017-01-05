@@ -59,7 +59,6 @@ h6, .zeta {
     font-weight: bold;
     font-weight: 700;
     font-family: "Lato";
-    margin-bottom: 1.5em;
     line-height: 1.1;
 }
 h1, .alpha {
@@ -88,8 +87,8 @@ h6, .zeta {
 }
 p,
 blockquote {
-    font-size: 1.125em;
-    margin: 0 0 1.5em;
+    font-size: 1.125em; /* 1.125x16 = 18px */
+    margin-bottom: 1.5em; /* 1.5x18 = 27px */
     line-height: 1.6;
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
@@ -107,20 +106,50 @@ dt,
 li {
     line-height: 1.5;
 }
-table td {
-    font-size: 1.125em; /* 1.125x16 = 18px */
-    padding: 0.5555em;
+
+.post-table {
+    font-size: 1rem;
+    box-sizing: content-box;
+    display: inline-block;
+    margin-bottom: 1.6875em; /* 1.6875x16 = 27px */
 }
-table th {
-    font-size: 1.125em; /* 1.125x16 = 18px */
-    padding: 0.5555em;
+
+.post-table:first-child {
+    margin-top: 32px;
+    margin-top: calc(27px + 0.3375em);
+}
+
+.post-table:last-child {
+    margin-bottom: 32px;
+    margin-bottom: calc(27px + 0.3375em);
+}
+
+.post-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* table:first-child {
+
+}
+
+table:last-child {
+
+} */
+
+.post-table table td {
+    padding: 0.5555em; /* 0.5555x18 = 10px */
+}
+.post-table table th {
+    padding: 0.5555em; /* 0.5555x18 = 10px */
     font-weight: bold;
 }
-table ul {
-    margin-left: 1.2222em;
+.post-table ul {
+    margin-left: 1.2222em; /* 1.2222x18 = 22px */
 }
-table p {
-
+.post-table p {
+    margin-bottom: 1.1111111111em; /* 1.1111111111x18 = 20px */
 }
 
 @media only screen and (max-width: 680px) {
@@ -161,17 +190,10 @@ ul {
     margin: 5px 5px 26px 5px;
 }
  */
-table {
-    width: 100%;
-    font-size: .9em;
-    border-collapse: collapse;
-}
+
 
 table td,
 table th {
-    padding: 0;
-    padding: .857em;
-    margin: 0;
     text-align: left;
     border: 1px solid #e7e7e7;
 }
