@@ -22,24 +22,12 @@
     clear: both;
 }
 
-@media only screen and (max-width: 1060px) {
-    .sb-content-wrap {
-        width: auto;
-        margin: 0;
-        clear: both;
-        opacity: 1;
-        display: none;
-        font-size: 0;
-        position: fixed;
-        z-index: 9999;
-    }
-}
-
 .sb-button {
     display: inline-block;
     -webkit-transition: background-color .3s linear;
     transition: background-color .3s linear;
     background-color: #cbcfd3;
+    text-align: center;
 }
 
 .sb-button .fa {
@@ -65,12 +53,6 @@ a.sb-button:hover i {
 
 .sb-content-wrap a:last-child {
     border-radius: 0 0 0 6px;
-}
-
-@media only screen and (max-width: 1060px) {
-    .sb-content-wrap a:last-child {
-        border-radius: 0 6px 0 0;
-    }
 }
 
 
@@ -100,4 +82,54 @@ a.sb-button:hover i {
 
 .sb-email:hover {
     background: #333;
+}
+
+@media only screen and (max-width: 1060px) {
+    .sb-content-wrap {
+        width: 100%;
+        margin: 0;
+        clear: both;
+        opacity: 1;
+        display: none;
+        font-size: 0;
+        position: fixed;
+        z-index: 9999;
+    }
+
+    .sb-content-wrap a:first-child {
+        border-radius: 0;
+    }
+
+    .sb-content-wrap a:last-child {
+        border-radius: 0;
+    }
+
+    .sb-button {
+        width:  16.6666666667%;
+    }
+
+    .sb-facebook {
+        background: #3a579a;
+    }
+
+    .sb-twitter {
+        background: #00aced;
+    }
+
+    .sb-googleplus {
+        background: #d34836;
+    }
+
+    .sb-linkedin {
+        background: #0077b5;
+    }
+
+    .sb-reddit {
+        background: #ff4500;
+    }
+
+    .sb-email {
+        background: #333;
+    }
+
 }
