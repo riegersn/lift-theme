@@ -51,11 +51,86 @@ jQuery(document).ready(function($) {
 		}
     });
 
-	/**
-	 * Shareable: Managing scroll and position
-	 */
-	if ($('.sb-content-wrap').length) { // if this doesn't exist just move on
-	    $(window).scroll(function() {
+    // switch to slim-header once scroll reaches switch point
+    $(window).scroll(function() {
+        var switch_point = 100,
+            header = $('.header'),
+            scroll_point = $(window).scrollTop();
+
+        if (scroll_point >= switch_point) {
+            if (!header.hasClass('skinny'))
+                header.addClass('skinny');
+        } else {
+            if (header.hasClass('skinny'))
+                header.removeClass('skinny');
+        }
+    });
+
+
+    /* ------------------------------------------------------------
+        Shareable
+       ------------------------------------------------------------ */
+
+    if ($('.sb-content-wrap').length) {
+
+
+        /* --- Define Shareable --- */
+        var Shareable = {
+            post_title: encodeURI($('.post-title').text()),
+            post_uri: encodeURIComponent(window.location),
+            social: { twitter: { handle: 'thelyftguy_net' } },
+            links: {
+                facebook: 'http://www.facebook.com/share.php?u=',
+                twitter: 'https://twitter.com/share?original_referer=/&text=',
+                googleplus: 'https://plus.google.com/share?url=',
+                linkedin: 'https://www.linkedin.com/cws/share?url=',
+                reddit: 'http://www.reddit.com/submit?url=',
+
+            }
+        };
+
+
+        /* --- Shareable Links --- */
+
+        //facebook
+        $('a.sb-facebook').click(function(event) {
+            window.open(Shareable.links.facebook + Shareable.post_uri);
+            return false;
+        });
+
+        //twitter
+        $('a.sb-twitter').click(function(event) {
+            window.open(Shareable.links.twitter + Shareable.post_uri + '&via=' + Shareable.social.twitter.handle);
+            return false;
+        });
+
+        //googleplus
+        $('a.sb-googleplus').click(function(event) {
+            window.open(Shareable.links.googleplus + Shareable.post_uri);
+            return false;
+        });
+
+        //linkedin
+        $('a.sb-linkedin').click(function(event) {
+            window.open(Shareable.links.linkedin + Shareable.post_uri);
+            return false;
+        });
+
+        //reddit
+        $('a.sb-reddit').click(function(event) {
+            window.open(Shareable.links.reddit + Shareable.post_uri);
+            return false;
+        });
+
+        //email
+        $('a.sb-email').click(function(event) {
+            window.open('mailto:?subject=' +
+                Shareable.post_title +
+                '&body=' +
+                encodeURI('I found something you may be interested in! Check it out! ') +
+                Shareable.post_uri);
+            return false;
+        });
 
 		    var sb = $('.sb-content-wrap'),
 		    	mobile = $('.mobile-bars'),
