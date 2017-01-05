@@ -132,78 +132,63 @@ jQuery(document).ready(function($) {
             return false;
         });
 
-		    var sb = $('.sb-content-wrap'),
-		    	mobile = $('.mobile-bars'),
-		    	post_image = $('.post-featured-image'),
-		    	header = $('.header'),
-				win_height = $(window).height(),
-	            scroll_top = Math.round($(window).scrollTop()),
-	            pc_top = $('.post-content').position().top,
-	            pc_height = $('.post-content').innerHeight(),
-	            sb_height = sb.height(),
-	            fp_top = Math.round(pc_top + 40),
-	            fp_bottom = Math.round(pc_top + pc_height - sb_height);
 
-            // console.log('scroll_top:'+scroll_top+' - fp_bottom:'+fp_bottom);
+        /* --- Freeze Shareable Container on Scroll --- */
+        $(window).scroll(function() {
 
-            var win_width = $(window).width();
+            var fp_start,
+                fp_stop,
+                sb = $('.sb-content-wrap'),
+                post = $('.post-content'),
+                scroll_top = $(window).scrollTop();
 
-	        if (mobile.is(':visible')) {
+            if ($('.mobile-bars').is(':visible')) {
 
-	            sb.css({
-	                'top': win_height - 47,
-	                'left': (win_width / 2) - (sb.width() / 2)
-	            });
+                sb.css({ 'bottom': 0, 'left': 0 });
 
-	            fp_bottom = fp_bottom - win_height;
+                // post.top - skinny.header.height + padding
+                fp_start = post.position().top - 66 + 30;
 
-	            console.log(scroll_top + ' / ' + fp_top + ' / ' + fp_bottom);
+                // fp_start + post.height - window.height/2
+                fp_stop = fp_start + post.height() - ($(window).height() / 2);
 
-	            if (scroll_top >= fp_top && scroll_top < fp_bottom) {
-	                sb.css({ 'display': 'inline-block'});
-	            }
-	            else {
-	                sb.css({ 'display': 'none'});
-	            }
+                if (scroll_top >= fp_start && scroll_top < fp_stop)
+                    sb.css('display', 'inline-block');
+                else
+                    sb.css('display', 'none');
 
-	        } else {
+            } else {
 
-	        	var fp_start,
-	        		fp_stop,
-	        		sbv_height = sb.height(),
-	        		post_content_h = $('.post-content').height();
+                var sbv_height = sb.height(),
+                    post_content_h = post.height();
 
-		        fp_start = 100 + // m_content.margin-top
-		        		   650 - // post_featured_image.height
-		        		   65;  // header.height
+                // m_content.margin-top + post_featured_image.height - skinny.header.height
+                fp_start = 100 + 650 - 66;
 
-		        fp_stop = fp_start +
-		        		  post_content_h - // post_content.height
-		        		  sbv_height - // shareable height (verticle)
-		        		  65; // header.height
+                // fp_start + post_content.height + shareable height (vertical) - header.height
+                fp_stop = fp_start + post_content_h - sbv_height - 66; //
 
-		        // console.log(scroll_top + ' / ' + fp_start + ' / ' + fp_stop);
+                if (scroll_top >= fp_start && scroll_top < fp_stop) {
 
-	            if (scroll_top >= fp_start && scroll_top < fp_stop) {
+                    // freeze the container when scroll reaches the defined freeze pos
+                    if (!sb.hasClass('sb-fixed-content-wrap'))
+                        sb.css({ 'top': '', 'position': '' }).addClass('sb-fixed-content-wrap');
 
-	            	// freeze the container when scroll reaches the defined freeze pos
-	                if (!sb.hasClass('sb-fixed-content-wrap'))
-		                sb.css({'top':'','position':'' }).addClass('sb-fixed-content-wrap');
+                } else if (scroll_top >= fp_stop) {
 
-	            } else if (scroll_top >= fp_stop) {
+                    // unfreeze the container when scroll reaches the defined freeze pos
+                    if (sb.hasClass('sb-fixed-content-wrap'))
+                        sb.removeClass('sb-fixed-content-wrap').css({ 'position': 'absolute', 'top': fp_stop + 100 });
 
-	            	// unfreeze the container when scroll reaches the defined freeze pos
-                	if (sb.hasClass('sb-fixed-content-wrap'))
-                		sb.removeClass('sb-fixed-content-wrap').css({'position':'absolute','top':fp_stop+100});
+                } else {
 
-	            } else {
+                    // return to normal pos
+                    sb.css({ 'top': '', 'position': '' });
+                    sb.removeClass('sb-fixed-content-wrap');
+                }
+            }
+        });
 
-	            	// return to normal pos
-	                sb.css({ 'top': '', 'position': '' });
-	                sb.removeClass('sb-fixed-content-wrap');
-	            }
-	        }
-		});
-	}
+    }
 
 });
