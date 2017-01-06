@@ -245,16 +245,31 @@ dt:first-child {
 }
 
 /* ------------------------------------------------------------
-    Custom Containers
+    Containers
    ------------------------------------------------------------ */
 
 .content-container {
-    padding: 0;
-    margin:  0 auto;
+    padding: 40px;
+    margin: 0 auto;
     width: 900px;
     max-width: 85%;
     background-color: #fff;
     font: inherit;
+    overflow: hidden;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.entry-post-grid {
+    padding: 10px 0 40px;
+}
+
+.the-blog {
+    padding-bottom: 0;
+    background-color: transparent;
+    text-align: center;
 }
 
 
@@ -283,7 +298,6 @@ dt:first-child {
 .button:hover {
     background-color: #293133;
 }
-
 
 .nav-item-highlight a:after {
     display: block;
