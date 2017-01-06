@@ -412,7 +412,7 @@ dt:first-child {
 
 /* --- Header media adjustments --- */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 700px) {
     .header-menu ul {
         font-size: 1.125rem;
     }
@@ -421,7 +421,7 @@ dt:first-child {
     }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 640px) {
     .mobile-bars {
         display: block;
     }
