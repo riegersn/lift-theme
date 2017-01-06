@@ -143,7 +143,7 @@ class comment_walker extends Walker_Comment {
 	// constructor – wrapper for the comments list
 	function __construct() { ?>
 
-		<div class="comments-list">
+		<ul class="comments-list">
 
 	<?php }
 
@@ -179,18 +179,23 @@ class comment_walker extends Walker_Comment {
 		} ?>
 
 		<li <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>">
-			<div class="cm-content-wrap">
-				<a href="<?php comment_author_url(); ?>"><?php echo get_avatar( $comment, 60, 'mystery', 'Author’s gravatar' ); ?></a>
-				<div class="cm-content">
-					<strong><a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a></strong> -
-					<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-					<!-- <?php edit_comment_link('Edit this comment','',''); ?> -->
-					<?php if ($comment->comment_approved == '0') : ?>
-					<p class="cm-comment">Your comment is awaiting moderation.</p>
-					<?php endif; ?>
-					<?php comment_text() ?>
+
+			<article>
+
+				<div class="user-avatar">
+					<?php echo get_avatar( $comment, 50, 'mystery', 'Author’s gravatar' ); ?>
 				</div>
-			</div>
+
+				<?php if ($comment->comment_approved == '0') : ?>
+					<p>Your comment is awaiting moderation.</p>
+				<?php endif; ?>
+				<?php comment_text() ?>
+
+				<footer>
+					<a href="<?php comment_author_url(); ?>" rel="author"><?php comment_author(); ?></a> on <?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?> - <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+				</footer>
+
+			</article>
 
 	<?php }
 
@@ -204,11 +209,20 @@ class comment_walker extends Walker_Comment {
 	// destructor – closing wrapper for the comments list
 	function __destruct() { ?>
 
-	</div>
+	</ul>
 
 	<?php }
 
 }
+
+
+function comment_reform ($arg) {
+	$arg['title_reply'] = __('Join the conversation...');
+	return $arg;
+}
+
+
+add_filter('comment_form_defaults','comment_reform');
 
 function my_update_comment_field( $comment_field ) {
 
