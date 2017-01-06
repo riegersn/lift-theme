@@ -145,22 +145,22 @@ jQuery(document).ready(function($) {
                     post_content_h = post.height();
 
                 // m_content.margin-top + post_featured_image.height - skinny.header.height
-                fp_start = 100 + 650 - 66;
+                fp_start = 100 + 550 - 66;
 
                 // fp_start + post_content.height + shareable height (vertical) - header.height
                 fp_stop = fp_start + post_content_h - sbv_height - 66; //
 
-                if (scroll_top >= fp_start && scroll_top < fp_stop) {
+                if (scroll_top >= fp_start /*&& scroll_top < fp_stop*/) {
 
                     // freeze the container when scroll reaches the defined freeze pos
                     if (!sb.hasClass('sb-fixed-content-wrap'))
                         sb.css({ 'top': '', 'position': '' }).addClass('sb-fixed-content-wrap');
 
-                } else if (scroll_top >= fp_stop) {
+                // } else if (scroll_top >= fp_stop) {
 
-                    // unfreeze the container when scroll reaches the defined freeze pos
-                    if (sb.hasClass('sb-fixed-content-wrap'))
-                        sb.removeClass('sb-fixed-content-wrap').css({ 'position': 'absolute', 'top': fp_stop + 100 });
+                //     // unfreeze the container when scroll reaches the defined freeze pos
+                //     if (sb.hasClass('sb-fixed-content-wrap'))
+                //         sb.removeClass('sb-fixed-content-wrap').css({ 'position': 'absolute', 'top': fp_stop + 100 });
 
                 } else {
 

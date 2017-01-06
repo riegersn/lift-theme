@@ -603,7 +603,7 @@ dt:first-child {
 .post-featured-image {
     position: relative;
     display: block;
-    height: 650px;
+    height: 550px;
     width: 100%;
     background-position: 50% 50%;
     -webkit-background-size: cover;
