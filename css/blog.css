@@ -1006,3 +1006,14 @@ ul.comments-list  {
 .m-footer p:last-child {
     margin-top: 10px;
 }
+
+
+/* ------------------------------------------------------------
+    404
+   ------------------------------------------------------------ */
+
+.special-404 {
+    padding: 150px 0 400px;
+    text-align: center;
+    font-size: 2rem;
+}
