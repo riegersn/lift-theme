@@ -9,17 +9,12 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-
 	<header class="header">
 		<div class="header-wrap">
 
 			<!-- the logo -->
-			<a class="header-logo skinny" href="<?php bloginfo( 'wpurl' );?>">
-				<?php echo print_svg_image('', 'lyftguy_logo.svg', 'lyftguy_logo_fallback.png'); ?>
-			</a>
-
 			<a class="header-logo" href="<?php bloginfo( 'wpurl' );?>">
-				<?php echo print_svg_image('', 'lyftguy_dark_80.svg', 'lyftguy_dark_80_fallback.png'); ?>
+				<?php echo print_svg_image('', 'lyftguy_logo.svg', 'lyftguy_logo_fallback.png'); ?>
 			</a>
 
 			<!-- the main menu -->
