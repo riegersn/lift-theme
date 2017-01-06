@@ -696,13 +696,12 @@ dt:first-child {
     width: 100%;
 }
 
-.post-table table th {
-    padding: 0.625em; /* 0.625x16 = 10px */
+.post-table th {
     font-weight: bold;
 }
 
-.post-table table td {
-    padding: 0.625em; /* 0.625x16 = 10px */
+.post-table td, .post-table th {
+    padding: 0.9375em; /* 0.9375x16 = 15px */
     vertical-align: top;
 }
 
