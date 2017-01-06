@@ -873,18 +873,6 @@ ul.comments-list  {
     width: 100%;
 }
 
-/* .comment-respond input {
-    width: 280px;
-} */
-
-/* .comment-respond input[type="submit"] {
-    width: auto;
-    margin-top: 4px;
-    cursor: pointer;
-    color: #fafafa;
-    background-color: #e91e78;
-} */
-
 .comment-respond input[type="submit"] {
     padding: 10px 12px;
     font-weight: 700;
