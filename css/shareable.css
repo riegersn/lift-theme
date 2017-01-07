@@ -47,8 +47,8 @@
     vertical-align: middle;
 }
 
-a.sb-button:hover i {
-    color: #fff;
+.sb-content-wrap a:hover {
+    border-bottom: none;
 }
 
 .sb-content-wrap a:first-child {
@@ -57,6 +57,10 @@ a.sb-button:hover i {
 
 .sb-content-wrap a:last-child {
     border-radius: 0 0 0 6px;
+}
+
+.sb-content-wrap a:hover i {
+    color: #fff;
 }
 
 

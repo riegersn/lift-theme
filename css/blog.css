@@ -120,6 +120,10 @@ a {
     cursor: pointer;
 }
 
+a:hover {
+    border-bottom: 2px dotted #0eb1d2;
+}
+
 img {
     height: auto;
     max-height: 100%;
@@ -643,7 +647,7 @@ dt:first-child {
 }
 
 .post-content {
-    padding: 40px;
+    /* padding: 40px; */
     overflow: hidden;
     background-color: #fff;
 }
@@ -761,7 +765,7 @@ dt:first-child {
    ------------------------------------------------------------ */
 
 .comments {
-    padding: 40px;
+    /* padding: 40px; */
     font-size: 1rem;
 }
 
