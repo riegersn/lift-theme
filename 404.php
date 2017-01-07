@@ -3,7 +3,10 @@
 <div class="special-404">
 
 	<h1>404</h1>
-	<p>Nothing to see here. <a href="http://localhost:8080">Check out our most recent posts.</a></p>
+	<p>Nothing to see here. <a href="http://localhost:8888">Check out our most recent posts.</a></p>
+
+	<!-- TODO: Make sure this link is changed before launch
+	-->
 
 </div>
 
