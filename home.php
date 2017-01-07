@@ -33,7 +33,6 @@
 
 	</div>
 
-	</div> <!-- /.c-column -->
 </div> <!-- /.m-content -->
 
 
