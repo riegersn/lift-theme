@@ -11,7 +11,7 @@
 
 		<div class="post-list-content">
 			<?php the_excerpt(); ?>
-			<a class="button" href="<?php echo the_permalink(); ?>">Continue reading</a>
+			<a class="button" href="<?php echo the_permalink(); ?>">Contine</a>
 		</div>
 	</div>
 

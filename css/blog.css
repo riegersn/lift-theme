@@ -12,10 +12,10 @@
 /* ------------------------------------------------------------
     Colors:
 
-    # Black       #293133
+    # Black       #434A54
     # White       #fafafa
     # Grey        #adacb5
-    # Accent      #e91e78
+    # Accent      #F62459
     # Secondary   #0eb1d2
     # Background  #edf2f4
    ------------------------------------------------------------ */
@@ -38,10 +38,10 @@ sup{vertical-align:super;font-size:70%;}
 
 /* Define Body */
 body {
-    color: #333;
-    background-color: #1e1e1e;
+    color: #434A54;
+    background-color: #434A54;
     font-weight: 300;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -60,7 +60,7 @@ h5, .epsilon,
 h6, .zeta {
     font-weight: bold;
     font-weight: 700;
-    font-family: "Lato";
+    font-family: "Roboto Condensed", sans-serif;
     line-height: 1.1;
 }
 h1, .alpha {
@@ -115,13 +115,10 @@ li {
    ------------------------------------------------------------ */
 
 a {
-    color: #e91e78;
+    color: #F62459;
     text-decoration: none;
     cursor: pointer;
-}
-
-a:hover {
-    border-bottom: 2px dotted #0eb1d2;
+    border: none;
 }
 
 img {
@@ -295,12 +292,12 @@ dt:first-child {
     text-align: center;
     color: #fafafa;
     border-radius: 4px;
-    background-color: #e91e78;
+    background-color: #F62459;
     margin: 5px;
 }
 
 .button:hover {
-    background-color: #293133;
+    background-color: #434A54;
 }
 
 .nav-item-highlight a:after {
@@ -326,7 +323,7 @@ dt:first-child {
 .header {
     width: 100%;
     position: fixed;
-    background-color: #1e1e1e;
+    background-color: #434A54;
     z-index: 2;
     top: 0;
     transition: all .4s ease;
@@ -374,7 +371,7 @@ dt:first-child {
     padding: 0;
     margin-top: 3px;
     font-size: 1.1875em;
-    font-family: "Lato";
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .header-menu li {
@@ -395,7 +392,8 @@ dt:first-child {
 
 .header a:hover,
 .current_page_item {
-    color: #e91e78;
+    color: #F62459;
+    border-bottom: none;
 }
 
 .mobile-bars {
@@ -412,7 +410,7 @@ dt:first-child {
 /* --- Skinny header --- */
 
 .header.skinny {
-    /* background-color: #1e1e1e; */
+    /* background-color: #434A54; */
     /* box-shadow: 0 0 10px rgba(0, 0, 0, .8); */
 }
 
@@ -426,7 +424,7 @@ dt:first-child {
 }
 
 .header.skinny .header-menu a:hover {
-    color: #e91e78;
+    color: #F62459;
 }
 
 .header.skinny .mobile-bars {
@@ -460,7 +458,7 @@ dt:first-child {
     }
     .header.skinny .header-menu {
         top: 60px;
-        background-color: #1e1e1e;
+        background-color: #434A54;
     }
     .header-menu li {
         padding: 0;
@@ -475,8 +473,8 @@ dt:first-child {
         padding: 10px 0;
     }
     .header-menu a:hover {
-        color: #e91e78;
-        background-color: #1e1e1e;
+        color: #F62459;
+        background-color: #434A54;
     }
 }
 
@@ -552,7 +550,7 @@ dt:first-child {
 /* ---------------- */
 
 .post-list-link {
-    color: #333;
+    color: #434A54;
 }
 
 .post-entry {
@@ -650,6 +648,10 @@ dt:first-child {
     /* padding: 40px; */
     overflow: hidden;
     background-color: #fff;
+}
+
+.post-content a:hover {
+    border-bottom: 2px dotted #0eb1d2;
 }
 
 @media only screen and (max-width: 1060px) {
@@ -859,7 +861,7 @@ ul.comments-list  {
     margin-right: 20px;
     font-size: 15px;
     font-weight: 700;
-    color: #e91e78;
+    color: #F62459;
 }
 
 .comments-title {
@@ -908,13 +910,13 @@ ul.comments-list  {
     text-align: center;
     color: #fafafa;
     border-radius: 4px;
-    background-color: #e91e78;
+    background-color: #F62459;
     /* margin: 5px; */
     border: none;
 }
 
 .comment-respond input[type="submit"]:hover {
-    background-color: #293133;
+    background-color: #434A54;
 }
 
 
@@ -959,7 +961,7 @@ ul.comments-list  {
 }
 
 .hp-section-header {
-    font-family: "Roboto Slab";
+    font-family: "Roboto";
     text-align: center;
 }
 
@@ -1002,7 +1004,7 @@ ul.comments-list  {
     color: inherit;
     border: none;
     border-radius: 4px;
-    background-color: #e91e78;
+    background-color: #F62459;
 }
 
 
@@ -1013,7 +1015,7 @@ ul.comments-list  {
 .m-footer {
     padding: 40px;
     color: #999;
-    background-color: #1e1e1e;
+    background-color: #434A54;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
