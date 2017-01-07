@@ -31,6 +31,8 @@ add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 	wp_enqueue_style('Roboto');
 	wp_register_style('Roboto Condensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 	wp_enqueue_style('Roboto Condensed');
+	wp_register_style('Lato', 'https://fonts.googleapis.com/css?family=Lato:700');
+	wp_enqueue_style('Lato');
 }
 
 add_action('wp_print_styles', 'lift_google_fonts');
