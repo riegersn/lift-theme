@@ -15,7 +15,7 @@
     # Black       #293133
     # White       #fafafa
     # Grey        #adacb5
-    # Accent      #e91e78
+    # Accent      #ED5565
     # Secondary   #0eb1d2
     # Background  #edf2f4
    ------------------------------------------------------------ */
@@ -24,6 +24,37 @@
 /* ------------------------------------------------------------
     Reset
    ------------------------------------------------------------ */
+
+/* @font-face {
+    font-family: Geomanist;
+    src: url(http://localhost:8888/wp-content/themes/lift-theme/fonts/geomanist-regular.ttf);
+    font-weight: normal;
+} */
+
+@font-face {
+    font-family: 'Geomanist';
+    src: url('../fonts/geomanist-bold-webfont.eot');
+    src: url('../fonts/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geomanist-bold-webfont.woff2') format('woff2'),
+         url('../fonts/geomanist-bold-webfont.woff') format('woff'),
+         url('../geomanist-bold-webfont.ttf') format('truetype'),
+         url('../fonts/geomanist-bold-webfont.svg#geomanistregular') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Geomanist';
+    src: url('../fonts/geomanist-light-webfont.eot');
+    src: url('../fonts/geomanist-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geomanist-light-webfont.woff2') format('woff2'),
+         url('../fonts/geomanist-light-webfont.woff') format('woff'),
+         url('../fonts/geomanist-light-webfont.ttf') format('truetype'),
+         url('../fonts/geomanist-light-webfont.svg#geomanistregular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -36,13 +67,16 @@ div{box-sizing:border-box;}
 ul,ol,dl{font-size:inherit;}
 sup{vertical-align:super;font-size:70%;}
 
+html {
+    font-size: 1.125em;
+}
+
 /* Define Body */
 body {
-    color: #333;
-    background-color: #1c2021;
-    font: 300 1em/1.5 'Roboto';
-/*     font-weight: 300;
-    font-family: 'Roboto', sans-serif; */
+    color: #373D3F;
+    background-color: #F2F3F4; /*#1C1C1C;*/
+    font-family: 'Geomanist';
+    font-weight: 300;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -59,9 +93,7 @@ h3, .gamma,
 h4, .delta,
 h5, .epsilon,
 h6, .zeta {
-    font-weight: bold;
     font-weight: 700;
-    font-family: "Lato";
     line-height: 1.1;
 }
 h1, .alpha {
@@ -90,6 +122,7 @@ h6, .zeta {
 }
 p,
 blockquote {
+    line-height: 1.6;
     margin-bottom: 1.5em; /* 1.5x18 = 27px */
     -webkit-hyphens: auto;
        -moz-hyphens: auto;
@@ -114,7 +147,7 @@ li {
    ------------------------------------------------------------ */
 
 a {
-    color: #e91e78;
+    color: #ED5565;
     text-decoration: none;
     cursor: pointer;
 }
@@ -256,7 +289,7 @@ dt:first-child {
     margin: 0 auto;
     width: 900px;
     max-width: 85%;
-    background-color: #fff;
+    background-color: #F2F3F4;
     font: inherit;
     overflow: hidden;
 }
@@ -294,7 +327,7 @@ dt:first-child {
     text-align: center;
     color: #fafafa;
     border-radius: 4px;
-    background-color: #e91e78;
+    background-color: #ED5565;
     margin: 5px;
 }
 
@@ -394,7 +427,7 @@ dt:first-child {
 
 .header a:hover,
 .current_page_item {
-    color: #e91e78;
+    color: #ED5565;
 }
 
 .mobile-bars {
@@ -425,7 +458,7 @@ dt:first-child {
 }
 
 .header.skinny .header-menu a:hover {
-    color: #e91e78;
+    color: #ED5565;
 }
 
 .header.skinny .mobile-bars {
@@ -474,14 +507,14 @@ dt:first-child {
         padding: 10px 0;
     }
     .header-menu a:hover {
-        color: #e91e78;
+        color: #ED5565;
         background-color: #1e1e1e;
     }
 }
 
 .m-content {
     margin-top: 100px;
-    background-color: #edf2f4;
+    background-color: #F2F3F4;
 }
 
 
@@ -526,7 +559,7 @@ dt:first-child {
 
 .c-panel {
     border-radius: 6px;
-    background-color: #fafafa;
+    background-color: #F2F3F4;
 }
 
 .c-post-panel {
@@ -568,7 +601,7 @@ dt:first-child {
 .entry-wrap {
     padding: 26px;
     border-radius: 6px;
-    background-color: #fafafa;
+    background-color: #F2F3F4;
 }
 
 @media only screen and (max-width: 1060px) {
@@ -633,7 +666,7 @@ dt:first-child {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: #edf2f4;
+    background-color: #F2F3F4;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
@@ -648,7 +681,7 @@ dt:first-child {
 .post-content {
     /* padding: 40px; */
     overflow: hidden;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 @media only screen and (max-width: 1060px) {
@@ -858,7 +891,7 @@ ul.comments-list  {
     margin-right: 20px;
     font-size: 15px;
     font-weight: 700;
-    color: #e91e78;
+    color: #ED5565;
 }
 
 .comments-title {
@@ -907,7 +940,7 @@ ul.comments-list  {
     text-align: center;
     color: #fafafa;
     border-radius: 4px;
-    background-color: #e91e78;
+    background-color: #ED5565;
     /* margin: 5px; */
     border: none;
 }
@@ -1001,7 +1034,7 @@ ul.comments-list  {
     color: inherit;
     border: none;
     border-radius: 4px;
-    background-color: #e91e78;
+    background-color: #ED5565;
 }
 
 
