@@ -17,7 +17,7 @@
     # Grey        #adacb5
     # Accent      #ED5565
     # Secondary   #0eb1d2
-    # Background  #edf2f4
+    # Background  #f2f3f4
    ------------------------------------------------------------ */
 
 
@@ -27,28 +27,41 @@
 
 @font-face {
     font-family: 'Geomanist';
-    src: url('../fonts/geomanist-bold-webfont.eot');
-    src: url('../fonts/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/geomanist-bold-webfont.woff2') format('woff2'),
-         url('../fonts/geomanist-bold-webfont.woff') format('woff'),
-         url('../geomanist-bold-webfont.ttf') format('truetype'),
-         url('../fonts/geomanist-bold-webfont.svg#geomanistbold') format('svg');
-    font-weight: 700;
+    src: url('../fonts/geomanist/geomanist-light-webfont.eot');
+    src: url('../fonts/geomanist/geomanist-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geomanist/geomanist-light-webfont.woff2') format('woff2'),
+         url('../fonts/geomanist/geomanist-light-webfont.woff') format('woff'),
+         url('../fonts/geomanist/geomanist-light-webfont.ttf') format('truetype'),
+         url('../fonts/geomanist/geomanist-light-webfont.svg#geomanistlight') format('svg');
+    font-weight: 300;
     font-style: normal;
-
 }
 
 @font-face {
     font-family: 'Geomanist';
-    src: url('../fonts/geomanist-light-webfont.eot');
-    src: url('../fonts/geomanist-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/geomanist-light-webfont.woff2') format('woff2'),
-         url('../fonts/geomanist-light-webfont.woff') format('woff'),
-         url('../fonts/geomanist-light-webfont.ttf') format('truetype'),
-         url('../fonts/geomanist-light-webfont.svg#geomanistlight') format('svg');
-    font-weight: 300;
+    src: url('../fonts/geomanist/geomanist-regular-webfont.eot');
+    src: url('../fonts/geomanist/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geomanist/geomanist-regular-webfont.woff2') format('woff2'),
+         url('../fonts/geomanist/geomanist-regular-webfont.woff') format('woff'),
+         url('../fonts/geomanist/geomanist-regular-webfont.ttf') format('truetype'),
+         url('../fonts/geomanist/geomanist-regular-webfont.svg#geomanistregular') format('svg');
+    font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Geomanist';
+    src: url('../fonts/geomanist/geomanist-medium-webfont.eot');
+    src: url('../fonts/geomanist/geomanist-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geomanist/geomanist-medium-webfont.woff2') format('woff2'),
+         url('../fonts/geomanist/geomanist-medium-webfont.woff') format('woff'),
+         url('../fonts/geomanist/geomanist-medium-webfont.ttf') format('truetype'),
+         url('../fonts/geomanist/geomanist-medium-webfont.svg#geomanistmedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -62,13 +75,13 @@ ul,ol,dl{font-size:inherit;}
 sup{vertical-align:super;font-size:70%;}
 
 html {
-    font-size: 1.125em;
+    font-size: 1.0625em;
 }
 
 /* Define Body */
 body {
-    color: #373D3F;
-    background-color: #1C1C1C;
+    color: #111111;
+    background-color: #f2f3f4;
     font-family: 'Geomanist';
     font-weight: 300;
     text-rendering: optimizeLegibility;
@@ -87,20 +100,21 @@ h3, .gamma,
 h4, .delta,
 h5, .epsilon,
 h6, .zeta {
-    font-weight: 700;
+    color: #333;
+    font-weight: 500;
     line-height: 1.1;
 }
 h1, .alpha {
-    font-size: 2.75em; /* 2.75x16 = 44px */
-    margin-bottom: 0.5454em; /* 0.5454x18 = 24px */
+    font-size: 2.5882352941em; /* 2.5882x17 = 44px */
+    margin-bottom: 0.5909090909em; /* 0.5909x44 = 26px */
 }
 h2, .beta {
     font-size: 1.5em; /* 1.5x16 = 24px */
     margin-bottom: 0.6666em; /* 0.6666x18 = 16px */
 }
 h3, .gamma {
-    font-size: 1.375em; /* 1.375x16 = 22px */
-    margin-bottom: 0.7272em; /* 0.7272x22 = 16px */
+    font-size: 1.2941176471em; /* 1.2941x16 = 22px */
+    margin-bottom: 0.6363636364em; /* 0.6363x22 = 16px */
 }
 h4, .delta {
     font-size: 1.25em; /* 1.25x16 = 20px */
@@ -312,6 +326,7 @@ dt:first-child {
     padding: 8px 10px;
     font-weight: 700;
     font-size: 1rem;
+    font-weight: 400;
     /*
         TODO: Geomanist Regular
     */
@@ -353,10 +368,10 @@ dt:first-child {
 
 .header {
     width: 100%;
-    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, .8);
-    background-color: #293133;
-    position: relative;
-    z-index: 1;
+    /* box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, .8); */
+    /* position: relative; */
+    /* z-index: 1; */
+    font-weight: 400;
     /*
         TODO: Define header font here. Geomanist Regular.
     */
@@ -372,19 +387,19 @@ dt:first-child {
 /* --- Header Logo --- */
 
 .header-logo {
-    height: 70px;
+    height: 66px;
     /*
         TODO: Create new images to support larger logo
     */
     width: auto;
-    padding: 20px;
+    padding: 16px 5px 16px 25px;
 }
 
 /* --- Main Menu --- */
 
 .header-menu {
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -399,11 +414,10 @@ dt:first-child {
 }
 
 .header-menu a {
-    color: #fafafa;
+    color: #111;
     display: block;
-    /* letter-spacing: -.3px; */
+    letter-spacing: -.3px;
     text-transform: lowercase;
-    /* text-decoration: none; */
 }
 
 .header a:hover, .current_page_item a {
@@ -468,7 +482,7 @@ dt:first-child {
         top: 100px;
         z-index: 3;
         transform: none;
-        background-color: #edf2f4;
+        background-color: #f2f3f4;
     }
     .header.skinny .header-menu {
         top: 60px;
@@ -678,12 +692,11 @@ dt:first-child {
 
 .post-meta {
     color: #0eb1d2;
-    margin: 0;
-    box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.2);
-    font-size: 0.875em; /* 14/16 */
+    margin-bottom: 0.6666666667em; /* 10/15 */
+    box-shadow: 0 4px 4px -5px rgba(0, 0, 0, 0.3);
+    font-size: 0.8823529412em; /* 15/17 */
     display: inline-block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .wp-caption-text {
@@ -1024,8 +1037,8 @@ ul.comments-list  {
 
 .m-footer {
     padding: 40px;
-    color: #999;
-    background-color: #1e1e1e;
+    color: #fafafa;
+    background-color: #1C1C1C;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }

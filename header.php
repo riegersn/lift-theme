@@ -14,7 +14,7 @@
 
 			<!-- the logo -->
 			<a class="header-logo-link" href="<?php bloginfo( 'wpurl' );?>">
-				<?php echo print_svg_image('header-logo', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>
+				<?php echo print_svg_image('header-logo', 'lyftguy-logo-alt3.svg', 'lyftguy-logo.png'); ?>
 			</a>
 
 			<!-- the main menu -->
