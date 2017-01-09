@@ -13,8 +13,8 @@
 		<div class="header-wrap">
 
 			<!-- the logo -->
-			<a class="header-logo" href="<?php bloginfo( 'wpurl' );?>">
-				<?php echo print_svg_image('', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>
+			<a class="header-logo-link" href="<?php bloginfo( 'wpurl' );?>">
+				<?php echo print_svg_image('header-logo', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>
 			</a>
 
 			<!-- the main menu -->

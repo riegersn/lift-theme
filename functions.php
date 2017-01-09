@@ -14,6 +14,7 @@ function lift_scripts() {
 	/*-- Scripts -----------------------------*/
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
+	wp_enqueue_script( 'jquery.easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js');
 	wp_enqueue_script( 'lift', get_template_directory_uri() . '/js/lift.js');
 	wp_enqueue_script( 'masonary', get_template_directory_uri() . '/js/masonry.pkgd.min.js');
 

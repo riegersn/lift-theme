@@ -34,19 +34,24 @@ jQuery(document).ready(function($) {
     });
 
     // switch to slim-header once scroll reaches switch point
-    $(window).scroll(function() {
-        var switch_point = 100,
-            header = $('.header'),
-            scroll_point = $(window).scrollTop();
+    // $(window).scroll(function() {
+    //     var switch_point = 200,
+    //         header = $('.header'),
+    //         scroll_point = $(window).scrollTop();
+    //         // console.log('asdfasdfasdf');
 
-        if (scroll_point >= switch_point) {
-            if (!header.hasClass('skinny'))
-                header.addClass('skinny');
-        } else {
-            if (header.hasClass('skinny'))
-                header.removeClass('skinny');
-        }
-    });
+    //     if (scroll_point >= switch_point && !header.hasClass('toggled')) {
+    //         // header.addClass('toggled');
+    //         // header.animate( { top: -100 }, 'slow', 'easeOutElastic');
+
+    //         // if (!header.hasClass('skinny'))
+    //             // header.addClass('skinny');
+    //     } else {
+
+    //         // if (header.hasClass('skinny'))
+    //             // header.removeClass('skinny');
+    //     }
+    // });
 
 
     /* ------------------------------------------------------------

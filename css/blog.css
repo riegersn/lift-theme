@@ -25,12 +25,6 @@
     Reset
    ------------------------------------------------------------ */
 
-/* @font-face {
-    font-family: Geomanist;
-    src: url(http://localhost:8888/wp-content/themes/lift-theme/fonts/geomanist-regular.ttf);
-    font-weight: normal;
-} */
-
 @font-face {
     font-family: 'Geomanist';
     src: url('../fonts/geomanist-bold-webfont.eot');
@@ -38,7 +32,7 @@
          url('../fonts/geomanist-bold-webfont.woff2') format('woff2'),
          url('../fonts/geomanist-bold-webfont.woff') format('woff'),
          url('../geomanist-bold-webfont.ttf') format('truetype'),
-         url('../fonts/geomanist-bold-webfont.svg#geomanistregular') format('svg');
+         url('../fonts/geomanist-bold-webfont.svg#geomanistbold') format('svg');
     font-weight: 700;
     font-style: normal;
 
@@ -51,7 +45,7 @@
          url('../fonts/geomanist-light-webfont.woff2') format('woff2'),
          url('../fonts/geomanist-light-webfont.woff') format('woff'),
          url('../fonts/geomanist-light-webfont.ttf') format('truetype'),
-         url('../fonts/geomanist-light-webfont.svg#geomanistregular') format('svg');
+         url('../fonts/geomanist-light-webfont.svg#geomanistlight') format('svg');
     font-weight: 300;
     font-style: normal;
 }
@@ -74,7 +68,7 @@ html {
 /* Define Body */
 body {
     color: #373D3F;
-    background-color: #F2F3F4; /*#1C1C1C;*/
+    background-color: #1C1C1C;
     font-family: 'Geomanist';
     font-weight: 300;
     text-rendering: optimizeLegibility;
@@ -175,9 +169,9 @@ table thead {
 }
 
 dt {
-    color: #5a5353;
+    /* color: #5a5353; */
     margin: 10px 0 5px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1;
 }
 
@@ -289,7 +283,6 @@ dt:first-child {
     margin: 0 auto;
     width: 900px;
     max-width: 85%;
-    background-color: #F2F3F4;
     font: inherit;
     overflow: hidden;
 }
@@ -319,6 +312,9 @@ dt:first-child {
     padding: 8px 10px;
     font-weight: 700;
     font-size: 1rem;
+    /*
+        TODO: Geomanist Regular
+    */
     cursor: pointer;
     -webkit-transition: background-color .2s ease-in;
     -moz-transition: background-color .2s ease-in;
@@ -357,16 +353,14 @@ dt:first-child {
 
 .header {
     width: 100%;
-    position: fixed;
-    background-color: #1e1e1e;
-    z-index: 2;
-    top: 0;
-    transition: all .4s ease;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, .8); */
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, .8);
+    background-color: #293133;
+    position: relative;
+    z-index: 1;
+    /*
+        TODO: Define header font here. Geomanist Regular.
+    */
 }
-
-/* TODO: Fix box shadow during transition, turned off for now.
-*/
 
 .header-wrap {
     position: relative;
@@ -375,41 +369,28 @@ dt:first-child {
     overflow: hidden;
 }
 
-
 /* --- Header Logo --- */
 
 .header-logo {
-    height: 60px;
+    height: 70px;
+    /*
+        TODO: Create new images to support larger logo
+    */
+    width: auto;
     padding: 20px;
-    line-height: 0;
-    position: static;
-    display: inline-block;
-    vertical-align: top;
-    transition: all .4s ease;
 }
 
-.header-logo img {
-    height: inherit;
-    width: auto;
-}
+/* --- Main Menu --- */
 
 .header-menu {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all .4s ease;
 }
 
-.header-menu ul {
+.header-menu ul, .header-menu li {
     margin: 0;
-    padding: 0;
-    margin-top: 3px;
-    font-size: 1.1875em;
-    font-family: "Lato";
-}
-
-.header-menu li {
     display: inline-block;
 }
 
@@ -418,15 +399,14 @@ dt:first-child {
 }
 
 .header-menu a {
-    color: #D9D9D9;
+    color: #fafafa;
     display: block;
-    letter-spacing: -.3px;
+    /* letter-spacing: -.3px; */
     text-transform: lowercase;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
-.header a:hover,
-.current_page_item {
+.header a:hover, .current_page_item a {
     color: #ED5565;
 }
 
@@ -513,7 +493,7 @@ dt:first-child {
 }
 
 .m-content {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     background-color: #F2F3F4;
 }
 
