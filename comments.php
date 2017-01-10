@@ -5,12 +5,12 @@
 <div class="content-container">
 	<div class="comments">
 		<?php if ( have_comments() ) : ?>
-			<h3>
+			<h2>
 				<?php
 				printf( _nx( 'One awesome comment.', '%1$s awesome comments.', get_comments_number(), 'comments title'),
 					number_format_i18n( get_comments_number() ), get_the_title() );
 				?>
-			</h3>
+			</h2>
 
 			<?php
 			wp_list_comments( array(

@@ -47,8 +47,12 @@
     vertical-align: middle;
 }
 
+.sb-content-wrap a {
+    border: 0px !important;
+}
+
 .sb-content-wrap a:hover {
-    border-bottom: none;
+    /* border-bottom: none; */
 }
 
 .sb-content-wrap a:first-child {

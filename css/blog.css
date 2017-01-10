@@ -114,7 +114,6 @@ h2, .beta {
 }
 h3, .gamma {
     font-size: 1.1764705882em; /* 20/17 */
-    margin-top: 2em; /* 40/20 */
     margin-bottom: 0.8em; /* 16/20 */
 }
 h4, .delta {
@@ -142,7 +141,7 @@ ol,
 ul {
     /* font-size: 1.125rem; */ /* 1.125x16 = 18px */
     margin: 0 2.9411em 1.4117em 2.9411em; /* (17 base) */
-    list-style-type: disc;
+    list-style-type: disc !important;
 }
 dd,
 li {
@@ -163,13 +162,10 @@ strong {
 
 a {
     color: #ED5565;
-    text-decoration: none;
     cursor: pointer;
-    border-bottom: 2px dotted #0eb1d2;
-}
-
-a:hover:not(.button):not(.header a) {
-    border-bottom: 2px dotted #0eb1d2;
+    font-weight: 400;
+    text-decoration: none;
+    /* border-bottom: 2px dotted #0eb1d2; */
 }
 
 img {
@@ -182,7 +178,7 @@ img {
 table td,
 table th {
     text-align: left;
-    border: 1px solid #e7e7e7;
+    border: 1px solid #dcdcdc;
 }
 
 table thead {
@@ -190,10 +186,21 @@ table thead {
     background: #f9f9f9;
 }
 
+dl {
+    maring-top: 5px;
+}
+
+dd {
+    margin-bottom: 20px;
+}
+
+dd:last-child {
+    margin-bottom: 0;
+}
+
 dt {
-    /* color: #5a5353; */
     margin: 10px 0 5px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1;
 }
 
@@ -374,12 +381,12 @@ dt:first-child {
 .header {
     width: 100%;
     /* box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, .8); */
-    /* position: relative; */
-    /* z-index: 1; */
+    letter-spacing: -.3px;
     font-weight: 400;
-    /*
-        TODO: Define header font here. Geomanist Regular.
-    */
+    font-size: 1.1176470588em; /* 19/17 */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, .8);
 }
 
 .header-wrap {
@@ -421,12 +428,13 @@ dt:first-child {
 .header-menu a {
     color: #111;
     display: block;
-    letter-spacing: -.3px;
     text-transform: lowercase;
+    border: none;
 }
 
 .header a:hover, .current_page_item a {
     color: #ED5565;
+    border: none;
 }
 
 .mobile-bars {
@@ -683,6 +691,14 @@ dt:first-child {
     /* background-color: #fff; */
 }
 
+.post-content a:hover {
+    border-bottom: 2px dotted #0eb1d2;
+}
+
+.post-content h3 {
+    margin-top: 2em; /* 40/20 */
+}
+
 @media only screen and (max-width: 1060px) {
     .post-content {
         margin: 0;
@@ -693,6 +709,13 @@ dt:first-child {
 
 .post-content p:last-child {
     margin-bottom: 0;
+}
+
+.divider {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 4px -5px rgba(0, 0, 0, 0.3);
 }
 
 .post-meta {
@@ -725,9 +748,9 @@ dt:first-child {
 /* --- tables inside post --- */
 
 .post-table {
-    font-size: 0.9411em; /* 16/17 */
     display: inline-block;
-    margin-bottom: 1.5882em; /* 27/17 */
+    font-size: 0.9411764706em; /* 16/17 */
+    margin-bottom: 1.5882352941em; /* 27/17 */
 }
 
 .post-table:first-child {
@@ -749,8 +772,8 @@ dt:first-child {
 }
 
 .post-table td, .post-table th {
-    padding: 0.9375em; /* 0.9375x16 = 15px */
-    vertical-align: top;
+    padding: 14px;
+    vertical-align: top !important;
 }
 
 .post-table table td *:last-child {
@@ -763,8 +786,7 @@ dt:first-child {
 
 .post-table ul, .post-table ol {
     font-size: 1em;
-    margin: 0 0 0 1.2941em; /* 22/17 */
-    list-style-type: disc;
+    margin: 0 0 0 22px; /* 22/17 */
 }
 
 .post-table p {
@@ -803,7 +825,7 @@ dt:first-child {
     margin: 0;
     padding: 0;
     font-size: 1rem;
-    list-style-type: none;
+    list-style-type: none !important;
 }
 
 .comments ol {
