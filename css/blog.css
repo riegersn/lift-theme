@@ -105,27 +105,28 @@ h6, .zeta {
     line-height: 1.1;
 }
 h1, .alpha {
-    font-size: 2.5882352941em; /* 2.5882x17 = 44px */
-    margin-bottom: 0.5909090909em; /* 0.5909x44 = 26px */
+    font-size: 2.4705882353em; /* 42/17 */
+    margin-bottom: 0.619047619em; /* 26/42 */
 }
 h2, .beta {
-    font-size: 1.5em; /* 1.5x16 = 24px */
-    margin-bottom: 0.6666em; /* 0.6666x18 = 16px */
+    font-size: 1.4117647059em; /* 24/17 */
+    margin-bottom: 0.6666666667em; /* 16/24 */
 }
 h3, .gamma {
-    font-size: 1.2941176471em; /* 1.2941x16 = 22px */
-    margin-bottom: 0.6363636364em; /* 0.6363x22 = 16px */
+    font-size: 1.1764705882em; /* 20/17 */
+    margin-top: 2em; /* 40/20 */
+    margin-bottom: 0.8em; /* 16/20 */
 }
 h4, .delta {
-    font-size: 1.25em; /* 1.25x16 = 20px */
-    margin-bottom: 0.5em; /* 0.5x20 = 10px */
+    font-size: 1em; /* 17 */
+    margin-bottom: 0.5882352941em; /* 10/17 */
 }
 h5, .epsilon {
     font-size: 1.125em; /* 1.125x16 = 18px */
     margin-bottom: 0.5555em; /* 0.5555x18 = 10px */
 }
 h6, .zeta {
-    font-size: 1em; /* 1x16 = 16px */
+    font-size: .8em; /* 1x16 = 16px */
     margin-bottom: 0.5555em; /* 0.5555x18 = 10px */
 }
 p,
@@ -139,16 +140,22 @@ blockquote {
 }
 ol,
 ul {
-    font-size: 1.125rem; /* 1.125x16 = 18px */
-    margin: 0 3.125em 1.5em 3.125em;
+    /* font-size: 1.125rem; */ /* 1.125x16 = 18px */
+    margin: 0 2.9411em 1.4117em 2.9411em; /* (17 base) */
     list-style-type: disc;
 }
 dd,
 li {
     line-height: 1.5;
 }
-
-
+small {
+    font-size: smaller;
+}
+strong {
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95em;
+}
 
 /* ------------------------------------------------------------
     Global Defaults
@@ -158,6 +165,7 @@ a {
     color: #ED5565;
     text-decoration: none;
     cursor: pointer;
+    border-bottom: 2px dotted #0eb1d2;
 }
 
 a:hover:not(.button):not(.header a) {
@@ -325,11 +333,8 @@ dt:first-child {
     width: auto;
     padding: 8px 10px;
     font-weight: 700;
-    font-size: 1rem;
-    font-weight: 400;
-    /*
-        TODO: Geomanist Regular
-    */
+    font-size: 0.8823529412em; /* 15/17 */
+    font-weight: 500;
     cursor: pointer;
     -webkit-transition: background-color .2s ease-in;
     -moz-transition: background-color .2s ease-in;
@@ -720,19 +725,19 @@ dt:first-child {
 /* --- tables inside post --- */
 
 .post-table {
-    font-size: 1rem;
+    font-size: 0.9411em; /* 16/17 */
     display: inline-block;
-    margin-bottom: 1.6875em; /* 1.6875x16 = 27px */
+    margin-bottom: 1.5882em; /* 27/17 */
 }
 
 .post-table:first-child {
     margin-top: 32px;
-    margin-top: calc(27px + 0.3375em);
+    margin-top: calc(27px + 0.3176em);
 }
 
 .post-table:last-child {
     margin-bottom: 32px;
-    margin-bottom: calc(27px + 0.3375em);
+    margin-bottom: calc(27px + 0.3176em);
 }
 
 .post-table table {
@@ -756,15 +761,15 @@ dt:first-child {
     margin-top:  0;
 }
 
-.post-table ul {
+.post-table ul, .post-table ol {
     font-size: 1em;
-    margin-left: 1.375em; /* 1.375x16 = 22px */
+    margin: 0 0 0 1.2941em; /* 22/17 */
     list-style-type: disc;
 }
 
 .post-table p {
     font-size: 1em;
-    margin-bottom: 1.25em; /* 1.25x16 = 20px */
+    margin-bottom: 1.1764em; /* 20/17 */
 }
 
 
