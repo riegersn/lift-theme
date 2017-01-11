@@ -218,7 +218,11 @@ class comment_walker extends Walker_Comment {
 
 
 function comment_reform ($arg) {
-	$arg['title_reply'] = __('Join the conversation...');
+	$comments_count = wp_count_comments(get_the_ID());
+	$arg['title_reply'] = ( (int) $comments_count->approved > 0 ? __('Join the conversation...') : __('Start the conversation...') );
+	$arg['title_reply_before'] = '<h2 class="comment-reply-title">';
+	$arg['title_reply_after'] = '</h2>';
+
 	return $arg;
 }
 
