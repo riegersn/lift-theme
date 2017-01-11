@@ -385,7 +385,7 @@ dt:first-child {
     font-size: 1.1176470588em; /* 19/17 */
     position: relative;
     z-index: 2;
-    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, .8);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, .5);
 }
 
 .header-wrap {
@@ -538,7 +538,7 @@ dt:first-child {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    border-bottom: 2px solid #dcdcdc;
 }
 
 .c-column {
@@ -607,7 +607,11 @@ dt:first-child {
 .entry-wrap {
     padding: 26px;
     border-radius: 6px;
-    background-color: #F2F3F4;
+    background-color: #fafafa;
+}
+
+.entry-wrap h2 {
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 1060px) {
