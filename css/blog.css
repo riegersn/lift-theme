@@ -693,7 +693,7 @@ dt:first-child {
     /* background-color: #fff; */
 }
 
-.post-content a:hover:not(.button:hover) {
+.post-content a:hover:not(.button) {
     border-bottom: 2px dotted #0eb1d2;
 }
 
