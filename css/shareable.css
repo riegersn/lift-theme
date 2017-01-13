@@ -16,28 +16,32 @@
     opacity: 1;
 }
 
-.sb-fixed-content-wrap {
-    position: fixed;
-    top: 100px;
-    clear: both;
-}
-
 .sb-button {
     display: inline-block;
     -webkit-transition: background-color .2s ease-in;
     -moz-transition: background-color .2s ease-in;
     -o-transition: background-color .2s ease-in;
     transition: background-color .2s ease-in;
-    /* background-color: #cbcfd3; */
     text-align: center;
+    border: 0px !important;
+    border-radius: 50% !important;
+    margin-bottom: 8px;
+}
+
+.sb-button:last-child {
+    margin-bottom: 0;
+}
+
+.sb-button:hover .fa {
+    color: #fafafa;
 }
 
 .sb-button .fa {
     color: #d4d5d6;
-    height: 48px;
-    width: 48px;
+    height: 40px;
+    width: 40px;
     font-size: 1.3rem;
-    line-height: 48px;
+    line-height: 40px;
     cursor: pointer;
     -webkit-transition: color .2s ease-in;
     -moz-transition: color .2s ease-in;
@@ -47,45 +51,34 @@
     vertical-align: middle;
 }
 
-.sb-content-wrap a {
-    border: 0px !important;
-}
-
-.sb-content-wrap a:first-child {
-    border-radius: 6px 0 0 0;
-}
-
-.sb-content-wrap a:last-child {
-    border-radius: 0 0 0 6px;
-}
 
 
 /* ------------------------------------------------------------
     Brand Colors
    ------------------------------------------------------------ */
 
-.sb-facebook:hover i {
-    color: #3a579a;
+.sb-facebook:hover {
+    background-color: #3a579a;
 }
 
-.sb-twitter:hover i {
-    color: #00aced;
+.sb-twitter:hover {
+    background-color: #00aced;
 }
 
-.sb-googleplus:hover i {
-    color: #d34836;
+.sb-googleplus:hover {
+    background-color: #d34836;
 }
 
-.sb-linkedin:hover i {
-    color: #0077b5;
+.sb-linkedin:hover {
+    background-color: #0077b5;
 }
 
-.sb-reddit:hover i {
-    color: #ff4500;
+.sb-reddit:hover {
+    background-color: #ff4500;
 }
 
-.sb-email:hover i {
-    color: #333;
+.sb-email:hover {
+    background-color: #333;
 }
 
 @media only screen and (max-width: 1060px) {
@@ -97,7 +90,7 @@
         display: none;
         font-size: 0;
         position: fixed;
-        z-index: 9999;
+        z-index: 100;
     }
 
     .sb-content-wrap a:first-child {

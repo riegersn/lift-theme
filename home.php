@@ -4,7 +4,9 @@
 <!--
 <m-content> -->
 
-	<div class="home-featured-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/home.jpg')" >
+	<div class="home-featured-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/home-alt.jpg')" >
+
+
 	</div>
 
 	<div class="content-container the-blog">

@@ -29,5 +29,15 @@
 		</div>
 	</header>
 
+	<div class="welcome-wrap">
+		<h2 class="welcome-header">Welcome to the theLyftGuy!</h2>
+		<div class="welcome-copy">
+			<p>I'm the LyftGuy, otherwise known as Shawn. Welcome to my first blog! I'm a husband, father and lover of all things Lyft!</p>
+			<p><input type="name" name="singup_name" value="" placeholder="your name"></p>
+			<p><input type="email" name="singup_email" value="" placeholder="your@email.com"></p>
+			<p><a class="button welcome-button" href="#">Subscribe</a></p>
+		</div>
+	</div>
+
 	<!-- start content -->
 	<div class="m-content">
