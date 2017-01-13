@@ -580,7 +580,7 @@ dt:first-child {
     width: 320px;
     padding: 25px;
     text-align: right;
-    display: block;
+    display: none;
     position: absolute;
     left: auto;
     right: 0;

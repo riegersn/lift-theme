@@ -6,8 +6,22 @@ jQuery(document).ready(function($) {
         isAnimated: false
     });
 
-    var hleft = document.getElementsByClassName('header-wrap')[0].getBoundingClientRect().left;
-    $('.welcome-wrap').css({right: hleft});
+    $('#menu-item-90').click(function(event) {
+        var ww = $('.welcome-wrap'),
+            hleft = document.getElementsByClassName('header-wrap')[0].getBoundingClientRect().left + 20;
+
+        if (ww.is(':visible'))
+            ww.css({right: '-320', display: 'none'});
+        else
+            ww.css('right', hleft);
+            ww.show();
+    });
+
+    //move the welcome/subscribe box
+    if (document.location.pathname == '/') {
+        var hleft = document.getElementsByClassName('header-wrap')[0].getBoundingClientRect().left + 20;
+        $('.welcome-wrap').css({right: hleft, display: 'block'});
+    }
 
     // mobile nav menu, slide on click
     $('.mobile-bars').click(function() {
@@ -27,6 +41,13 @@ jQuery(document).ready(function($) {
 
     // fix to make sure header menu is visible after resize up
     $(window).resize(function() {
+
+        //move the welcome/subscribe box
+        if ($('.welcome-wrap').is(':visible')) {
+            var hleft = document.getElementsByClassName('header-wrap')[0].getBoundingClientRect().left + 20;
+            $('.welcome-wrap').css({right: hleft});
+        }
+
         if ($(window).width() >= 860) {
             console.log('testing');
             $('.header-menu').css({
