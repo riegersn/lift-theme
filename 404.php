@@ -1,13 +1,26 @@
 <?php get_header(); ?>
 
-<div class="special-404">
-
+<div class="content-container">
 	<h1>404</h1>
-	<p>Nothing to see here. <a href="http://localhost:8888">Check out our most recent posts.</a></p>
+	<p>Nothing to see here. <a href="http://localhost:8888">Go home.</a></p>
 
-	<!-- TODO: Make sure this link is changed before launch
-	-->
+	<h3>Pages</h3>
+	<ul>
+		<?php wp_list_pages( array( 'title_li' => '' ) ); ?>
+	</ul>
 
+	<h3>Posts</h3>
+	<ul>
+		<?php $lastposts = get_posts( array('numberposts' => -1) );
+			if ( $lastposts ) {
+			    foreach ( $lastposts as $post ) :
+			        setup_postdata( $post ); ?>
+
+		<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
+		<?php endforeach;
+			wp_reset_postdata();
+		} ?>
+	</ul>
 </div>
-
 <?php get_footer(); ?>
