@@ -582,11 +582,10 @@ dt:first-child {
     width: 320px;
     padding: 25px;
     text-align: right;
-    display: none;
     position: absolute;
     left: auto;
     right: 0;
-    right: -320px;
+    right: -330px;
     z-index: 10;
     background-color: #1C1C1C;
     border-radius: 0 0 12px 12px;
@@ -600,7 +599,7 @@ dt:first-child {
     color: #ed5565;
 }
 
-.welcome-wrap input {
+.welcome-wrap input[type='text'], .welcome-wrap input[type='email'] {
     display: inline-block;
     width: 100%;
     height: 42px;
@@ -622,14 +621,16 @@ dt:first-child {
     transition: all 400ms ease;
 }
 
-.welcome-wrap input:hover, .welcome-wrap input:focus {
+.welcome-wrap input[type='text']:hover, .welcome-wrap input[type='text']:focus,
+.welcome-wrap input[type='email']:hover, .welcome-wrap input[type='email']:focus {
   color: rgba(181,181,181,1);
   background: rgba(0,0,0,0.4);
   color: #ed5565;
 }
 
-.welcome-button {
-    font-size: 0.9411764706em; /* 16/17 */
+.welcome-wrap input[type='submit'] {
+    font-size: 0.9411764706em;
+    border: none; /* 16/17 */
     color: #fafafa;
     padding: 8px 20px;
     background-color: #0eb1d2;
@@ -639,9 +640,9 @@ dt:first-child {
     transition: color 400ms ease;
 }
 
-.welcome-button:hover {
-  color: #0eb1d2;
-  background: rgba(0,0,0,0.4);
+.welcome-wrap input[type='submit']:hover, .welcome-wrap input[type='submit']:focus {
+  position: relative;
+  background: #0eb1d2;
 }
 
 .welcome-copy p {
@@ -750,7 +751,7 @@ dt:first-child {
     position: relative;
     z-index: 1;
     display: block;
-    height: 550px;
+    height: 500px;
     width: 100%;
     background-position: 50% 50%;
     -webkit-background-size: cover;
