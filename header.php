@@ -14,7 +14,7 @@
 
 			<!-- the logo -->
 			<a class="header-logo-link" href="<?php bloginfo( 'wpurl' );?>">
-				<?php echo print_svg_image('header-logo', 'lyftguy-logo-alt3.svg', 'lyftguy-logo.png'); ?>
+				<?php echo print_svg_image('header-logo', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>
 			</a>
 
 			<!-- the main menu -->
@@ -45,6 +45,7 @@
 			<div id="mce-responses" class="clear">
 				<div class="response" id="mce-error-response" style="display:none"></div>
 				<div class="response" id="mce-success-response" style="display:none"></div>
+				<!-- <a class="button">Close</a> -->
 			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 			<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 		</div>
