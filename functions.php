@@ -233,6 +233,7 @@ function my_update_comment_field( $comment_field ) {
 
   $comment_field =
     '<p class="comment-form-comment">
+			<span class="asterisk">*</span>
             <textarea required id="comment" name="comment" placeholder="' . esc_attr__( "Start talking!", "text-domain" ) . '" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
 
@@ -249,19 +250,21 @@ function my_update_comment_fields( $fields ) {
 
 	$fields['author'] =
 		'<p class="comment-form-author">
-			<input id="author" name="author" type="text" placeholder="' . esc_attr__( "*Your real name", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+			<span class="asterisk">*</span>
+			<input id="author" name="author" type="text" placeholder="' . esc_attr__( "Your real name", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 		'" size="30" ' . $aria_req . ' />
 		</p>';
 
 	$fields['email'] =
 		'<p class="comment-form-email">
-			<input id="email" name="email" type="email" placeholder="' . esc_attr__( "*Your email", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
+			<span class="asterisk">*</span>
+			<input id="email" name="email" type="email" placeholder="' . esc_attr__( "Your email", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 		'" size="30" ' . $aria_req . ' />
 		</p>';
 
 	$fields['url'] =
 		'<p class="comment-form-url">
-			<input id="url" name="url" type="url"  placeholder="' . esc_attr__( "Your website (Optional)", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			<input id="url" name="url" type="url"  placeholder="' . esc_attr__( "Your website", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
 		'" size="30" />
 			</p>';
 

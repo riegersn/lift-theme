@@ -991,6 +991,17 @@ ul.comments-list  {
     margin-bottom: 8px;
 }
 
+.comment-respond span.asterisk {
+    color: #ed5565;
+    position: absolute;
+    left: -15px;
+    top: 9px;
+}
+
+.comment-form-author, .comment-form-email, .comment-form-comment {
+    position: relative;
+}
+
 .comment-respond input[type="submit"] {
     padding: 10px 12px;
     font-weight: 700;
