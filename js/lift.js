@@ -6,21 +6,26 @@ jQuery(document).ready(function($) {
         isAnimated: false
     });
 
-    $('#menu-item-90').click(function(event) {
+    $('#menu-item-365').click(function(event) {
         var ww = $('.welcome-wrap'),
             hleft = document.getElementsByClassName('header-wrap')[0].getBoundingClientRect().left + 20;
 
-        if (ww.is(':visible'))
-            ww.css({right: '-320', display: 'none'});
-        else
-            ww.css('right', hleft);
-            ww.show();
+        ww.finish();
+
+        if (ww.hasClass('toggled')) {
+            ww.removeClass('toggled');
+            ww.animate({'right': '-330'}, 'normal');
+        }
+        else {
+            ww.addClass('toggled');
+            ww.animate({'right': hleft}, 'normal');
+        }
     });
 
     //move the welcome/subscribe box
     if (document.location.pathname == '/') {
         var hleft = document.getElementsByClassName('header-wrap')[0].getBoundingClientRect().left + 20;
-        $('.welcome-wrap').css({right: hleft, display: 'block'});
+        $('.welcome-wrap').css({'right': hleft}).addClass('toggled');
     }
 
     // mobile nav menu, slide on click
@@ -172,13 +177,19 @@ jQuery(document).ready(function($) {
             } else {
 
                 var sbv_height = sb.height(),
-                    content_t = content.position().top,
+                    content_t = content.offset().top,
                     content_h = content.height();
+
+                // console.log(scroll_top + '/' + content_t);
 
                 fp_start = content_t;
                 fp_stop = content_t + content_h - sbv_height;
 
+                // console.log(scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
+
                 if (scroll_top >= fp_start && scroll_top < (fp_stop - 40)) {
+
+                    // console.log('IF: ' + scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
 
                     // freeze the container when scroll reaches the defined freeze pos
                     if (!sb.hasClass('freeze')) {
@@ -187,12 +198,14 @@ jQuery(document).ready(function($) {
 
                 } else if (scroll_top >= fp_stop - 40) {
 
+                    // console.log('IF ELSE: ' + scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
+
                     // unfreeze the container when scroll reaches the defined freeze pos
                     if (sb.hasClass('freeze'))
-                        sb.removeClass('freeze').css({ 'position': 'absolute', 'top': fp_stop });
+                        sb.removeClass('freeze').css({ 'position': 'absolute', 'top': fp_stop - 98 });
 
                 } else {
-
+                    // console.log('ELSE: ' + scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
                     // return to normal pos
                     sb.css({ 'top': '', 'position': '' });
                     sb.removeClass('freeze');
