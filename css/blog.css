@@ -955,8 +955,15 @@ ul.comments-list  {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    border: 3px solid #D3D3D3;
 }
 
+li.bypostauthor .user-avatar .avatar {
+    border: 3px solid #0eb1d2;
+}
+
+/* li.bypostauthor .user-avatar::after {
+} */
 
 .cm-buttons {
     margin: 10px 0 30px 0;
@@ -1015,7 +1022,7 @@ ul.comments-list  {
 }
 
 .comment-respond input, .comment-respond textarea {
-    color: #dedede;
+    color: #666;
     border: 1px solid #dedede;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1040,6 +1047,10 @@ ul.comments-list  {
 .comment-respond textarea {
     width: 100%;
 
+}
+
+.comment footer {
+    font-size: .9em;
 }
 
 @media only screen and (max-width: 680px) {
