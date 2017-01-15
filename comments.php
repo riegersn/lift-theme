@@ -1,7 +1,7 @@
 <?php if ( post_password_required() ) {
 	return;
 } ?>
-
+<span class="divider">&nbsp;</span>
 <div class="content-container">
 	<div class="comments">
 		<?php if ( have_comments() ) : ?>

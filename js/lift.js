@@ -187,7 +187,7 @@ jQuery(document).ready(function($) {
 
                 // console.log(scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
 
-                if (scroll_top >= fp_start && scroll_top < (fp_stop - 40)) {
+                if (scroll_top >= fp_start && scroll_top < (fp_stop - 70)) {
 
                     // console.log('IF: ' + scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
 
@@ -196,13 +196,13 @@ jQuery(document).ready(function($) {
                         sb.css({ 'top': 40, 'position': 'fixed' }).addClass('freeze');
                     }
 
-                } else if (scroll_top >= fp_stop - 40) {
+                } else if (scroll_top >= fp_stop - 70) {
 
                     // console.log('IF ELSE: ' + scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
 
                     // unfreeze the container when scroll reaches the defined freeze pos
                     if (sb.hasClass('freeze'))
-                        sb.removeClass('freeze').css({ 'position': 'absolute', 'top': fp_stop - 98 });
+                        sb.removeClass('freeze').css({ 'position': 'absolute', 'top': fp_stop - 128 });
 
                 } else {
                     // console.log('ELSE: ' + scroll_top + '/ ' + content_t + '+' + content_h + '-' + sbv_height + ' = ' + fp_stop);
