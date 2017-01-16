@@ -9,6 +9,11 @@ function print_svg_image($img_class, $svg_img, $fallback_img) {
 	return sprintf($template, $img_class, $svg_img, $fallback_img);
 }
 
+function print_image($class="", $src, $style="") {
+	$src = get_template_directory_uri() . '/img/' . $src;
+	echo sprintf("<img class=\"%s\" src=\"%s\" style=\"%s\">", $class, $src, $style);
+}
+
 function lift_scripts() {
 
 	/*-- Scripts -----------------------------*/
