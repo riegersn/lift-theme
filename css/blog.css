@@ -106,10 +106,10 @@ html {
 }
 
 body {
-    color: #000;
+    color: #141823;
     background-color: #1C1C1C;
     font-family: 'Geomanist';
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -127,7 +127,6 @@ body {
    ------------------------------------------------------------ */
 
 h1,.alpha,h2,.beta,h3,.gamma,h4,.delta,h5,.epsilon,h6,.zeta {
-    color: #333;
     font-weight: 500;
     line-height: 1.1;
 }
@@ -214,7 +213,7 @@ table td, table th {
 }
 
 table thead {
-    color: #222;
+    /* color: #222; */
     background: #dedede;
 }
 
