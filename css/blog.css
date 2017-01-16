@@ -185,14 +185,20 @@ ol,ul {
 
 /* --- links --- */
 a {
-    color: #ed5565;
-    cursor: pointer;
-    font-weight: 400;
+    color: #0eb1d2;
     text-decoration: none;
 }
 
 a:hover,a:focus {
-    border-bottom: 2px dotted #0eb1d2;
+    border-bottom: 1px dotted #ed5565;
+}
+
+#footer a, #header a {
+    color: #ed5565;
+}
+
+#footer a:hover, #header a:hover, #footer a:focus, #header a:focus  {
+    border-bottom-color: #0eb1d2;
 }
 
 
