@@ -4,7 +4,7 @@
 	</div>
 <?php } ?>
 
-<div class="content-container">
+<div class="container">
 	<div class="post-content">
 		<?php get_template_part('shareable') ?>
 		<p class="post-meta">/theLyftGuy/<?php the_date(); ?></a></p>

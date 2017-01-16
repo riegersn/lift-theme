@@ -12,7 +12,7 @@
 .sb-content-wrap {
     position: absolute;
     width: 48px;
-    margin: 30px 0 0 -65px;
+    margin: 40px 0 0 -65px;
     opacity: 1;
 }
 
@@ -26,6 +26,7 @@
     border: 0 !important;
     border-radius: 50% !important;
     margin-bottom: 8px;
+    background-color: rgba(0,0,0,0.03);
 }
 
 .sb-button:last-child {

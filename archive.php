@@ -4,7 +4,7 @@ Template Name: Archives
 */
 get_header(); ?>
 
-<div class="content-container">
+<div class="container">
 
 	<h1>Archive Index</h1>
 

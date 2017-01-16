@@ -2,7 +2,7 @@
 	return;
 } ?>
 <span class="divider">&nbsp;</span>
-<div class="content-container">
+<div class="container">
 	<div class="comments">
 		<?php if ( have_comments() ) : ?>
 			<h2>

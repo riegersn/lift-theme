@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="content-container">
+<div class="container">
 	<h1>404</h1>
 	<p>Nothing to see here. <a href="http://localhost:8888">Go home.</a></p>
 

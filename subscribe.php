@@ -4,7 +4,7 @@ Template Name: Subscribe
 */
 get_header(); ?>
 
-<div class="content-container subscribe-page">
+<div class="container subscribe-page">
 
 	<h1>Don't You Want To Earn More Money!?</h1>
 	<p>HI! I'm Shawn the LyftGuy. Welcome to my first blog! I'm a husband, father, and lover of all things Lyft! <a href="/about">Among other things...</a></p>

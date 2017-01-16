@@ -4,7 +4,7 @@ Template Name: About
 */
 get_header(); ?>
 
-<div class="content-container">
+<div class="container">
 
 	<h1>About Me</h1>
 	<?php print_image('about-image alignleft', 'about.jpg', 'margin-top: 10px;'); ?>

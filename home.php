@@ -26,12 +26,12 @@
 
 	</div>
 
-	<div class="content-container the-blog">
+	<div class="container the-blog">
 		<img class="c-header" src="<?php echo get_template_directory_uri(); ?>/img/the_blog_140.svg" onerror="this.onerror=null; this.src='<?php echo get_template_directory_uri(); ?>/img/the_blog_140_fallback.png'">
 	</div>
 
 
-	<div class="content-container entry-post-grid transparent">
+	<div class="container entry-post-grid">
 
 		<?php
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
