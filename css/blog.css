@@ -1071,7 +1071,7 @@ li.bypostauthor .user-avatar .avatar {
     Footer
    ------------------------------------------------------------ */
 
-.m-footer {
+#footer {
     position: relative;
     padding: 40px;
     color: #fafafa;
@@ -1080,15 +1080,15 @@ li.bypostauthor .user-avatar .avatar {
     z-index: 1;
 }
 
-.m-footer p {
+#footer p {
     margin: 0;
 }
 
-.m-footer p:first-child {
+#footer p:first-child {
     margin-bottom: 10px;
 }
 
-.m-footer p:last-child {
+#footer p:last-child {
     margin-top: 10px;
 }
 
@@ -1109,11 +1109,11 @@ li.bypostauthor .user-avatar .avatar {
     background-color: #00aced;
 }
 
-.m-footer a:hover,.m-footer a:focus {
+#footer a:hover,#footer a:focus {
     border-bottom-width: 1px;
 }
 
-/* .m-footer .cryptedmail:after {
+/* #footer .cryptedmail:after {
   content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 } */
 
