@@ -9,29 +9,21 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-	<header class="header">
-		<div class="header-wrap">
-
+	<header id="header">
+		<div class="container wide">
 			<!-- the logo -->
-			<a class="header-logo-link" href="<?php bloginfo( 'wpurl' );?>">
-				<?php echo print_svg_image('header-logo', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>
 			<a class="main-logo" href="<?php bloginfo( 'wpurl' );?>">
 				<?php echo print_svg_image('', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>
 			</a>
 
 			<!-- the main menu -->
-			<nav class="header-menu nav-item-highlight">
 			<nav class="main-nav valign">
 				<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
 			</nav>
 
-			<!-- mobile bars -->
-			<div class="mobile-bars">
-				<i class='fa fa-bars' aria-hidden='true'></i>
-			</div>
 			<i class='fa fa-bars main-nav--button valign' aria-hidden='true'></i>
 		</div>
 	</header>
 
 	<!-- start content -->
-	<div class="m-content">	<div id="content">
+	<div id="content">

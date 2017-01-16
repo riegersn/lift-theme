@@ -193,11 +193,11 @@ a:hover,a:focus {
     border-bottom: 1px dotted #ed5565;
 }
 
-#footer a, #header a {
+#footer a {
     color: #ed5565;
 }
 
-#footer a:hover, #header a:hover, #footer a:focus, #header a:focus  {
+#footer a:hover, #footer a:focus {
     border-bottom-color: #0eb1d2;
 }
 
@@ -247,6 +247,14 @@ dt:first-child {
     margin-top: 0;
 }
 
+
+/* --- positioning --- */
+.valign {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 
 /* --- custom styles --- */
 .c-blue {
@@ -389,8 +397,14 @@ strong {
     overflow: hidden;
 }
 
-.transparent {
-    background-color: transparent;
+.wide {
+    max-width: 1336px;
+    position: relative;
+    width: auto;
+}
+
+#header .container {
+    padding: 0 20px;
 }
 
 .entry-post-grid {
@@ -451,87 +465,32 @@ strong {
     Main Header
    ------------------------------------------------------------ */
 
-.header {
-    width: 100%;
-    font-weight: 400;
-    font-size: 1.1176470588rem; /* 19/17 */
-    position: relative;
-    z-index: 2;
-    color: #fafafa;
+#header {
     background-color: #1C1C1C;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, .75);
+    color: #666;
+    font-size: 1.1176470588rem; /* 19/17 */
+    letter-spacing: -.3px;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-.header-wrap {
-    position: relative;
-    max-width: 1336px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-
-/* --- Header Logo --- */
-
-.header-logo {
-    height: 66px;
-    /*
-        TODO: Create new images to support larger logo
-    */
-    width: auto;
-    padding: 16px 5px 16px 25px;
-    display: block;
-}
-
-.header-logo-link {
-    display: inline-block;
-}
-
-
-/* --- Main Menu --- */
-
-.header-menu {
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.header-menu ul,
-.header-menu li {
-    margin: 0;
-    display: inline-block;
-}
-
-.header-menu li:not(:last-child) {
-    padding-right: 30px;
-}
-
-.header-menu a {
+#header a {
     color: #fafafa;
-    display: block;
+    display: inline-block;
     text-transform: lowercase;
-    border: none;
 }
 
-.header a:hover,
-.header .current_page_item a {
+#header a:hover, #header a:focus,
+#header .current_page_item > a {
+    border: none;
     color: #ed5565;
-    border: none;
 }
 
-.mobile-bars {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    display: none;
-    font-size: 29px;
-    cursor: pointer;
-}
-
-.nav-item-highlight a:after {
+#header a:not(.main-logo)::after {
     display: block;
     height: 3px;
     width: 0;
@@ -542,67 +501,95 @@ strong {
     background: transparent;
 }
 
-.nav-item-highlight a:hover:after {
+#header a:not(.main-logo):hover::after {
     width: 100%;
     background: #0eb1d2;
 }
 
+.main-logo {
+    height: 66px;
+    padding: 16px 5px 16px 0;
+    width: auto;
+}
+
+.main-nav {
+    right: 25px;
+    line-height: 1;
+}
+
+.main-nav ul,.main-nav li {
+    margin: 0;
+    display: inline-block;
+}
+
+.main-nav li:not(:last-child) {
+    padding-right: 1.0526315789em; /* 20/19 */
+}
+
+.main-nav--button.fa {
+    cursor: pointer;
+    font-size: 28px;
+    display: none;
+    right: 20px;
+}
+
 
 /* --- Header media adjustments --- */
-@media only screen and (max-width: 960px) {
-    .header {
-        letter-spacing: -.4px;
+@media only screen and (max-width: 950px) {
+    #header {
         font-size: 1.0588235294rem; /* 18/17 */
     }
-    .header-menu li:not(:last-child) {
-        padding-right: 15px;
-    }
-    .header-logo {
+    .main-logo {
         height: 56px;
     }
 }
 
-@media only screen and (max-width: 830px) {
-    .header {
-        letter-spacing: 0;
+@media only screen and (max-width: 850px) {
+    #header {
         font-size: 1.1176470588rem; /* 19/17 */
     }
-    .mobile-bars {
+    .main-nav--button.fa {
         display: block;
     }
-    .header-menu {
+    .main-nav {
         width: 100%;
         position: fixed;
         right: -1000px;
-        top: 90px;
+        top: 88px;
         z-index: 3;
+        background-color: #1c1c1c;
         -webkit-transform: none;
         transform: none;
-        background-color: #1c1c1c;
-        transition: all 300ms ease;
     }
-    .header-menu ul,
-    .header-menu li {
+    .main-nav ul,
+    .main-nav li {
         padding: 0;
         display: block;
         width: 100%;
         text-align: center;
     }
-    .header-menu li:not(:last-child) {
+    .main-nav li:not(:last-child) {
         padding-right: 0;
     }
-    .header-menu a {
+    .main-nav a {
+        width: 100%;
         display: block;
         padding: 10px 0;
+        outline: none;
     }
-    .header-menu a:hover {
+    /* we need to use the exact same selector here or this wont work */
+    #header a:not(.main-logo):hover::after {
+        width: 0;
+    }
+    .main-nav a:hover {
         color: #ed5565;
-        background-color: #1e1e1e;
+        background-color: #111;
     }
 }
 
-.m-content {
-    /* margin-top: 100px; */
+
+#content {
+    padding-top: 98px;
     background-color: #F2F3F4;
     overflow: hidden;
     position: relative;
@@ -771,7 +758,6 @@ strong {
 }
 
 .post-content {
-    padding: 0 20px;
     overflow: hidden;
     /* background-color: #fff; */
 }
@@ -786,6 +772,7 @@ strong {
         margin: 0;
         border-radius: 0;
         max-width: 100%;
+        padding: 0 20px;
     }
 }
 
@@ -802,11 +789,9 @@ strong {
 
 .post-meta {
     color: #0eb1d2;
-    margin-bottom: .6666666667em;
-    /* 10/15 */
+    margin-bottom: .6666666667em; /* 10/15 */
     box-shadow: 0 4px 4px -5px rgba(0, 0, 0, .3);
-    font-size: .8823529412em;
-    /* 15/17 */
+    font-size: .8823529412em; /* 15/17 */
     display: inline-block;
     font-weight: 500;
 }
@@ -832,10 +817,8 @@ strong {
 
 .post-table {
     display: inline-block;
-    font-size: .9411764706em;
-    /* 16/17 */
-    margin-bottom: 1.5882352941em;
-    /* 27/17 */
+    font-size: .9411764706em; /* 16/17 */
+    margin-bottom: 1.5882352941em; /* 27/17 */
 }
 
 .post-table:first-child {
@@ -873,14 +856,12 @@ strong {
 .post-table ul,
 .post-table ol {
     font-size: 1em;
-    margin: 0 0 0 22px;
-    /* 22/17 */
+    margin: 0 0 0 22px; /* 22/17 */
 }
 
 .post-table p {
     font-size: 1em;
-    margin-bottom: 1.1764em;
-    /* 20/17 */
+    margin-bottom: 1.1764em; /* 20/17 */
 }
 
 
