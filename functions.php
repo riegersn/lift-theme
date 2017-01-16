@@ -44,16 +44,6 @@ add_action('wp_print_styles', 'lift_google_fonts');
 add_theme_support( 'title-tag' ); // Titles
 add_theme_support( 'post-thumbnails' ); // Support Featured Images
 
-// function new_excerpt_more( $more ) {
-//     return '...';
-// }
-// add_filter('excerpt_more', 'new_excerpt_more');
-
-// function custom_excerpt_length( $length ) {
-// 	return 80;
-// }
-// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
 function wpse_allowedtags() {
     // Add custom tags to this string
         return '<p>';
