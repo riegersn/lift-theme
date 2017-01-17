@@ -193,14 +193,6 @@ a:hover,a:focus {
     border-bottom: 1px dotted #ed5565;
 }
 
-#footer a {
-    color: #ed5565;
-}
-
-#footer a:hover, #footer a:focus {
-    border-bottom-color: #0eb1d2;
-}
-
 
 /* --- images --- */
 img {
@@ -1059,45 +1051,47 @@ li.bypostauthor .user-avatar .avatar {
     background-color: #1C1C1C;
     text-align: center;
     z-index: 1;
+    font-size: .8823529412em; /* 15/17 */
+}
+
+#footer img {
+    margin: 0 0 10px 14px;
 }
 
 #footer p {
-    margin: 0;
+    margin: 5px 0;
+    line-height: 1.2;
 }
 
-#footer p:first-child {
-    margin-bottom: 10px;
+#footer p:last-of-type {
+    margin-top: 18px;
 }
 
-#footer p:last-child {
-    margin-top: 10px;
+#footer a {
+    margin: 0 8px;
+    font-weight: 500;
+    border-bottom-color: #1C1C1C;
+    transition: all .3s linear;
 }
 
-.social-footer {
-    color: #fafafa;
-    width: 29px;
-    line-height: 29px;
-    display: inline-block;
-    border-radius: 50%;
-    border: none !important;
-}
-
-.footer-facebook {
-    background-color: #3a579a;
-}
-
-.footer-twitter {
-    background-color: #00aced;
-}
-
-#footer a:hover,#footer a:focus {
+#footer a:hover, #footer a:focus {
     border-bottom-width: 1px;
+    border-bottom-color: #ed5565;
 }
 
-/* #footer .cryptedmail:after {
-  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
-} */
+#footer .footer-social {
+    border-bottom: 0;
+    color: rgba(255, 255, 255, .15);
+    transition: color .3s linear;
+}
 
+#footer .footer-social.facebook:hover {
+    color: #3a579a;
+}
+
+#footer .footer-social.twitter:hover {
+    color: #00aced;
+}
 
 /* ------------------------------------------------------------
     Subscribe Page
