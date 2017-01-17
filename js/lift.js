@@ -41,26 +41,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // switch to slim-header once scroll reaches switch point
-    // $(window).scroll(function() {
-    //     var switch_point = 200,
-    //         header = $('.header'),
-    //         scroll_point = $(window).scrollTop();
-    //         // console.log('asdfasdfasdf');
-
-    //     if (scroll_point >= switch_point && !header.hasClass('toggled')) {
-    //         // header.addClass('toggled');
-    //         // header.animate( { top: -100 }, 'slow', 'easeOutElastic');
-
-    //         // if (!header.hasClass('skinny'))
-    //             // header.addClass('skinny');
-    //     } else {
-
-    //         // if (header.hasClass('skinny'))
-    //             // header.removeClass('skinny');
-    //     }
-    // });
-
 
     /* ------------------------------------------------------------
         Shareable
@@ -144,15 +124,15 @@ jQuery(document).ready(function($) {
                 offset_t    = header_h + margin,
                 offset_b    = margin * 2 + header_h;
 
-            if ($('.mobile-bars').is(':visible')) {
+            if ($('.main-nav--button').is(':visible')) {
 
                 shareable.css({ 'bottom': 0, 'left': 0 });
 
                 // post.top - skinny.header.height + padding
-                fp_start = post.position().top - 66 + 30;
+                fp_start = post.position().top - offset_t;
 
                 // fp_start + post.height - window.height/2
-                fp_stop = fp_start + post.height() - ($(window).height() / 2);
+                fp_stop = (post.height() + post.position().top) - shareable.height() - offset_b - ($(window).height() / 2);
 
                 if (scroll_t >= fp_start && scroll_t < fp_stop)
                     shareable.css('display', 'inline-block');
