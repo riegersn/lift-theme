@@ -1,6 +1,6 @@
 
 <?php if(has_post_thumbnail()) { ?>
-	<div class="post-featured-image" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>')">
+	<div class="feat-img" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>')">
 	</div>
 <?php } ?>
 

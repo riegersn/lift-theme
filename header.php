@@ -10,7 +10,7 @@
 	</head>
 	<body>
 	<header id="header">
-		<div class="container wide">
+		<div class="container container-wide">
 			<!-- the logo -->
 			<a class="main-logo" href="<?php bloginfo( 'wpurl' );?>">
 				<?php echo print_svg_image('', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>

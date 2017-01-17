@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
     // set the content to masonary style
-    $('.entry-post-grid').masonry({
+    $('.home--post-grid').masonry({
         itemSelector: '.post-entry',
         isAnimated: false
     });
