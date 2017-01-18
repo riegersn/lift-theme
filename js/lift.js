@@ -32,12 +32,20 @@ jQuery(document).ready(function($) {
             $('.welcome-wrap').css({right: hleft});
         }
 
-        if ($(window).width() >= 850) {
-            console.log('testing');
+        if ($(window).width() > 850) {
             $('.main-nav').css({
                 display: 'block',
                 right: ''
             });
+
+            /*
+                TODO: this can still visible when resizing, not a good solution
+            */
+            if (!$('#shareable').is(':visible')) {
+                $('#shareable').removeAttr("style");
+                ('#shareable').css({ 'top': '128px', 'position': 'fixed' });
+            }
+
         }
     });
 
@@ -46,7 +54,7 @@ jQuery(document).ready(function($) {
         Shareable
        ------------------------------------------------------------ */
 
-    if ($('.sb-content-wrap').length) {
+    if ($('#shareable').length) {
 
 
         /* --- Define Shareable --- */
@@ -119,23 +127,18 @@ jQuery(document).ready(function($) {
                 margin      = 40,
                 post        = $('.post-content'),
                 scroll_t    = $(window).scrollTop(),
-                shareable   = $('#shareable-box'),
-                shareable_t = document.getElementById('shareable-box').getBoundingClientRect().top,
+                shareable   = $('#shareable'),
+                shareable_t = document.getElementById('shareable').getBoundingClientRect().top,
                 offset_t    = header_h + margin,
                 offset_b    = margin * 2 + header_h;
 
             if ($('.main-nav--button').is(':visible')) {
 
-                shareable.css({ 'bottom': 0, 'left': 0 });
-
-                // post.top - skinny.header.height + padding
                 fp_start = post.position().top - offset_t;
-
-                // fp_start + post.height - window.height/2
                 fp_stop = (post.height() + post.position().top) - shareable.height() - offset_b - ($(window).height() / 2);
 
                 if (scroll_t >= fp_start && scroll_t < fp_stop)
-                    shareable.css('display', 'inline-block');
+                    shareable.css({display: 'inline-block',top: '',bottom: '0'});
                 else
                     shareable.css('display', 'none');
 
