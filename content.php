@@ -6,10 +6,8 @@
 		</a>
 	<?php } ?>
 
-	<div class="entry-wrap">
-		<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-		<?php the_excerpt(); ?>
-		<a class="button" href="<?php echo the_permalink(); ?>">Continue reading</a>
-	</div>
+	<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+	<?php the_excerpt(); ?>
+	<a class="button" href="<?php echo the_permalink(); ?>">Continue reading</a>
 
 </article>
