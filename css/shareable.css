@@ -86,16 +86,18 @@
         left: 0;
         bottom: 0;
         position: fixed;
-        font-size: 0;
-        width: 100%;
-        z-index: 10;
         height: 40px;
+        width: 100%;
+        z-index: 5;
     }
 
     .shareable-btn {
         width:  16.6666666667%;
         border-radius: 0;
         margin: 0;
+        float: left;
+        display: block;
+
     }
 
     .sb-facebook {

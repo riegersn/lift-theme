@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
             menu.css('right', '0');
             button.removeClass('fa-bars').addClass('fa-times');
         } else {
-            menu.css('right', '-' + win_width + 'px');
+            menu.css('right', '-3000px');
             menu.removeClass('active').addClass('nav-item-highlight');
             button.removeClass('fa-times').addClass('fa-bars');
         }
@@ -33,19 +33,15 @@ jQuery(document).ready(function($) {
         }
 
         if ($(window).width() > 850) {
-            $('.main-nav').css({
-                display: 'block',
-                right: ''
-            });
 
-            /*
-                TODO: this can still visible when resizing, not a good solution
-            */
-            if (!$('#shareable').is(':visible')) {
-                $('#shareable').removeAttr("style");
-                ('#shareable').css({ 'top': '128px', 'position': 'fixed' });
-            }
+            var main_nav = $('.main-nav'),
+                shareable = $('#shareable');
 
+            if (main_nav[0].hasAttribute('style'))
+                main_nav.removeAttr('style');
+
+            if (shareable.hasClass('mobile-mode'))
+                shareable.removeAttr("style");
         }
     });
 
@@ -134,15 +130,19 @@ jQuery(document).ready(function($) {
 
             if ($('.main-nav--button').is(':visible')) {
 
+                shareable.removeClass('desktop-mode').addClass('mobile-mode');
+
                 fp_start = post.position().top - offset_t;
                 fp_stop = (post.height() + post.position().top) - shareable.height() - offset_b - ($(window).height() / 2);
 
                 if (scroll_t >= fp_start && scroll_t < fp_stop)
-                    shareable.css({display: 'inline-block',top: '',bottom: '0'});
+                    shareable.css({display: 'block',top: '',bottom: '0'});
                 else
                     shareable.css('display', 'none');
 
             } else {
+
+                shareable.removeClass('mobile-mode').addClass('desktop-mode');
 
                 fp_start = post.position().top - offset_t;
                 fp_stop = (post.height() + post.position().top) - shareable.height() - offset_b;
@@ -159,7 +159,7 @@ jQuery(document).ready(function($) {
 
                 } else {
                     // return to normal pos
-                    shareable.css({ 'top': '', 'position': '' });
+                    shareable.removeAttr("style");
                     shareable.removeClass('freeze');
                 }
             }
