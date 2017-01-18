@@ -44,6 +44,21 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Geomanist';
+    src: url('../fonts/geomanist/geomanist-bold-webfont.eot');
+    src: url('../fonts/geomanist/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/geomanist/geomanist-bold-webfont.woff2') format('woff2'), url('../fonts/geomanist/geomanist-bold-webfont.woff') format('woff'), url('../fonts/geomanist/geomanist-bold-webfont.ttf') format('truetype'), url('../fonts/geomanist/geomanist-bold-webfont.svg#geomanistbold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geomanist';
+    src: url('../fonts/geomanist/geomanist-black-webfont.eot');
+    src: url('../fonts/geomanist/geomanist-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/geomanist/geomanist-black-webfont.woff2') format('woff2'), url('../fonts/geomanist/geomanist-black-webfont.woff') format('woff'), url('../fonts/geomanist/geomanist-black-webfont.ttf') format('truetype'), url('../fonts/geomanist/geomanist-black-webfont.svg#geomanistblack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
 
 /* ------------------------------------------------------------
     Reset
