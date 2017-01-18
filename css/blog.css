@@ -26,13 +26,7 @@
     Fonts
    ------------------------------------------------------------ */
 
-/* @font-face {
-    font-family: 'Geomanist';
-    src: url('../fonts/geomanist/geomanist-light-webfont.eot');
-    src: url('../fonts/geomanist/geomanist-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/geomanist/geomanist-light-webfont.woff2') format('woff2'), url('../fonts/geomanist/geomanist-light-webfont.woff') format('woff'), url('../fonts/geomanist/geomanist-light-webfont.ttf') format('truetype'), url('../fonts/geomanist/geomanist-light-webfont.svg#geomanistlight') format('svg');
-    font-weight: 300;
-    font-style: normal;
-} */
+
 
 @font-face {
     font-family: 'Geomanist';
