@@ -408,7 +408,11 @@ strong {
     padding: 40px 0;
     margin: 0 auto;
     width: 800px;
-    max-width: 90%;
+
+    max-width: 78%;
+    /* TODO: switch to 90% in mobile
+    */
+
     overflow: hidden;
 }
 
@@ -419,9 +423,9 @@ strong {
     padding: 0 20px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     /* should cover all tablets (-ipad pro) */
-    .content-container {
+    .container {
         max-width: 90%;
     }
 }
@@ -429,7 +433,7 @@ strong {
 @media only screen and (max-width: 500px) {
     /* should cover all smartphones */
     .content-container {
-        max-width: 100%;
+        /* max-width: 100%; */
     }
 }
 
