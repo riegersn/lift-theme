@@ -407,17 +407,14 @@ strong {
 .container {
     padding: 40px 0;
     margin: 0 auto;
-    width: 800px;
-
+    width: 700px;
     max-width: 78%;
-    /* TODO: switch to 90% in mobile
-    */
-
     overflow: hidden;
 }
 
 .container-wide {
     max-width: 1336px;
+    margin: 0 auto;
     position: relative;
     width: auto;
     padding: 0 20px;
@@ -432,7 +429,7 @@ strong {
 
 @media only screen and (max-width: 500px) {
     /* should cover all smartphones */
-    .content-container {
+    .container {
         /* max-width: 100%; */
     }
 }
