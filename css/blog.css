@@ -383,7 +383,7 @@ strong {
     width: 31.33%;
 }
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 850px) {
     .span-col {
         width: 48%;
     }
@@ -418,7 +418,7 @@ strong {
     margin: 0 auto;
     width: 700px;
     max-width: 78%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .container-wide {
@@ -471,6 +471,7 @@ strong {
     background-color: #ed5565;
     margin: 5px;
     border: none;
+    /* box-shadow: 0 0 5px 0 rgba(0,0,0,0.25); */
 }
 
 .button:hover,
@@ -623,8 +624,8 @@ strong {
 .post-grid {
     padding-top: 10px;
     padding-bottom: 40px;
-    max-width: 1000px;
-    width: auto;
+    width: 1000px;
+    max-width: 95%;
 }
 
 .grid-entry {
@@ -657,19 +658,13 @@ strong {
 .grid-entry p {
     margin: 0 25px 16px;
     font-size: 16px;
-    height: 150px;
+    height: auto;
     overflow: hidden;
 }
 
 .grid-entry .button {
     line-height: normal;
     margin: 0 25px 25px;
-}
-
-@media only screen and (max-width: 1060px) {
-    .grid-entry {
-        border-radius: 0;
-    }
 }
 
 @media only screen and (max-width: 620px) {
@@ -1061,6 +1056,9 @@ li.bypostauthor .user-avatar .avatar {
    ------------------------------------------------------------ */
 
 .about-image {
-    height: 300px;
-    border-radius: 6px;
+    height: 263px;
+    border-radius: 4px;
+    margin-top: 70px;
+    float: right;
+    margin-left: 30px;
 }

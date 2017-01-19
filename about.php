@@ -7,7 +7,7 @@ get_header(); ?>
 <div class="container">
 
 	<h1>About Me</h1>
-	<?php print_image('about-image alignleft', 'about.jpg', 'margin-top: 10px;'); ?>
+	<?php print_image('about-image alignleft', 'about-alt.jpg'); ?>
 	<p>HI! I'm Shawn the LyftGuy. Welcome to my first blog! I'm a husband, father, and lover of all things Lyft!</p>
 	<p>I was born in Odessa TX, but I grew up in South Jersey, a quick 15 minute ride to the Ben Franklin bridge into Philadelphia. Played baseball in high school and for my the local township. Yet my true interests lied behind the computer, with programming.</p>
 	<p>I taught myself programming in Visual Basic 6 at a young age and was completely sucked in. So after high school I received my degree in CIS from the local community college. After which I joined TD Bank to work in their IT Help Desk.</p>

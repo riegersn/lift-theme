@@ -1,8 +1,13 @@
 jQuery(document).ready(function($) {
 
     // set the content to masonary style
-    $('.home--post-grid').masonry({
-        itemSelector: '.post-entry',
+    var grid = $('.post-grid');
+
+    grid.masonry({
+        itemSelector: '.grid-entry',
+        transitionDuration: 0,
+        // columnWidth: '.column',
+        // percentPosition: true,
         isAnimated: false
     });
 
