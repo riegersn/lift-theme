@@ -631,7 +631,7 @@ strong {
 .grid-entry {
     background-color: #fafafa;
     border-radius: 4px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1);
     float: left;
 }
 
@@ -658,8 +658,9 @@ strong {
 .grid-entry p {
     margin: 0 25px 16px;
     font-size: 16px;
-    height: auto;
+    max-height: 200px;
     overflow: hidden;
+    height: 150px;
 }
 
 .grid-entry .button {
@@ -726,9 +727,8 @@ strong {
     padding: 0px 10px;
     border-radius: 4px;
     background-color: #000;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.3);
     color: #fafafa;
-    /* font-weight: 800; */
     font-size: 24px;
 }
 
