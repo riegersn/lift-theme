@@ -246,7 +246,7 @@ function my_update_comment_fields( $fields ) {
 	$fields['author'] =
 		'<p class="comment-form-author">
 			<span class="asterisk">*</span>
-			<input id="author" name="author" type="text" placeholder="' . esc_attr__( "Your real name", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+			<input id="author" name="author" type="text" placeholder="' . esc_attr__( "Your name", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 		'" size="30" ' . $aria_req . ' />
 		</p>';
 
