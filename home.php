@@ -5,7 +5,11 @@
 <m-content> -->
 
 	<div class="feat-img home--feat-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/home-alt.jpg')" >
-
+		<div class="home-signup">
+			<span class="home-signup-highlight">Don't be a <span class="c-red">clueless driver</span>.</span><br>
+			<span class="home-signup-highlight">Follow us on <a href="https://www.facebook.com/theLyftGuy/" target="_blank"><span class="home-signup-span home-signup-fb">facebook</span></a> and <a href="https://twitter.com/thelyftguy_net" target="_blank"><span class="home-signup-span home-signup-tw">twitter</span></a>,</span><br>
+			<span class="home-signup-highlight">then <a class="home-signup-btn" href="/subscribe">subscribe</a> to our newsletter!</span>
+		</div>
 	</div>
 
 	<div class="container home--the-blog">
