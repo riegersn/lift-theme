@@ -6,8 +6,6 @@ jQuery(document).ready(function($) {
     grid.masonry({
         itemSelector: '.grid-entry',
         transitionDuration: 0,
-        // columnWidth: '.column',
-        // percentPosition: true,
         isAnimated: false
     });
 
