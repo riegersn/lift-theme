@@ -545,7 +545,7 @@ strong {
 }
 
 .main-nav li:not(:last-child) {
-    padding-right: 1.0526315789em; /* 20/19 */
+    padding-right: 20px;
 }
 
 .main-nav--button.fa {
@@ -559,7 +559,7 @@ strong {
 /* --- Header media adjustments --- */
 @media only screen and (max-width: 950px) {
     #header {
-        font-size: 1.0588235294rem; /* 18/17 */
+        font-size: 18px;
     }
     .main-logo {
         height: 56px;
@@ -568,7 +568,7 @@ strong {
 
 @media only screen and (max-width: 850px) {
     #header {
-        font-size: 1.1176470588rem; /* 19/17 */
+        font-size: 20px; /* 19/17 */
     }
     .main-nav--button.fa {
         display: block;
