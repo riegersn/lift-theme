@@ -343,6 +343,10 @@ strong {
 }
 
 /* --- mailchimp responses --- */
+#mce-responses {
+    line-height: 1.6;
+}
+
 #mce-error-response::before {
     content: 'Oops! ';
     color: #ed5565;
