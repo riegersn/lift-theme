@@ -179,7 +179,7 @@ class comment_walker extends Walker_Comment {
 			<article>
 
 				<div class="user-avatar">
-					<?php echo get_avatar( $comment, 50, 'mystery', 'Author’s gravatar' ); ?>
+					<?php echo get_avatar( $comment, 60, 'mystery', 'Author’s gravatar' ); ?>
 				</div>
 
 				<?php if ($comment->comment_approved == '0') : ?>
