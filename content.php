@@ -1,7 +1,7 @@
 <article class="grid-entry col span-col">
 	<?php if ( has_post_thumbnail() ) {?>
 		<a href="<?php echo the_permalink(); ?>">
-			<div class="grid-entry--img" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ); ?>);">
+			<div class="grid-entry--img" style="background-image: url(<?php the_post_thumbnail_url( 'medium' ); ?>);">
 			</div>
 		</a>
 	<?php } ?>
