@@ -177,11 +177,8 @@ p, blockquote {
     hyphens: auto;
 }
 
-ol,ul,dd {
+ol,ul {
     line-height: 1.5;
-}
-
-ol,ul,dl {
     list-style-type: disc !important;
     margin: 0 0 28px 30px;
 }
@@ -226,6 +223,7 @@ table thead {
 
 /* --- definitions --- */
 dd {
+    line-height: 1.6;
     margin: 0 0 20px 10px;
 }
 
