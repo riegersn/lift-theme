@@ -233,7 +233,6 @@ dd:last-child {
 
 dt {
     margin: 10px 0 5px;
-    font-size: .90em;
     font-weight: 800;
     line-height: 1;
 }
@@ -781,8 +780,8 @@ strong {
 
 .post-table {
     display: inline-block;
-    font-size: .9411764706em; /* 16/17 */
-    margin-bottom: 1.5882352941em; /* 27/17 */
+    font-size: 16px;
+    margin-bottom: 27px;
 }
 
 .post-table:first-child {
