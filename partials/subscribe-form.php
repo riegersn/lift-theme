@@ -1,8 +1,8 @@
 <div class="subscribe-form">
     <form action="//thelyftguy.us14.list-manage.com/subscribe/post?u=fa32ac29ec19b61d8e3b4ea47&amp;id=3e8b46ba4a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <p class="input">
-            <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="your@email.com">
+            <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Your name">
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email">
         </p>
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
             <input type="text" name="b_fa32ac29ec19b61d8e3b4ea47_3e8b46ba4a" tabindex="-1" value="">

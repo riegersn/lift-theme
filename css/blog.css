@@ -1038,9 +1038,10 @@ ul.comments-list {
     font-weight: 500;
     width: 200px;
     font-size: 14px;
-    /* 14/17 */
     -webkit-transition: color .2s ease-in;
     transition: color .2s ease-in;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .subscribe-form input[name="EMAIL"] {
