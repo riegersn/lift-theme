@@ -806,7 +806,7 @@ strong {
 }
 
 .comments ul,
-ol {
+.comments ol {
     margin: 0;
     padding: 0;
     font-size: 1rem;
@@ -824,7 +824,7 @@ ul.comments-list {
 
 .comments article {
     position: relative;
-    padding: 30px 0 30px 70px;
+    padding: 30px 0 30px 80px;
     border-top: 1px dashed #D3D3D3;
     border-collapse: collapse;
 }
@@ -839,26 +839,29 @@ ul.comments-list {
 }
 
 .user-avatar {
+    /* width: auto; */
+    height: 60px;
     position: absolute;
-    top: 25px;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    top: 30px;
+    left: 5px;
 }
 
 .user-avatar .avatar {
-    border-radius: 50%;
-    border: 3px solid #D3D3D3;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.25);
 }
 
-li.bypostauthor .user-avatar .avatar {
+/* li.bypostauthor .user-avatar .avatar {
     border: 3px solid #0eb1d2;
-}
+} */
 
 
 /* li.bypostauthor .user-avatar::after {
 } */
+
+#respond {
+    padding-top: 25px;
+}
 
 .cm-buttons {
     margin: 10px 0 30px 0;
