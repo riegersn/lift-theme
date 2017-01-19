@@ -983,6 +983,9 @@ li.bypostauthor .user-avatar .avatar {
 #footer p {
     margin: 5px 0;
     line-height: 1.2;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
 #footer p:last-of-type {
