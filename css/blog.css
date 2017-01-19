@@ -721,6 +721,11 @@ strong {
     border-radius: 6px;
 }
 
+.post-content li {
+    line-height: 1.6;
+    margin: 0;
+}
+
 
 /* --- tables inside post --- */
 
