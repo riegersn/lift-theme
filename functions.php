@@ -14,34 +14,34 @@ function print_image($class="", $src, $style="") {
 	echo sprintf("<img class=\"%s\" src=\"%s\" style=\"%s\">", $class, $src, $style);
 }
 
-function lift_scripts() {
+function lyft_scripts() {
 
 	/*-- Scripts -----------------------------*/
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 	wp_enqueue_script( 'jquery.easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js');
-	wp_enqueue_script( 'lift', get_template_directory_uri() . '/js/lift.js');
 	wp_enqueue_script( 'masonary', get_template_directory_uri() . '/js/masonry.pkgd.min.js');
+	wp_enqueue_script( 'lyft', get_template_directory_uri() . '/js/lyft.js');
 
 	/*-- Stylesheets -------------------------*/
 	wp_enqueue_style( 'shareable', get_template_directory_uri() . '/css/shareable.css' );
 	wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );
 }
 
-add_action( 'wp_enqueue_scripts', 'lift_scripts' );
+add_action( 'wp_enqueue_scripts', 'lyft_scripts' );
 
 /* Fonts
  * ----------------------------------------*/
- function lift_google_fonts() {
-	wp_register_style('Roboto', 'https://fonts.googleapis.com/css?family=Roboto:300');
-	wp_enqueue_style('Roboto');
-	wp_register_style('Roboto Condensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
-	wp_enqueue_style('Roboto Condensed');
-	wp_register_style('Lato', 'https://fonts.googleapis.com/css?family=Lato:700');
-	wp_enqueue_style('Lato');
-}
+//  function lift_google_fonts() {
+// 	wp_register_style('Roboto', 'https://fonts.googleapis.com/css?family=Roboto:300');
+// 	wp_enqueue_style('Roboto');
+// 	wp_register_style('Roboto Condensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+// 	wp_enqueue_style('Roboto Condensed');
+// 	wp_register_style('Lato', 'https://fonts.googleapis.com/css?family=Lato:700');
+// 	wp_enqueue_style('Lato');
+// }
 
-add_action('wp_print_styles', 'lift_google_fonts');
+// add_action('wp_print_styles', 'lift_google_fonts');
 
 
 /* Wordpress Theme Support
