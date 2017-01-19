@@ -675,6 +675,13 @@ strong {
         border-radius: 0;
         box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, .1);
     }
+    .post-grid {
+        margin: 0;
+        max-width: 100%;
+    }
+    .grid-entry {
+        border-radius: 0;
+    }
 }
 
 
