@@ -135,7 +135,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-weight: 800;
     line-height: 1;
     margin: .6em 0 .8em;
@@ -145,7 +145,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-weight: 900;
     font-size: 36px;
-    margin-top: 0;
+    margin: 0 0 .8em;
+    line-height: 1;
 }
 
 h2 {
@@ -182,9 +183,9 @@ ol,ul,dd {
     line-height: 1.5;
 }
 
-ol,ul {
+ol,ul,dl {
     list-style-type: disc !important;
-    margin: 0 2.9411em 1.4117em 2.9411em; /* (17 base) */
+    margin: 0 0 28px 5px;
 }
 
 
@@ -226,12 +227,8 @@ table thead {
 
 
 /* --- definitions --- */
-dl {
-    maring-top: 5px;
-}
-
 dd {
-    margin-bottom: 20px;
+    margin: 0 0 20px 10px;
 }
 
 dd:last-child {
@@ -240,7 +237,8 @@ dd:last-child {
 
 dt {
     margin: 10px 0 5px;
-    font-weight: 400;
+    font-size: .90em;
+    font-weight: 800;
     line-height: 1;
 }
 
@@ -1024,7 +1022,7 @@ li.bypostauthor .user-avatar .avatar {
     padding: 10px;
     font-weight: 500;
     width: 200px;
-    font-size: .8235294118em;
+    font-size: 14px;
     /* 14/17 */
     -webkit-transition: color .2s ease-in;
     transition: color .2s ease-in;
@@ -1048,6 +1046,18 @@ li.bypostauthor .user-avatar .avatar {
     height: 60px;
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
+}
+
+
+/* ------------------------------------------------------------
+    Attachment.php
+   ------------------------------------------------------------ */
+
+.attachment img {
+    border-radius: 4px;
+    border: 4px solid #dadbdc;
+    border: 4px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
 }
 
 
