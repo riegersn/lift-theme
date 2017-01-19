@@ -9,6 +9,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
+<<<<<<< HEAD
 		<div class="m-header">
 
 			<nav class="h-wrap">
@@ -36,3 +37,23 @@
 			</nav> <!-- /h-logo-wrap -->
 		</div> <!-- /main-header -->
 		<div class="m-content">
+=======
+	<header id="header">
+		<div class="container-wide">
+			<!-- the logo -->
+			<a class="main-logo" href="<?php bloginfo( 'wpurl' );?>">
+				<?php echo print_svg_image('', 'lyftguy-logo.svg', 'lyftguy-logo.png'); ?>
+			</a>
+
+			<!-- the main menu -->
+			<nav class="main-nav valign">
+				<?php wp_nav_menu( array( 'menu' => 'Main Nav Menu', 'theme_location' => 'main-nav-menu', 'container' => '', 'container_class' => '' ) ); ?>
+			</nav>
+
+			<i class='fa fa-bars main-nav--button valign' aria-hidden='true'></i>
+		</div>
+	</header>
+
+	<!-- start content -->
+	<div id="content">
+>>>>>>> master

@@ -2,6 +2,7 @@
 
 show_admin_bar( false ); // disable the admin bar.
 
+<<<<<<< HEAD
 function lift_scripts() {
 
 	/* Scripts
@@ -14,12 +15,94 @@ function lift_scripts() {
 
 	/* Stylesheets
 	 * ----------------------------------------*/
+=======
+function print_svg_image($img_class, $svg_img, $fallback_img) {
+	$template = "<img class=\"%s\" src=\"%s\" onerror=\"this.onerror=null; this.src='%s'\">";
+	$svg_img = get_template_directory_uri() . '/img/' . $svg_img;
+	$fallback_img = get_template_directory_uri() . '/img/' . $fallback_img;
+	return sprintf($template, $img_class, $svg_img, $fallback_img);
+}
+
+function print_image($class="", $src, $style="") {
+	$src = get_template_directory_uri() . '/img/' . $src;
+	echo sprintf("<img class=\"%s\" src=\"%s\" style=\"%s\">", $class, $src, $style);
+}
+
+function lyft_scripts() {
+
+	/*-- Scripts -----------------------------*/
+	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
+	wp_enqueue_script( 'jquery.easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js');
+	wp_enqueue_script( 'masonary', get_template_directory_uri() . '/js/masonry.pkgd.min.js');
+	wp_enqueue_script( 'lyft', get_template_directory_uri() . '/js/lyft.js');
+
+	/*-- Stylesheets -------------------------*/
+>>>>>>> master
 	wp_enqueue_style( 'shareable', get_template_directory_uri() . '/css/shareable.css' );
 	wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );
 }
 
-add_action( 'wp_enqueue_scripts', 'lift_scripts' );
+add_action( 'wp_enqueue_scripts', 'lyft_scripts' );
 
+/* Fonts
+ * ----------------------------------------*/
+//  function lift_google_fonts() {
+// 	wp_register_style('Roboto', 'https://fonts.googleapis.com/css?family=Roboto:300');
+// 	wp_enqueue_style('Roboto');
+// 	wp_register_style('Roboto Condensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+// 	wp_enqueue_style('Roboto Condensed');
+// 	wp_register_style('Lato', 'https://fonts.googleapis.com/css?family=Lato:700');
+// 	wp_enqueue_style('Lato');
+// }
+
+// add_action('wp_print_styles', 'lift_google_fonts');
+
+
+/* Wordpress Theme Support
+ * ----------------------------------------*/
+add_theme_support( 'title-tag' ); // Titles
+add_theme_support( 'post-thumbnails' ); // Support Featured Images
+
+function wpse_allowedtags() {
+    // Add custom tags to this string
+        return '<p>';
+    }
+
+if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
+
+    function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
+    $raw_excerpt = $wpse_excerpt;
+        if ( '' == $wpse_excerpt ) {
+
+            $wpse_excerpt = get_the_content('');
+            $wpse_excerpt = strip_shortcodes( $wpse_excerpt );
+            $wpse_excerpt = apply_filters('the_content', $wpse_excerpt);
+            $wpse_excerpt = str_replace(']]>', ']]>', $wpse_excerpt);
+            $wpse_excerpt = strip_tags($wpse_excerpt, wpse_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
+
+            //Set the excerpt word count and only break after sentence is complete.
+            $excerpt_word_count = 35;
+            $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+            $tokens = array();
+            $excerptOutput = '';
+            $count = 0;
+
+            // Divide the string into tokens; HTML tags, or words, followed by any whitespace
+            preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $wpse_excerpt, $tokens);
+
+            foreach ($tokens[0] as $token) {
+
+                if ($count >= $excerpt_length && preg_match('/[\,\;\?\.\!]\s*$/uS', $token)) {
+                // Limit reached, continue until , ; ? . or ! occur at the end
+                    $excerptOutput .= trim($token);
+                    break;
+                }
+
+                // Add words to complete sentence
+                $count++;
+
+<<<<<<< HEAD
 /* Fonts
  * ----------------------------------------*/
  function lift_google_fonts() {
@@ -28,9 +111,15 @@ add_action( 'wp_enqueue_scripts', 'lift_scripts' );
 	wp_register_style('Roboto Slab', 'https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 	wp_enqueue_style('Roboto Slab');
 }
+=======
+                // Append what's left of the token
+                $excerptOutput .= $token;
+            }
+>>>>>>> master
 
-add_action('wp_print_styles', 'lift_google_fonts');
+            $wpse_excerpt = trim(force_balance_tags($excerptOutput));
 
+<<<<<<< HEAD
 
 /* Wordpress Theme Support
  * ----------------------------------------*/
@@ -102,6 +191,19 @@ if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
             // 	// After the content
             // 	$wpse_excerpt .= $excerpt_more; /*Add read more in new paragraph */
 
+=======
+            $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . ' » ' . sprintf(__( 'Read more about: %s  »', 'wpse' ), get_the_title()) . '</a>';
+            $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+
+            // $pos = strrpos($wpse_excerpt, '</');
+            // if ($pos !== false)
+            // 	// Inside last HTML tag
+            // 	$wpse_excerpt = substr_replace($wpse_excerpt, $excerpt_end, $pos, 0); /* Add read more next to last word */
+            // else
+            // 	// After the content
+            // 	$wpse_excerpt .= $excerpt_more; /*Add read more in new paragraph */
+
+>>>>>>> master
         	// lets remove any punctuation that may be at the end of the excerpt
 
         	$wpse_excerpt = rtrim(trim($wpse_excerpt), '.!?,<>\/p') . "...";
@@ -117,6 +219,7 @@ endif;
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt');
 
+<<<<<<< HEAD
 function lift_theme_menu() {
   register_nav_menus( array(
     'header' => 'Header menu'
@@ -124,6 +227,12 @@ function lift_theme_menu() {
  }
 
 add_action( 'after_setup_theme', 'lift_theme_menu' );
+=======
+function register_main_menu() {
+  register_nav_menu( 'main-nav-menu',__( 'Main Nav Menu' ));
+}
+add_action( 'init', 'register_main_menu' );
+>>>>>>> master
 
 /* ----------------------------------------*
  * Settings Menu
@@ -140,7 +249,7 @@ class comment_walker extends Walker_Comment {
 	// constructor – wrapper for the comments list
 	function __construct() { ?>
 
-		<div class="comments-list">
+		<ul class="comments-list">
 
 	<?php }
 
@@ -176,6 +285,7 @@ class comment_walker extends Walker_Comment {
 		} ?>
 
 		<li <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>">
+<<<<<<< HEAD
 			<div class="cm-content-wrap">
 				<a href="<?php comment_author_url(); ?>"><?php echo get_avatar( $comment, 60, 'mystery', 'Author’s gravatar' ); ?></a>
 				<div class="cm-content">
@@ -188,6 +298,25 @@ class comment_walker extends Walker_Comment {
 					<?php comment_text() ?>
 				</div>
 			</div>
+=======
+
+			<article>
+
+				<div class="user-avatar">
+					<?php echo get_avatar( $comment, 60, 'mystery', 'Author’s gravatar' ); ?>
+				</div>
+
+				<?php if ($comment->comment_approved == '0') : ?>
+					<p>Your comment is awaiting moderation.</p>
+				<?php endif; ?>
+				<?php comment_text() ?>
+
+				<footer>
+					<a href="<?php comment_author_url(); ?>" rel="author"><?php comment_author(); ?></a> on <?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?> - <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+				</footer>
+
+			</article>
+>>>>>>> master
 
 	<?php }
 
@@ -201,16 +330,30 @@ class comment_walker extends Walker_Comment {
 	// destructor – closing wrapper for the comments list
 	function __destruct() { ?>
 
-	</div>
+	</ul>
 
 	<?php }
 
 }
 
+
+function comment_reform ($arg) {
+	$comments_count = wp_count_comments(get_the_ID());
+	$arg['title_reply'] = ( (int) $comments_count->approved > 0 ? __('Join the conversation...') : __('Start the conversation...') );
+	$arg['title_reply_before'] = '<h2 class="comment-reply-title">';
+	$arg['title_reply_after'] = '</h2>';
+
+	return $arg;
+}
+
+
+add_filter('comment_form_defaults','comment_reform');
+
 function my_update_comment_field( $comment_field ) {
 
   $comment_field =
     '<p class="comment-form-comment">
+			<span class="asterisk">*</span>
             <textarea required id="comment" name="comment" placeholder="' . esc_attr__( "Start talking!", "text-domain" ) . '" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
 
@@ -227,19 +370,21 @@ function my_update_comment_fields( $fields ) {
 
 	$fields['author'] =
 		'<p class="comment-form-author">
-			<input id="author" name="author" type="text" placeholder="' . esc_attr__( "*Your real name", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+			<span class="asterisk">*</span>
+			<input id="author" name="author" type="text" placeholder="' . esc_attr__( "Your name", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 		'" size="30" ' . $aria_req . ' />
 		</p>';
 
 	$fields['email'] =
 		'<p class="comment-form-email">
-			<input id="email" name="email" type="email" placeholder="' . esc_attr__( "*Your email", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
+			<span class="asterisk">*</span>
+			<input id="email" name="email" type="email" placeholder="' . esc_attr__( "Your email", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 		'" size="30" ' . $aria_req . ' />
 		</p>';
 
 	$fields['url'] =
 		'<p class="comment-form-url">
-			<input id="url" name="url" type="url"  placeholder="' . esc_attr__( "Your website (Optional)", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			<input id="url" name="url" type="url"  placeholder="' . esc_attr__( "Your website", "text-domain" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
 		'" size="30" />
 			</p>';
 
