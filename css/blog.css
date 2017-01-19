@@ -623,6 +623,10 @@ strong {
     text-align: center;
 }
 
+.home--the-blog img {
+    height: 120px;
+}
+
 .post-grid {
     padding-top: 10px;
     padding-bottom: 40px;
