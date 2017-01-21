@@ -14,6 +14,13 @@ function print_image($class="", $src, $style="") {
 	echo sprintf("<img class=\"%s\" src=\"%s\" style=\"%s\">", $class, $src, $style);
 }
 
+add_shortcode('subscribe_form', 'get_subscribe_form');
+function get_subscribe_form($atts) {
+	ob_start();
+    get_template_part('partials/subscribe', 'form');
+    return ob_get_clean();
+}
+
 function lyft_scripts() {
 
 	/*-- Scripts -----------------------------*/
