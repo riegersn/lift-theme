@@ -1,4 +1,4 @@
-    </div><!-- /.m-container -->
+    </div><!-- #content -->
 
     <footer id="footer" class="top-shadow">
         <p><?php echo print_svg_image('footer-logo','lyftguy_text_75.svg','lyftguy_text_75.png'); ?></p>
