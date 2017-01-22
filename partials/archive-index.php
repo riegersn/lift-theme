@@ -4,11 +4,6 @@
  */
 ?>
 
-<h3>Pages</h3>
-<ul>
-	<?php wp_list_pages( array( 'title_li' => '' ) ); ?>
-</ul>
-
 <h3>Posts</h3>
 <ul>
 	<?php $lastposts = get_posts( array('numberposts' => -1) );
@@ -21,4 +16,9 @@
 	<?php endforeach;
 		wp_reset_postdata();
 	} ?>
+</ul>
+
+<h3>Pages</h3>
+<ul>
+	<?php wp_list_pages( array( 'title_li' => '' ) ); ?>
 </ul>
