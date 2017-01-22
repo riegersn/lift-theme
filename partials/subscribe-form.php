@@ -1,3 +1,9 @@
+<?php
+/**
+ * Template part for displaying subscription form
+ */
+?>
+
 <div class="subscribe-form">
     <form action="//thelyftguy.us14.list-manage.com/subscribe/post?u=fa32ac29ec19b61d8e3b4ea47&amp;id=3e8b46ba4a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <p class="input">

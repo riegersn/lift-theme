@@ -21,6 +21,14 @@ function get_subscribe_form($atts) {
     return ob_get_clean();
 }
 
+add_shortcode('archive_index', 'get_archive_index');
+function get_archive_index($atts) {
+	ob_start();
+    get_template_part('partials/archive', 'index');
+    return ob_get_clean();
+}
+
+
 function lyft_scripts() {
 
 	/*-- Scripts -----------------------------*/
