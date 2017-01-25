@@ -119,7 +119,7 @@ sup {
    ------------------------------------------------------------ */
 
 html {
-    font-size: 17px;
+    font-size: 16.5px;
 }
 
 body {
@@ -148,30 +148,31 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 26px;
     margin-top: 0;
 }
 
 h3 {
-    font-size: 22px;
-}
-
-h4 {
     font-size: 20px;
 }
 
+h4 {
+    font-size: 16.5px;
+}
+
 h5 {
-    font-size: 17px;
+    font-size: 15px;
 }
 
 h6 {
+    color: #666;
     font-size: 15px;
     text-transform: uppercase;
 }
 
 p, blockquote {
     line-height: 1.6;
-    margin-bottom: 28px; /* 27/17 */
+    margin-bottom: 28px;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
@@ -190,12 +191,12 @@ ol,ul {
 
 /* --- links --- */
 a {
-    color: #0eb1d2;
+    color: #ed5565;
     text-decoration: none;
 }
 
 a:not(.noborder):hover,a:not(.noborder):focus {
-    border-bottom: 1px dotted #ed5565;
+    border-bottom: 2px solid #0eb1d2;
 }
 
 /* --- images --- */
@@ -215,15 +216,22 @@ table td, table th {
 }
 
 table thead {
-    /* color: #222; */
     background: #dedede;
 }
 
 
 /* --- definitions --- */
+dl {
+    border-left: 1px dashed #dedede;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
 dd {
     line-height: 1.6;
-    margin: 0 0 20px 10px;
+    margin: 0 0 10px 10px;
 }
 
 dd:last-child {
@@ -231,9 +239,11 @@ dd:last-child {
 }
 
 dt {
-    margin: 10px 0 5px;
-    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
     line-height: 1;
+    color: #666;
 }
 
 dt:first-child {
@@ -440,7 +450,7 @@ strong {
 
 .feat-img {
     width: 100%;
-    height: 500px;
+    height: 450px;
     background-position: 50% 50%;
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
@@ -450,7 +460,7 @@ strong {
     display: inline-block;
     width: auto;
     padding: 8px 10px;
-    font-size: .8823529412em; /* 15/17 */
+    font-size: 15px; /* 15/17 */
     font-weight: 500;
     cursor: pointer;
     -webkit-transition: background-color .2s ease-in;
@@ -460,7 +470,7 @@ strong {
     border-radius: 4px;
     background-color: #ed5565;
     margin: 5px;
-    border: none;
+    border: none !important;
     /* box-shadow: 0 0 5px 0 rgba(0,0,0,0.25); */
 }
 
@@ -479,7 +489,7 @@ strong {
     background-color: #1C1C1C;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, .75);
     color: #666;
-    font-size: 1.1176470588rem; /* 19/17 */
+    font-size: 19px;
     letter-spacing: -.3px;
     z-index: 2;
     position: fixed;
@@ -556,7 +566,7 @@ strong {
 
 @media only screen and (max-width: 850px) {
     #header {
-        font-size: 20px; /* 19/17 */
+        font-size: 20px;
     }
     .main-nav--button.fa {
         display: block;
@@ -765,15 +775,15 @@ strong {
     color: #b1b1b1;
     display: inline-block;
     margin-bottom: 10px;
-    font-size: .8823529412em; /* 15/17 */
+    font-size: 15px;
     box-shadow: 0 4px 4px -5px rgba(0, 0, 0, .3);
 }
 
 .wp-caption-text {
     padding: 0 16px;
     margin: 0;
-    font-size: .875rem;
-    line-height: .875rem;
+    font-size: 15px;
+    line-height: 1;
     text-align: right;
     color: #dedede;
 }
@@ -865,7 +875,7 @@ strong {
 
 .comments {
     /* padding: 40px; */
-    font-size: 1rem;
+    font-size: 16.5px;
 }
 
 .comments ul,
@@ -1039,7 +1049,7 @@ ul.comments-list {
     background-color: #1C1C1C;
     text-align: center;
     z-index: 1;
-    font-size: .8823529412em; /* 15/17 */
+    font-size: 15px; /* 15/17 */
 }
 
 #footer img {
@@ -1059,6 +1069,7 @@ ul.comments-list {
 }
 
 #footer a {
+    color: #0eb1d2;
     margin: 0 8px;
     border-bottom-color: #1C1C1C;
 }

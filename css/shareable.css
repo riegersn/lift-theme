@@ -28,7 +28,7 @@
 }
 
 .shareable-btn:hover {
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
 .shareable-btn:hover .fa {
