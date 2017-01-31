@@ -10,12 +10,12 @@
 			<span class="home-signup-highlight"><a class="home-signup-btn" href="/subscribe">Subscribe</a> to our newsletter!</span>
 		</div>
 	</div>
-
-	<div class="container home--the-blog">
+<!--
+	<div class="container home-/-the-blog">
 		<?php echo print_svg_image('','the_blog_140.svg','the_blog_140.png'); ?>
 	</div>
-
-	<div class="container post-grid">
+ -->
+	<div class="container-home post-grid">
 
 		<?php
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
