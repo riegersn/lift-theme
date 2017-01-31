@@ -35,16 +35,14 @@ wp_enqueue_script("jquery");
 function load_scripts() {
 
 	// js libraries
-	// wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/29b54b682d.js');
-	// wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js');
 	wp_enqueue_script( 'masonry', 'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.js');
-	// wp_enqueue_script( 'lyftguy', get_template_directory_uri() . '/js/lyftguy.js');
-	wp_enqueue_script( 'lyftguy-min', get_template_directory_uri() . '/js/lyftguy-min.js');
+	wp_enqueue_script( 'lyftguy', get_template_directory_uri() . '/js/lyftguy.js');
+	// wp_enqueue_script( 'lyftguy-min', get_template_directory_uri() . '/js/lyftguy.min.js');
 
 	// stylesheets
-	// wp_enqueue_style( 'lyftguy', get_template_directory_uri() . '/css/lyftguy.css' );
+	wp_enqueue_style( 'lyftguy', get_template_directory_uri() . '/css/lyftguy.css' );
+	// wp_enqueue_style( 'lyftguy-min', get_template_directory_uri() . '/css/lyftguy.min.css' );
 	wp_enqueue_style( 'font-awesome', 'https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css' );
-	wp_enqueue_style( 'lyftguy-min', get_template_directory_uri() . '/css/lyftguy-min.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
