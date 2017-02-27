@@ -1,0 +1,19 @@
+{
+  "name": "lyftguy",
+  "version": "1.0.0",
+  "description": "lyftguy.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riegersn/lyftguy.git"
+  },
+  "author": "Shawn Rieger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/riegersn/lyftguy/issues"
+  },
+  "homepage": "https://github.com/riegersn/lyftguy#readme"
+}
